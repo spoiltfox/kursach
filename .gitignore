@@ -1,5 +1,6 @@
 bin
 obj
-doxygen
 .git
 kursach.exe
+kursach.depend
+kursach.layout
