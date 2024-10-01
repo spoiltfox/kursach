@@ -1,8 +1,29 @@
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <fstream>
 
 using namespace std;
+
+int symboul (string path = "README.md")  //по умолчанию выводит количество символов в redme
+{
+    //Чтение файла
+    ifstream file;
+    file.open(path, ios::binary);
+    char ch;
+    int charcount=0;
+    //читаем посимвольно весь файл
+    while(file.get(ch))
+    {
+        if (ch!='\r') //т.к. Enter в Windows считается за два символа
+        {
+            ++charcount;
+        }
+    }
+    cout<<"number of characters: "<<charcount;
+    file.close();
+    return charcount;
+}
 
 int get_week_day() // Функция для получения текущего дня недели
 {
@@ -46,8 +67,8 @@ int get_minute() {
     return minute;
 }
 
-void print_help(){
-cout << "Usage:\n\t kursach.exe [input_file] [output_file]\n";
+void print_help(){          //вывод помощи
+    cout << "Usage:\n\t kursach.exe [input_file] [output_file]\n";
 }
 
 int main(int argc, char* argv[])
@@ -55,12 +76,16 @@ int main(int argc, char* argv[])
     setlocale(LC_ALL, "Russian");
 
     if(argc != 3)
-        {
-            print_help();
-            return 0;
-        }
-    cout << argv[1]<< endl;
-    cout << argv[2]<< endl;
+    {
+        print_help();
+        /*return 0; //прога требует два аргумента при запуске
+                    //можно закоментить
+        cout << argv[1]<< endl;
+        cout << argv[2]<< endl;*/
+    }
+
+    symboul();
+
     return 0;
 }
 
