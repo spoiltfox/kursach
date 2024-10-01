@@ -46,7 +46,7 @@ int get_minute() {
     return minute;
 }
 
-void help(char program_name[]){
+void print_help(){
 cout << "Usage:\n\t kursach.exe [input_file] [output_file]\n";
 }
 
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 
     if(argc != 3)
         {
-            help(argv[0]);
+            print_help();
             return 0;
         }
     cout << argv[1]<< endl;
