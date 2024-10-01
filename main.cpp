@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <string>
 
 using namespace std;
 
@@ -9,8 +10,8 @@ int get_week_day() // Функция для получения текущего дня недели
     tm* ltm = localtime(&now); // Преобразуем время в tm структуру
 
     int week_day = ltm->tm_wday; // Номер дня недели (0-6, где 0 - Sunday, 6 - Saturday)
-    const char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", // Перевод номера дня недели в текстовое представление
-                           "Thursday", "Friday", "Saturday"};
+    //const char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", // Перевод номера дня недели в текстовое представление
+    //                       "Thursday", "Friday", "Saturday"};
 
     // Вывод результатов
     //cout << "Числовое значение дня недели: " << week_day << endl;
@@ -44,12 +45,22 @@ int get_minute() {
     }
     return minute;
 }
-int main()
+
+void help(char program_name[]){
+cout << "Usage:\n\t kursach.exe [input_file] [output_file]\n";
+}
+
+int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "Russian");
-    cout<<get_week_day()<<endl;
-    cout<<get_mouth_day()<<endl;
-    cout<<get_minute()<<endl;
+
+    if(argc != 3)
+        {
+            help(argv[0]);
+            return 0;
+        }
+    cout << argv[1]<< endl;
+    cout << argv[2]<< endl;
     return 0;
 }
 
