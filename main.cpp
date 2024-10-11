@@ -4,6 +4,55 @@
 #include <fstream>
 
 using namespace std;
+struct offsets {
+    int lat;
+    int kir;
+    int num;
+};
+
+void caesar(ifstream* input_file, offsets offset){
+    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string abc = "abcdefghijklmnopqrstuvwxyz";
+    string abc_rus = "абвгдеЄжзийклмнопрстуфхцчшщъыьэю€";
+    string ABC_RUS = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
+    string num = "1234567890";
+    string symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
+
+    bool symbol_found = false;
+    char current_byte = 0;
+    int crypted_symbol_pos = 0;
+    int crypted_symbol_abc = 0;
+    while (input_file[0].get(current_byte)){
+        symbol_found = false;
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < symbols[i].length(); j++)
+            {
+                if(current_byte == symbols[i][j])
+                {
+                    symbol_found = true;
+                    crypted_symbol_abc = i;
+                    if(i < 2){
+                        crypted_symbol_pos = (j + offset.lat) % symbols[i].length();
+                    }
+                    else if(i < 4){
+                        crypted_symbol_pos = (j + offset.lat) % symbols[i].length();
+                    }
+                    else if(i = 4){
+                        crypted_symbol_pos = (j + offset.lat) % symbols[i].length();
+                    }
+                    break;
+                }
+
+            }
+        }
+        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos];}
+        else {cout << current_byte;}
+    }
+    cout << "File crypted";
+
+
+}
+
 
 int symboul (string path = "README.md")  //по умолчанию выводит количество символов в redme
 {
@@ -75,16 +124,17 @@ int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "Russian");
 
-    if(argc != 3)
-    {
-        print_help();
-        /*return 0; //прога требует два аргумента при запуске
-                    //можно закоментить
-        cout << argv[1]<< endl;
-        cout << argv[2]<< endl;*/
-    }
+    if(argc != 3){print_help();}
 
-    symboul();
+    //symboul();
+
+    ifstream input;
+    input.open(argv[1]);
+
+    //место дл€ проверки открыти€
+    offsets test;
+    test.kir = 1; test.lat = 1; test.num = 1;
+    caesar(&input, test);
 
     return 0;
 }
