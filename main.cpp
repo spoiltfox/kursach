@@ -4,13 +4,18 @@
 #include <fstream>
 
 using namespace std;
-struct offsets {
+struct offsets { //в случае неообходимости могут быть добавлены дополнительные переменные в структуру
     int lat;
     int kir;
     int num;
+    bool sybmol_count_needed = false;
+    bool hash_sum_needed = false;
 };
 
-int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
+int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        //внешний вид "декораторов" для "цезаря" должен быть вида:  int func_name(ifstream* a, ofstream* b, offsets c){
+                                                                                                                                                //что-то умное;
+                                                                                                                                                //return caesar(a, b, d);}
+
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string abc = "abcdefghijklmnopqrstuvwxyz";
     string abc_rus = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
@@ -32,13 +37,13 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
                     symbol_found = true;
                     crypted_symbol_abc = i;
                     if(i < 2){
-                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()*16) % symbols[i].length();
                     }
                     else if(i < 4){
-                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()*16) % symbols[i].length();
                     }
                     else{
-                        crypted_symbol_pos = (j + offset.num + symbols[i].length()) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.num + symbols[i].length()*16) % symbols[i].length();
                     }
                     break;
                 }
@@ -48,29 +53,29 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
         if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos];}
         else {cout << current_byte;}
     }
+    input_file->clear();
+    input_file->seekg(0, ios_base::beg);
     return 0;
 
 
 }
 
 
-int symboul (string path = "README.md")  //по умолчанию выводит количество символов в redme
+char symboul (ifstream* file)  //по умолчанию выводит количество символов в redme
 {
-    //Чтение файла
-    ifstream file;
-    file.open(path, ios::binary);
     char ch;
-    int charcount=0;
+    char charcount=0;
     //читаем посимвольно весь файл
-    while(file.get(ch))
+    while(file->get(ch))
     {
         if (ch!='\r') //т.к. Enter в Windows считается за два символа
         {
             ++charcount;
         }
     }
-    cout<<"number of characters: "<<charcount;
-    file.close();
+
+    file->clear();
+    file->seekg(0, ios_base::beg);
     return charcount;
 }
 
@@ -82,10 +87,6 @@ int get_week_day() // Функция для получения текущего дня недели
     int week_day = ltm->tm_wday; // Номер дня недели (0-6, где 0 - Sunday, 6 - Saturday)
     //const char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", // Перевод номера дня недели в текстовое представление
     //                       "Thursday", "Friday", "Saturday"};
-
-    // Вывод результатов
-    //cout << "Числовое значение дня недели: " << week_day << endl;
-    //cout << "День недели: " << days[week_day] << endl;
     return week_day;
 }
 
@@ -96,7 +97,6 @@ int get_mouth_day() // То же самое для дня месяца
 
     int day_of_month = ltm->tm_mday; // Номер дня месяца (1-31)
 
-    //cout << "Текущий день месяца: " << day_of_month << endl; // Вывод результата
     return day_of_month;
 }
 
@@ -106,13 +106,6 @@ int get_minute() {
 
     int minute = local_time->tm_min;
 
-    //wcout << minute << endl;
-
-    if (minute % 2 == 0) {
-        //если минута четная
-    } else {
-        //если минута нечетная
-    }
     return minute;
 }
 
@@ -126,35 +119,46 @@ int main(int argc, char* argv[])
     ifstream input;
     ofstream output;
 
-
-
-
     string exe_name = argv[0];
-    string defaul_codeblocks_name = "kursach\\bin\\Debug\\kursach.exe";
 
-    //      Debug
-    //  build and run from code::blocks
-    bool is_debug_run = (exe_name.find(defaul_codeblocks_name) <= exe_name.length() && argc == 1);
+
+
+
+
+    bool is_debug_run = (exe_name.find("kursach\\bin\\Debug\\kursach.exe") <= exe_name.length() && argc == 1);
     if(is_debug_run){
-        input.open("test.txt");
+
+                //      Debug
+    //  build and run from code::blocks
+    // место для записи отладочных скриптов
+        input.open("test.txt", ios::binary);
         offsets test;
-        test.kir = 1; test.lat = 1; test.num = -1;
+        test.kir = 1; test.lat = -54; test.num = -1;
+
+        symboul(&input);
         caesar(&input, &output, test);
+        input.close();
         return 0;
+    //  Debug End  /////////////////////////
     }
 
-    //      Release
     if(argc != 3){
         print_help();
         return 1;
     }
-    input.open(argv[1]);
-    output.open(argv[2]);
+    //      Release
+    // место для красивейшего кода, срабатывает при запуске с двумя аргументами
+    // требуется проверка на открытие
+    input.open(argv[1]), ios::binary;
+    output.open(argv[2], ios::binary);
+
     offsets test;
     test.kir = 1; test.lat = 1; test.num = -1;
     caesar(&input, &output, test);
 
 
+    input.close();
+    output.close();
     return 0;
 }
 
