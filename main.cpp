@@ -10,7 +10,7 @@ struct offsets {
     int num;
 };
 
-void caesar(ifstream* input_file, offsets offset){
+void caesar(ifstream* input_file, ofstream* output_file, offsets offset){
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string abc = "abcdefghijklmnopqrstuvwxyz";
     string abc_rus = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
@@ -32,13 +32,13 @@ void caesar(ifstream* input_file, offsets offset){
                     symbol_found = true;
                     crypted_symbol_abc = i;
                     if(i < 2){
-                        crypted_symbol_pos = (j + offset.lat) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()) % symbols[i].length();
                     }
                     else if(i < 4){
-                        crypted_symbol_pos = (j + offset.lat) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()) % symbols[i].length();
                     }
-                    else if(i = 4){
-                        crypted_symbol_pos = (j + offset.lat) % symbols[i].length();
+                    else{
+                        crypted_symbol_pos = (j + offset.num + symbols[i].length()) % symbols[i].length();
                     }
                     break;
                 }
@@ -129,12 +129,15 @@ int main(int argc, char* argv[])
     //symboul();
 
     ifstream input;
-    input.open(argv[1]);
+    ofstream output;
+
+    input.open("test.txt");
+
 
     //место для проверки открытия
     offsets test;
-    test.kir = 1; test.lat = 1; test.num = 1;
-    caesar(&input, test);
+    test.kir = 1; test.lat = 1; test.num = -1;
+    caesar(&input, &output, test);
 
     return 0;
 }
