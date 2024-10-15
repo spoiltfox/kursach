@@ -10,7 +10,7 @@ struct offsets {
     int num;
 };
 
-void caesar(ifstream* input_file, ofstream* output_file, offsets offset){
+int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string abc = "abcdefghijklmnopqrstuvwxyz";
     string abc_rus = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
@@ -48,7 +48,7 @@ void caesar(ifstream* input_file, ofstream* output_file, offsets offset){
         if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos];}
         else {cout << current_byte;}
     }
-    cout << "File crypted";
+    return 0;
 
 
 }
@@ -123,21 +123,37 @@ void print_help(){          //вывод помощи
 int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "Russian");
-
-    if(argc != 3){print_help();}
-
-    //symboul();
-
     ifstream input;
     ofstream output;
 
-    input.open("test.txt");
 
 
-    //место для проверки открытия
+
+    string exe_name = argv[0];
+    string defaul_codeblocks_name = "kursach\\bin\\Debug\\kursach.exe";
+
+    //      Debug
+    //  build and run from code::blocks
+    bool is_debug_run = (exe_name.find(defaul_codeblocks_name) <= exe_name.length() && argc == 1);
+    if(is_debug_run){
+        input.open("test.txt");
+        offsets test;
+        test.kir = 1; test.lat = 1; test.num = -1;
+        caesar(&input, &output, test);
+        return 0;
+    }
+
+    //      Release
+    if(argc != 3){
+        print_help();
+        return 1;
+    }
+    input.open(argv[1]);
+    output.open(argv[2]);
     offsets test;
     test.kir = 1; test.lat = 1; test.num = -1;
     caesar(&input, &output, test);
+
 
     return 0;
 }
