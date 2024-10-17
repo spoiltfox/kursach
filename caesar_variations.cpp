@@ -3,33 +3,26 @@
 #include <string>
 #include <fstream>
 
-#include "functions.h"
+//ИМЯ ФУНКЦИИ ДОЛЖНО СОТВЕТСТВОВАТЬ КОНКРЕТНОЙ ВАРИАЦИИ ИЗ ФАЙЛА
+// Для шифра Ш1.1.1 - v1_1_1
 
-int shift_decorator(ifstream* input_file, ofstream* output_file, offsets offset) {
-    offset.lat = 3; offset.kir = 5; offset.num = 2;
+int v1_1_1(ifstream* input_file, ofstream* output_file, offsets offset) {
     // Логика сдвига
-    if (offset.lat > 0) {
-        cout << "Сдвиг для латиницы вправо на " << offset.lat << " символов" << endl;
-    } else {
-        cout << "Сдвиг для латиницы влево на " << abs(offset.lat) << " символов" << endl;
-    }
-
-    if (offset.kir > 0) {
-        cout << "Сдвиг для кириллицы вправо на " << offset.kir << " символов" << endl;
-    } else {
-        cout << "Сдвиг для кириллицы влево на " << abs(offset.kir) << " символов" << endl;
-    }
-
-    if (offset.num > 0) {
-        cout << "Сдвиг для цифр вправо на " << offset.num << " символов" << endl;
-    } else {
-        cout << "Сдвиг для цифр влево на " << abs(offset.num) << " символов" << endl;
-    }
+    offset.lat = 3; offset.kir = 5; offset.num = 2;
 
     // Вызов основной функции (шифр Цезаря)
     return caesar(input_file, output_file, offset);
 }
 
+int v1_1_2(ifstream* input_file, ofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = -3; offset.kir = -5; offset.num = -2;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}
+
+/*
 int time_based_decorator(ifstream* input_file, ofstream* output_file, offsets offset) {
     int week_day = get_week_day();  // Получаем текущий день недели
     int minute = get_minute();      // Получаем текущую минуту
@@ -57,3 +50,4 @@ int time_based_decorator(ifstream* input_file, ofstream* output_file, offsets of
     // Вызов основной функции (шифр Цезаря)
     return caesar(input_file, output_file, offset);
 }
+*/

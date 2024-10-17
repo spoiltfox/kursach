@@ -12,57 +12,67 @@ int main(int argc, char* argv[])
     ofstream output;
 
     string exe_name = argv[0];
-    int decorator_chosoe;
-    cin >> decorator_chosoe;
+    int variation;
 
     bool is_debug_run = (exe_name.find("kursach\\bin\\Debug\\kursach.exe") <= exe_name.length() && argc == 1);
     if (is_debug_run) {
         // Debug
-        input.open("test.txt", ios::binary);
+        cin >> variation;
+        input.open("ioFiles\\test.txt", ios::binary);
+        output.open("output.txt", ios::binary);
+        if(input.is_open()){cout << "File open ok\n";}
+        if(output.is_open()){cout << "File open ok\n";}
         offsets test;
-        test.kir = 1; test.lat = -54; test.num = -1;
+        test.kir = 1; test.lat = 1; test.num = 1;
 
         // Выбор декоратора
          // Выбираем нужный декоратор
-        switch (decorator_chosoe)
+        switch (variation)
         {
         case 1:
-            shift_decorator(&input, &output, test);
+            v1_1_1(&input, &output, test);
             break;
         case 2:
-            time_based_decorator(&input, &output, test);
+            v1_1_2(&input, &output, test);
             break;
         default:
             cout << "Декоратор" << endl;
             break;
         }
         input.close();
+        output.close();
         return 0;
+        // Debug end
     }
 
-    if (argc != 4) {
+    if (argc != 3) {
         print_help();
         return 1;
     }
 
     // Release
+    cout << "Print the number of variant(1 - 1.1.1, 2 - 1.1.2): ";
+    cin >> variation;
     input.open(argv[1], ios::binary);
     output.open(argv[2], ios::binary);
+    if(input.is_open()){cout << "File open ok\n";}
+    else{return 2;}
+    if(output.is_open()){cout << "File open ok\n";}
+    else{return 2;}
 
     offsets test;
-    test.kir = 0; test.lat = 0; test.num = 0;
 
     // Выбор декоратора
-    switch (decorator_chosoe)
+    switch (variation)
         {
         case 1:
-            shift_decorator(&input, &output, test);
+            v1_1_1(&input, &output, test);
             break;
         case 2:
-            time_based_decorator(&input, &output, test);
+            v1_1_2(&input, &output, test);
             break;
         default:
-            cout << "Декоратор гавна" << endl;
+            cout << "To be continued..." << endl;
             break;
         }
 

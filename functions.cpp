@@ -5,11 +5,11 @@
 
 using namespace std;
 struct offsets { //в случае неообходимости могут быть добавлены дополнительные переменные в структуру
-    int lat;
-    int kir;
-    int num;
+    int lat = 0;
+    int kir = 0;
+    int num = 0;
     bool sybmol_count_needed = false;
-    bool hash_sum_needed = false;
+    bool checksum_needed = false;
 };
 
 int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        //внешний вид "декораторов" для "цезаря" должен быть вида:  int func_name(ifstream* a, ofstream* b, offsets c){
@@ -50,8 +50,8 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        
 
             }
         }
-        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos];}
-        else {cout << current_byte;}
+        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
+        else {cout << current_byte; output_file[0].put(current_byte);}
     }
     input_file->clear();
     input_file->seekg(0, ios_base::beg);
@@ -107,6 +107,41 @@ int get_minute() {
     int minute = local_time->tm_min;
 
     return minute;
+}
+
+char calcChecksum(fstream* inputFile, bool timeDependent) {
+    if (!inputFile->is_open() || !inputFile->good()) {
+        return 1; // Ошибка открытия файла
+    }
+
+    char ch;
+    unsigned long long checksum = 0;
+    unsigned long long sdvig = 0;
+    while (inputFile->get(ch)) {
+
+        // Определяем сдвиг в зависимости от символа
+        if (isalpha(ch)) { // Латинские буквы
+            sdvig = (ch >= 'a' && ch <= 'z') ? 3 : 3; // Латинские буквы - сдвиг 3
+        } else if ((ch >= 0xC0 && ch <= 0xFF) || (ch >= 0xE0 && ch <= 0xEF)) { // Кириллица в UTF-8
+            sdvig = 5; // Кириллица - сдвиг 5
+        } else if (isdigit(ch)) { // Цифры
+            sdvig = 2; // Цифры - сдвиг 2
+        } else {
+            sdvig = 0; // Прочие символы
+        }
+
+        // Применяем сдвиг и обновляем контрольную сумму
+        checksum += (ch + sdvig);
+    }
+
+    if (timeDependent) {
+        // Можете использовать текущее время для дополнения контрольной суммы
+        checksum += get_minute() % 2; //пример
+    }
+
+    inputFile->clear();
+    inputFile->seekg(0, ios_base::beg);
+    return checksum;
 }
 
 void print_help(){          //вывод помощи
