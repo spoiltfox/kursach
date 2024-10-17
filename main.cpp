@@ -1,54 +1,73 @@
 #include "functions.h"
-//#include "caesar_variations.h"
+#include "caesar_variations.h"
 
 
+using namespace std;
 
 int main(int argc, char* argv[])
 {
+
     setlocale(LC_ALL, "Russian");
     ifstream input;
     ofstream output;
 
     string exe_name = argv[0];
-
-
-
-
+    int decorator_chosoe;
+    cin >> decorator_chosoe;
 
     bool is_debug_run = (exe_name.find("kursach\\bin\\Debug\\kursach.exe") <= exe_name.length() && argc == 1);
-    if(is_debug_run){
-
-                //      Debug
-    //  build and run from code::blocks
-    // место для записи отладочных скриптов
-        input.open("ioFiles/test.txt", ios::binary);
+    if (is_debug_run) {
+        // Debug
+        input.open("test.txt", ios::binary);
         offsets test;
         test.kir = 1; test.lat = -54; test.num = -1;
 
-        symboul(&input);
-        caesar(&input, &output, test);
+        // Выбор декоратора
+         // Выбираем нужный декоратор
+        switch (decorator_chosoe)
+        {
+        case 1:
+            shift_decorator(&input, &output, test);
+            break;
+        case 2:
+            time_based_decorator(&input, &output, test);
+            break;
+        default:
+            cout << "Декоратор" << endl;
+            break;
+        }
         input.close();
         return 0;
-    //  Debug End  /////////////////////////
     }
 
-    if(argc != 3){
+    if (argc != 4) {
         print_help();
         return 1;
     }
-    //      Release
-    // место для красивейшего кода, срабатывает при запуске с двумя аргументами
-    // требуется проверка на открытие
-    input.open(argv[1]), ios::binary;
+
+    // Release
+    input.open(argv[1], ios::binary);
     output.open(argv[2], ios::binary);
 
     offsets test;
-    test.kir = 1; test.lat = 1; test.num = -1;
-    caesar(&input, &output, test);
+    test.kir = 0; test.lat = 0; test.num = 0;
 
+    // Выбор декоратора
+    switch (decorator_chosoe)
+        {
+        case 1:
+            shift_decorator(&input, &output, test);
+            break;
+        case 2:
+            time_based_decorator(&input, &output, test);
+            break;
+        default:
+            cout << "Декоратор гавна" << endl;
+            break;
+        }
 
     input.close();
     output.close();
-    return 1;
+    return 0;
 }
 
