@@ -8,8 +8,9 @@ struct offsets { //в случае неообходимости могут быть добавлены дополнительные п
     int lat = 0;
     int kir = 0;
     int num = 0;
-    bool sybmol_count_needed = false;
+    bool symbol_count_needed = false;
     bool checksum_needed = false;
+    bool checksum_time_dependent = false;
 };
 
 int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        //внешний вид "декораторов" дл€ "цезар€" должен быть вида:  int func_name(ifstream* a, ofstream* b, offsets c){
@@ -22,6 +23,15 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        
     string ABC_RUS = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
     string num = "1234567890";
     string symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
+
+    if(symbol_count_needed)
+    {
+        char x = symboul(input_file);
+    }
+    if(checksum_needed)
+    {
+        char y = calcChecksum(input_file, offset.checksum_time_dependent);
+    }
 
     bool symbol_found = false;
     char current_byte = 0;
@@ -53,6 +63,16 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        
         if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
         else {cout << current_byte; output_file[0].put(current_byte);}
     }
+    if(symbol_count_needed)
+    {
+        cout << x;
+        output_file[0].put(x);
+    }
+    if(checksum_needed)
+    {
+        cout << symbols[crypted_symbol_abc][crypted_symbol_pos];
+        output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);
+    }
     input_file->clear();
     input_file->seekg(0, ios_base::beg);
     return 0;
@@ -61,7 +81,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        
 }
 
 
-char symboul (ifstream* file)  //по умолчанию выводит количество символов в redme
+char symboul (ifstream* file)
 {
     char ch;
     char charcount=0;
