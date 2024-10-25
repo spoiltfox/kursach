@@ -20,8 +20,10 @@ int main(int argc, char* argv[])
         cin >> variation;
         input.open("ioFiles\\test.txt", ios::binary);
         output.open("output.txt", ios::binary);
-        if(input.is_open()){cout << "File open ok\n";}
-        if(output.is_open()){cout << "File open ok\n";}
+        if(input.is_open()){cout << "input file open ok\n";}
+        else{return 2;}
+        if(output.is_open()){cout << "output file open ok\n";}
+        else{return 2;}
         offsets test;
         test.kir = 1; test.lat = 1; test.num = 1;
 
@@ -34,6 +36,9 @@ int main(int argc, char* argv[])
             break;
         case 2:
             v1_1_2(&input, &output, test);
+            break;
+        case 3:
+            v1_3_1(&input, &output, test);
             break;
         default:
             cout << "Декоратор" << endl;
@@ -55,9 +60,9 @@ int main(int argc, char* argv[])
     cin >> variation;
     input.open(argv[1], ios::binary);
     output.open(argv[2], ios::binary);
-    if(input.is_open()){cout << "File open ok\n";}
+    if(input.is_open()){cout << "input file open ok\n";}
     else{return 2;}
-    if(output.is_open()){cout << "File open ok\n";}
+    if(output.is_open()){cout << "output file open ok\n";}
     else{return 2;}
 
     offsets test;

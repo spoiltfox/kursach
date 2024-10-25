@@ -51,3 +51,18 @@ int time_based_decorator(ifstream* input_file, ofstream* output_file, offsets of
     return caesar(input_file, output_file, offset);
 }
 */
+//
+int v1_3_1(ifstream* input_file, ofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = 3; offset.kir = 5; offset.num = 2; offset.symbol_count_needed = true;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}
+int v1_3_2(ifstream* input_file, ofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = -3; offset.kir = -5; offset.num = -2; offset.symbol_count_needed = true;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}

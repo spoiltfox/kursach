@@ -13,72 +13,7 @@ struct offsets { //в случае неообходимости могут быть добавлены дополнительные п
     bool checksum_time_dependent = false;
 };
 
-int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        //внешний вид "декораторов" дл€ "цезар€" должен быть вида:  int func_name(ifstream* a, ofstream* b, offsets c){
-                                                                                                                                                //что-то умное;
-                                                                                                                                                //return caesar(a, b, d);}
 
-    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string abc = "abcdefghijklmnopqrstuvwxyz";
-    string abc_rus = "абвгдеЄжзийклмнопрстуфхцчшщъыьэю€";
-    string ABC_RUS = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
-    string num = "1234567890";
-    string symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
-
-    if(symbol_count_needed)
-    {
-        char x = symboul(input_file);
-    }
-    if(checksum_needed)
-    {
-        char y = calcChecksum(input_file, offset.checksum_time_dependent);
-    }
-
-    bool symbol_found = false;
-    char current_byte = 0;
-    int crypted_symbol_pos = 0;
-    int crypted_symbol_abc = 0;
-    while (input_file[0].get(current_byte)){
-        symbol_found = false;
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < symbols[i].length(); j++)
-            {
-                if(current_byte == symbols[i][j])
-                {
-                    symbol_found = true;
-                    crypted_symbol_abc = i;
-                    if(i < 2){
-                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()*16) % symbols[i].length();
-                    }
-                    else if(i < 4){
-                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()*16) % symbols[i].length();
-                    }
-                    else{
-                        crypted_symbol_pos = (j + offset.num + symbols[i].length()*16) % symbols[i].length();
-                    }
-                    break;
-                }
-
-            }
-        }
-        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
-        else {cout << current_byte; output_file[0].put(current_byte);}
-    }
-    if(symbol_count_needed)
-    {
-        cout << x;
-        output_file[0].put(x);
-    }
-    if(checksum_needed)
-    {
-        cout << symbols[crypted_symbol_abc][crypted_symbol_pos];
-        output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);
-    }
-    input_file->clear();
-    input_file->seekg(0, ios_base::beg);
-    return 0;
-
-
-}
 
 
 char symboul (ifstream* file)
@@ -129,7 +64,7 @@ int get_minute() {
     return minute;
 }
 
-char calcChecksum(fstream* inputFile, bool timeDependent) {
+char calcChecksum(ifstream* inputFile, bool timeDependent) {
     if (!inputFile->is_open() || !inputFile->good()) {
         return 1; // ќшибка открыти€ файла
     }
@@ -162,6 +97,73 @@ char calcChecksum(fstream* inputFile, bool timeDependent) {
     inputFile->clear();
     inputFile->seekg(0, ios_base::beg);
     return checksum;
+}
+int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        //внешний вид "декораторов" дл€ "цезар€" должен быть вида:  int func_name(ifstream* a, ofstream* b, offsets c){
+                                                                                                                                                //что-то умное;
+                                                                                                                                                //return caesar(a, b, d);}
+
+    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string abc = "abcdefghijklmnopqrstuvwxyz";
+    string abc_rus = "абвгдеЄжзийклмнопрстуфхцчшщъыьэю€";
+    string ABC_RUS = "јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏџ№Ёёя";
+    string num = "1234567890";
+    string symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
+    char x, y;
+
+    if(offset.symbol_count_needed)
+    {
+        x = symboul(input_file);
+    }
+    if(offset.checksum_needed)
+    {
+        y = calcChecksum(input_file, offset.checksum_time_dependent);
+    }
+
+    bool symbol_found = false;
+    char current_byte = 0;
+    int crypted_symbol_pos = 0;
+    int crypted_symbol_abc = 0;
+    while (input_file[0].get(current_byte)){
+        symbol_found = false;
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < symbols[i].length(); j++)
+            {
+                if(current_byte == symbols[i][j])
+                {
+                    symbol_found = true;
+                    crypted_symbol_abc = i;
+                    if(i < 2){
+                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()*16) % symbols[i].length();
+                    }
+                    else if(i < 4){
+                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()*16) % symbols[i].length();
+                    }
+                    else{
+                        crypted_symbol_pos = (j + offset.num + symbols[i].length()*16) % symbols[i].length();
+                    }
+                    break;
+                }
+
+            }
+        }
+        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
+        else {cout << current_byte; output_file[0].put(current_byte);}
+    }
+    if(offset.symbol_count_needed)
+    {
+        cout << x;
+        output_file[0].put(x);
+    }
+    if(offset.checksum_needed)
+    {
+        cout << y;
+        output_file[0].put(y);
+    }
+    input_file->clear();
+    input_file->seekg(0, ios_base::beg);
+    return 0;
+
+
 }
 
 void print_help(){          //вывод помощи
