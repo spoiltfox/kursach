@@ -38,6 +38,42 @@ int main(int argc, char* argv[])
             v1_1_2(&input, &output, test);
             break;
         case 3:
+            v1_2_1(&input, &output, test);
+            break;
+        case 4:
+            v1_2_2(&input, &output, test);
+            break;
+        case 5:
+            v1_2_3(&input, &output, test);
+            break;
+        case 6:
+            v1_2_4(&input, &output, test);
+            break;
+        case 7:
+            v1_2_5(&input, &output, test);
+            break;
+        case 8:
+            v1_2_6(&input, &output, test);
+            break;
+        case 9:
+            v1_2_7(&input, &output, test);
+            break;
+        case 10:
+            v1_2_8(&input, &output, test);
+            break;
+        case 11:
+            v1_2_9(&input, &output, test);
+            break;
+        case 12:
+            v1_2_10(&input, &output, test);
+            break;
+        case 13:
+            v1_2_11(&input, &output, test);
+            break;
+        case 14:
+            v1_2_12(&input, &output, test);
+            break;
+        case 15:
             v1_3_1(&input, &output, test);
             break;
         default:
@@ -75,6 +111,42 @@ int main(int argc, char* argv[])
             break;
         case 2:
             v1_1_2(&input, &output, test);
+            break;
+        case 3:
+            v1_2_1(&input, &output, test);
+            break;
+        case 4:
+            v1_2_2(&input, &output, test);
+            break;
+        case 5:
+            v1_2_3(&input, &output, test);
+            break;
+        case 6:
+            v1_2_4(&input, &output, test);
+            break;
+        case 7:
+            v1_2_5(&input, &output, test);
+            break;
+        case 8:
+            v1_2_6(&input, &output, test);
+            break;
+        case 9:
+            v1_2_7(&input, &output, test);
+            break;
+        case 10:
+            v1_2_8(&input, &output, test);
+            break;
+        case 11:
+            v1_2_9(&input, &output, test);
+            break;
+        case 12:
+            v1_2_10(&input, &output, test);
+            break;
+        case 13:
+            v1_2_11(&input, &output, test);
+            break;
+        case 14:
+            v1_2_12(&input, &output, test);
             break;
         default:
             cout << "To be continued..." << endl;
