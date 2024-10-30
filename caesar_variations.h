@@ -33,6 +33,10 @@ int v1_3_1(ifstream* input_file, ofstream* output_file, offsets offset);
 
 int v1_3_2(ifstream* input_file, ofstream* output_file, offsets offset);
 
+int v1_4_1(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_4_2(ifstream* input_file, ofstream* output_file, offsets offset);
+
 
 
 

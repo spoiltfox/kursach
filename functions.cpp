@@ -167,5 +167,5 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        
 }
 
 void print_help(){          //вывод помощи
-    cout << "Usage:\n\t kursach.exe [input_file] [output_file]\n";
+    cout << "Usage:\n\t kursach.exe [input_file] [output_file] [cipher_number]\n";
 }

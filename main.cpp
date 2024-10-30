@@ -1,8 +1,55 @@
 #include "functions.h"
 #include "caesar_variations.h"
 
-
 using namespace std;
+
+namespace decor_choice {
+    enum Option
+    {
+        Option_invalid,
+        Option1_1_1,
+        Option1_1_2,
+        Option1_2_1,
+        Option1_2_2,
+        Option1_2_3,
+        Option1_2_4,
+        Option1_2_5,
+        Option1_2_6,
+        Option1_2_7,
+        Option1_2_8,
+        Option1_2_9,
+        Option1_2_10,
+        Option1_2_11,
+        Option1_2_12,
+        Option1_3_1,
+        Option1_3_2,
+        Option1_4_1,
+        Option1_4_2,
+    };
+}
+
+decor_choice::Option resolveOption(string input){
+    if (input == "1.1.1") return decor_choice::Option::Option1_1_1;
+    if (input == "1.1.2") return decor_choice::Option::Option1_1_2;
+    if (input == "1.2.1") return decor_choice::Option::Option1_2_1;
+    if (input == "1.2.2") return decor_choice::Option::Option1_2_2;
+    if (input == "1.2.3") return decor_choice::Option::Option1_2_3;
+    if (input == "1.2.4") return decor_choice::Option::Option1_2_4;
+    if (input == "1.2.5") return decor_choice::Option::Option1_2_5;
+    if (input == "1.2.6") return decor_choice::Option::Option1_2_6;
+    if (input == "1.2.7") return decor_choice::Option::Option1_2_7;
+    if (input == "1.2.8") return decor_choice::Option::Option1_2_8;
+    if (input == "1.2.9") return decor_choice::Option::Option1_2_9;
+    if (input == "1.2.10") return decor_choice::Option::Option1_2_10;
+    if (input == "1.2.11") return decor_choice::Option::Option1_2_11;
+    if (input == "1.2.12") return decor_choice::Option::Option1_2_12;
+    if (input == "1.3.1") return decor_choice::Option::Option1_3_1;
+    if (input == "1.3.2") return decor_choice::Option::Option1_3_2;
+    if (input == "1.4.1") return decor_choice::Option::Option1_4_1;
+    if (input == "1.4.2") return decor_choice::Option::Option1_4_2;
+
+    return decor_choice::Option::Option_invalid;
+}
 
 int main(int argc, char* argv[])
 {
@@ -76,6 +123,15 @@ int main(int argc, char* argv[])
         case 15:
             v1_3_1(&input, &output, test);
             break;
+        case 16:
+            v1_3_2(&input, &output, test);
+            break;
+        case 17:
+            v1_4_1(&input, &output, test);
+            break;
+        case 18:
+            v1_4_2(&input, &output, test);
+            break;
         default:
             cout << "Декоратор" << endl;
             break;
@@ -86,16 +142,18 @@ int main(int argc, char* argv[])
         // Debug end
     }
 
-    if (argc != 3) {
+    if (argc != 4) {
         print_help();
         return 1;
     }
 
     // Release
-    cout << "Print the number of variant(1 - 1.1.1, 2 - 1.1.2): ";
-    cin >> variation;
+
+    /*cout << "Print the number of variant(1 - 1.1.1, 2 - 1.1.2): ";
+    cin >> variation;*/
     input.open(argv[1], ios::binary);
     output.open(argv[2], ios::binary);
+    string decorator_choice = argv[3];
     if(input.is_open()){cout << "input file open ok\n";}
     else{return 2;}
     if(output.is_open()){cout << "output file open ok\n";}
@@ -104,49 +162,61 @@ int main(int argc, char* argv[])
     offsets test;
 
     // Выбор декоратора
-    switch (variation)
+    switch (resolveOption(decorator_choice))
         {
-        case 1:
+        case decor_choice::Option::Option1_1_1:
             v1_1_1(&input, &output, test);
             break;
-        case 2:
+        case decor_choice::Option::Option1_1_2:
             v1_1_2(&input, &output, test);
             break;
-        case 3:
+        case decor_choice::Option::Option1_2_1:
             v1_2_1(&input, &output, test);
             break;
-        case 4:
+        case decor_choice::Option::Option1_2_2:
             v1_2_2(&input, &output, test);
             break;
-        case 5:
+        case decor_choice::Option::Option1_2_3:
             v1_2_3(&input, &output, test);
             break;
-        case 6:
+        case decor_choice::Option::Option1_2_4:
             v1_2_4(&input, &output, test);
             break;
-        case 7:
+        case decor_choice::Option::Option1_2_5:
             v1_2_5(&input, &output, test);
             break;
-        case 8:
+        case decor_choice::Option::Option1_2_6:
             v1_2_6(&input, &output, test);
             break;
-        case 9:
+        case decor_choice::Option::Option1_2_7:
             v1_2_7(&input, &output, test);
             break;
-        case 10:
+        case decor_choice::Option::Option1_2_8:
             v1_2_8(&input, &output, test);
             break;
-        case 11:
+        case decor_choice::Option::Option1_2_9:
             v1_2_9(&input, &output, test);
             break;
-        case 12:
+        case decor_choice::Option::Option1_2_10:
             v1_2_10(&input, &output, test);
             break;
-        case 13:
+        case decor_choice::Option::Option1_2_11:
             v1_2_11(&input, &output, test);
             break;
-        case 14:
+        case decor_choice::Option::Option1_2_12:
             v1_2_12(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_3_1:
+            v1_3_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_3_2:
+            v1_3_2(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_4_1:
+            v1_4_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_4_2:
+            v1_4_2(&input, &output, test);
             break;
         default:
             cout << "To be continued..." << endl;

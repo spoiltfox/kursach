@@ -247,3 +247,18 @@ int v1_3_2(ifstream* input_file, ofstream* output_file, offsets offset) {
     // Вызов основной функции (шифр Цезаря)
     return caesar(input_file, output_file, offset);
 }
+
+int v1_4_1(ifstream* input_file, ofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = 3; offset.kir = 5; offset.num = 2; offset.checksum_needed = true;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}
+int v1_4_2(ifstream* input_file, ofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = -3; offset.kir = -5; offset.num = -2; offset.checksum_needed = true;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}
