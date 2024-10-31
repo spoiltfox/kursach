@@ -8,3 +8,6 @@ caesar_variations.h.gch
 functions.h.gch
 test.exe
 output.txt
+main.o
+main.exe
+functions.o

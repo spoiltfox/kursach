@@ -13,9 +13,9 @@ int v1_2_3(ifstream* input_file, ofstream* output_file, offsets offset);
 
 int v1_2_4(ifstream* input_file, ofstream* output_file, offsets offset);
 
-int v1_1_5(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_2_5(ifstream* input_file, ofstream* output_file, offsets offset);
 
-int v1_1_6(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_2_6(ifstream* input_file, ofstream* output_file, offsets offset);
 
 int v1_2_7(ifstream* input_file, ofstream* output_file, offsets offset);
 
