@@ -242,8 +242,14 @@ int time_based_decorator(wifstream* input_file, wofstream* output_file, offsets 
     return caesar(input_file, output_file, offset);
 }
 */
-//
 
+/**
+    Реализует шифр цезаря со сдвигом вправо и дописывает байт в конце зашифрованного файла с полем длины открытого текста
+    \param[in] input_file Файл с исходным текстом
+    \param[out] output_file Созданный файл с зашифрованным текстом
+    \param[in] offset Структура задающая сдвиги
+    \return Результат работы функции ceasar()
+*/
 int v1_3_1(wifstream* input_file, wofstream* output_file, offsets offset) {
     // Логика сдвига
     offset.lat = 3; offset.kir = 5; offset.num = 2; offset.symbol_count_needed = true;
@@ -251,6 +257,14 @@ int v1_3_1(wifstream* input_file, wofstream* output_file, offsets offset) {
     // Вызов основной функции (шифр Цезаря)
     return caesar(input_file, output_file, offset);
 }
+
+/**
+    Реализует шифр цезаря со сдвигом влево и дописывает байт в конце зашифрованного файла с полем длины открытого текста
+    \param[in] input_file Файл с исходным текстом
+    \param[out] output_file Созданный файл с зашифрованным текстом
+    \param[in] offset Структура задающая сдвиги
+    \return Результат работы функции ceasar()
+*/
 int v1_3_2(wifstream* input_file, wofstream* output_file, offsets offset) {
     // Логика сдвига
     offset.lat = -3; offset.kir = -5; offset.num = -2; offset.symbol_count_needed = true;
