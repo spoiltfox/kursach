@@ -274,3 +274,244 @@ int v1_4_2(wifstream* input_file, wofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
+//1.5.1 Ш1.2.1 с полем длины открытого текста
+int v1_5_1(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int textpole = symboul(ifstream* file);
+    int minute = get_minute();
+    while (textpole!=0){
+
+        if (minute % 2 == 0) { // Четная минута
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетная минута
+            offset.lat = 4;
+            offset.kir = 6;
+            offset.num = 2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.2 - Ш1.2.2 с полем длины открытого текста
+int v1_5_2(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int textpole = symboul(ifstream* file);
+    int minute = get_minute();
+    while (textpole!=0){
+
+        if (minute % 2 == 0) { // Четная минута
+            offset.lat = -3;
+            offset.kir = -5;
+            offset.num = -3;
+            textpole-=1;
+        } else { // Нечетная минута
+            offset.lat = -4;
+            offset.kir = -6;
+            offset.num = -2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.3 - Ш1.2.3 с полем длины открытого текста
+int v1_5_3(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (minute % 2 == 0) { // Четная минута - сдвиг вправо
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетная минута - сдвиг влево
+            offset.lat = -3;
+            offset.kir = -5;
+            offset.num = -3;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.4 - Ш1.2.4 с полем длины открытого текста
+int v1_5_4(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (minute % 2 == 0) { // Четная минута - - сдвиг вправо
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетная минута - - сдвиг влево
+            offset.lat = -4;
+            offset.kir = -6;
+            offset.num = -2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.5: Ш1.2.5 с полем длины открытого текста
+int v1_5_5(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (day_of_month % 2 == 0) { // Четный день месяца
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетный день месяца
+            offset.lat = 4;
+            offset.kir = 6;
+            offset.num = 2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.6: Ш1.2.6 с полем длины открытого текста
+int v1_5_6(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (day_of_month % 2 == 0) { // Четный день месяца
+            offset.lat = -3;
+            offset.kir = -5;
+            offset.num = -3;
+            textpole-=1;
+        } else { // Нечетный день месяца
+            offset.lat = -4;
+            offset.kir = -6;
+            offset.num = -2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.7: Ш1.2.7 с полем длины открытого текста
+int v1_5_7(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетный день месяца - сдвиг влево
+            offset.lat = -3;
+            offset.kir = -5;
+            offset.num = -3;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.8:Ш1.2.8 с полем длины открытого текста
+int v1_5_8(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетный день месяца - сдвиг влево
+            offset.lat = -4;
+            offset.kir = -6;
+            offset.num = -2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.9: Ш1.2.9 с полем длины открытого текста
+int v1_5_9(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (week_day % 2 == 0) { // Четный день недели
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетный день недели
+            offset.lat = 4;
+            offset.kir = 6;
+            offset.num = 2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.10: Ш1.2.10 с полем длины открытого текста
+int v1_5_10(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (week_day % 2 == 0) { // Четный день недели
+            offset.lat = -3;
+            offset.kir = -5;
+            offset.num = -3;
+            textpole-=1;
+        } else { // Нечетный день недели
+            offset.lat = -4;
+            offset.kir = -6;
+            offset.num = -2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.11: Ш1.2.11 с полем длины открытого текста
+int v1_5_11(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетный день недели - сдвиг влево
+            offset.lat = -3;
+            offset.kir = -5;
+            offset.num = -3;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.5.12: Ш1.2.12 с полем длины открытого текста
+int v1_5_12(ifstream* input_file, ofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    int textpole = symboul(ifstream* file);
+    while (textpole!=0){
+        if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+            offset.lat = 3;
+            offset.kir = 5;
+            offset.num = 3;
+            textpole-=1;
+        } else { // Нечетный день недели - сдвиг влево
+            offset.lat = -4;
+            offset.kir = -6;
+            offset.num = -2;
+            textpole-=1;
+        }
+    }
+    return caesar(input_file, output_file, offset);
+}

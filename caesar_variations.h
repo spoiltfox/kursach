@@ -38,6 +38,30 @@ int v1_4_1(wifstream* input_file, wofstream* output_file, offsets offset);
 
 int v1_4_2(wifstream* input_file, wofstream* output_file, offsets offset);
 
+int v1_5_1(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_2(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_3(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_4(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_5(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_6(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_7(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_8(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_9(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_10(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_11(ifstream* input_file, ofstream* output_file, offsets offset);
+
+int v1_5_12(ifstream* input_file, ofstream* output_file, offsets offset);
+
 
 
 
