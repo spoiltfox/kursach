@@ -1,35 +1,45 @@
+/**
+\file
+\brief Р¤Р°Р№Р» СЃРѕРґРµСЂР¶Р°С‰РёР№ РІР°СЂРёР°С†РёРё С€РёС„СЂР°С‚РѕСЂР°
+
+Р’ РґР°РЅРЅС‹Р№ С„Р°Р№Р» РІС‹РІРµРґРµРЅС‹ РІСЃРµ С„СѓРЅРєС†РёРё РІРёРґР° vX_X_X(ifstream*, wofstream*, offsets),
+РіРґРµ РҐ_РҐ_РҐ РЅРѕРјРµСЂ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРіРѕ С€РёС„СЂР° РёР· С„Р°Р№Р»Р° СЃ РўР—.
+РљР°Р¶РґР°СЏ С„СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµС‚ caesar(ifstream*, wofstream*, offsets), РіРґРµ С‡РµСЂРµР·
+СЃС‚СЂСѓРєС‚СѓСЂСѓ offsets РїРµСЂРµРґР°СЋС‚СЃСЏ РїР°СЂР°РјРµС‚СЂС‹ С€РёС„СЂР°С‚РѕСЂР°
+*/
+
 #include <iostream>
 #include <ctime>
 #include <string>
 #include <fstream>
 
-//ИМЯ ФУНКЦИИ ДОЛЖНО СОТВЕТСТВОВАТЬ КОНКРЕТНОЙ ВАРИАЦИИ ИЗ ФАЙЛА
-// Для шифра Ш1.1.1 - v1_1_1
+//РРњРЇ Р¤РЈРќРљР¦РР Р”РћР›Р–РќРћ РЎРћРўР’Р•РўРЎРўР’РћР’РђРўР¬ РљРћРќРљР Р•РўРќРћР™ Р’РђР РРђР¦РР РР— Р¤РђР™Р›Рђ
+// Р”Р»СЏ С€РёС„СЂР° РЁ1.1.1 - v1_1_1
 
-int v1_1_1(ifstream* input_file, ofstream* output_file, offsets offset) {
-    // Логика сдвига
+int v1_1_1(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Р›РѕРіРёРєР° СЃРґРІРёРіР°
     offset.lat = 3; offset.kir = 5; offset.num = 2;
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
 
-int v1_1_2(ifstream* input_file, ofstream* output_file, offsets offset) {
-    // Логика сдвига
+int v1_1_2(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Р›РѕРіРёРєР° СЃРґРІРёРіР°
     offset.lat = -3; offset.kir = -5; offset.num = -2;
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.1 - однонаправленный сдвиг вправо, зависящий от времени начала шифрования
-int v1_2_1(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.1 - РѕРґРЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹Р№ СЃРґРІРёРі РІРїСЂР°РІРѕ, Р·Р°РІРёСЃСЏС‰РёР№ РѕС‚ РІСЂРµРјРµРЅРё РЅР°С‡Р°Р»Р° С€РёС„СЂРѕРІР°РЅРёСЏ
+int v1_2_1(wifstream* input_file, wofstream* output_file, offsets offset) {
     int minute = get_minute();
-    if (minute % 2 == 0) { // Четная минута
+    if (minute % 2 == 0) { // Р§РµС‚РЅР°СЏ РјРёРЅСѓС‚Р°
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетная минута
+    } else { // РќРµС‡РµС‚РЅР°СЏ РјРёРЅСѓС‚Р°
         offset.lat = 4;
         offset.kir = 6;
         offset.num = 2;
@@ -37,8 +47,8 @@ int v1_2_1(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.2 - однонаправленный сдвиг влево, зависящий от времени начала шифрования
-int v1_2_2(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.2 - РѕРґРЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹Р№ СЃРґРІРёРі РІР»РµРІРѕ, Р·Р°РІРёСЃСЏС‰РёР№ РѕС‚ РІСЂРµРјРµРЅРё РЅР°С‡Р°Р»Р° С€РёС„СЂРѕРІР°РЅРёСЏ
+int v1_2_2(wifstream* input_file, wofstream* output_file, offsets offset) {
     int minute = get_minute();
     if (minute % 2 == 0) {
         offset.lat = -3;
@@ -52,14 +62,14 @@ int v1_2_2(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.3 - одинаковый разнонаправленный сдвиг, зависящий от времени начала шифрования
-int v1_2_3(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.3 - РѕРґРёРЅР°РєРѕРІС‹Р№ СЂР°Р·РЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹Р№ СЃРґРІРёРі, Р·Р°РІРёСЃСЏС‰РёР№ РѕС‚ РІСЂРµРјРµРЅРё РЅР°С‡Р°Р»Р° С€РёС„СЂРѕРІР°РЅРёСЏ
+int v1_2_3(wifstream* input_file, wofstream* output_file, offsets offset) {
     int minute = get_minute();
-    if (minute % 2 == 0) { // Четная минута - сдвиг вправо
+    if (minute % 2 == 0) { // Р§РµС‚РЅР°СЏ РјРёРЅСѓС‚Р° - СЃРґРІРёРі РІРїСЂР°РІРѕ
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетная минута - сдвиг влево
+    } else { // РќРµС‡РµС‚РЅР°СЏ РјРёРЅСѓС‚Р° - СЃРґРІРёРі РІР»РµРІРѕ
         offset.lat = -3;
         offset.kir = -5;
         offset.num = -3;
@@ -67,14 +77,14 @@ int v1_2_3(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.4 - разнонаправленные сдвиги, зависящие от времени начала шифрования
-int v1_2_4(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.4 - СЂР°Р·РЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹Рµ СЃРґРІРёРіРё, Р·Р°РІРёСЃСЏС‰РёРµ РѕС‚ РІСЂРµРјРµРЅРё РЅР°С‡Р°Р»Р° С€РёС„СЂРѕРІР°РЅРёСЏ
+int v1_2_4(wifstream* input_file, wofstream* output_file, offsets offset) {
     int minute = get_minute();
-    if (minute % 2 == 0) { // Четная минута - - сдвиг вправо
+    if (minute % 2 == 0) { // Р§РµС‚РЅР°СЏ РјРёРЅСѓС‚Р° - - СЃРґРІРёРі РІРїСЂР°РІРѕ
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетная минута - - сдвиг влево
+    } else { // РќРµС‡РµС‚РЅР°СЏ РјРёРЅСѓС‚Р° - - СЃРґРІРёРі РІР»РµРІРѕ
         offset.lat = -4;
         offset.kir = -6;
         offset.num = -2;
@@ -82,14 +92,14 @@ int v1_2_4(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.5: Ш1.2.1 с учётом четности дня месяца (вправо)
-int v1_2_5(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.5: РЁ1.2.1 СЃ СѓС‡С‘С‚РѕРј С‡РµС‚РЅРѕСЃС‚Рё РґРЅСЏ РјРµСЃСЏС†Р° (РІРїСЂР°РІРѕ)
+int v1_2_5(wifstream* input_file, wofstream* output_file, offsets offset) {
     int day_of_month = get_mouth_day();
-    if (day_of_month % 2 == 0) { // Четный день месяца
+    if (day_of_month % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р°
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетный день месяца
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р°
         offset.lat = 4;
         offset.kir = 6;
         offset.num = 2;
@@ -97,14 +107,14 @@ int v1_2_5(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.6: Ш1.2.2 с учётом четности дня месяца (влево)
-int v1_2_6(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.6: РЁ1.2.2 СЃ СѓС‡С‘С‚РѕРј С‡РµС‚РЅРѕСЃС‚Рё РґРЅСЏ РјРµСЃСЏС†Р° (РІР»РµРІРѕ)
+int v1_2_6(wifstream* input_file, wofstream* output_file, offsets offset) {
     int day_of_month = get_mouth_day();
-    if (day_of_month % 2 == 0) { // Четный день месяца
+    if (day_of_month % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р°
         offset.lat = -3;
         offset.kir = -5;
         offset.num = -3;
-    } else { // Нечетный день месяца
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р°
         offset.lat = -4;
         offset.kir = -6;
         offset.num = -2;
@@ -112,15 +122,15 @@ int v1_2_6(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.7: Ш1.2.3 с одинаковыми разнонаправленными сдвигами, зависящими от числа месяца
-int v1_2_7(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.7: РЁ1.2.3 СЃ РѕРґРёРЅР°РєРѕРІС‹РјРё СЂР°Р·РЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹РјРё СЃРґРІРёРіР°РјРё, Р·Р°РІРёСЃСЏС‰РёРјРё РѕС‚ С‡РёСЃР»Р° РјРµСЃСЏС†Р°
+int v1_2_7(wifstream* input_file, wofstream* output_file, offsets offset) {
     int day_of_month = get_mouth_day();
 
-    if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+    if (day_of_month % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р° - СЃРґРІРёРі РІРїСЂР°РІРѕ
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетный день месяца - сдвиг влево
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р° - СЃРґРІРёРі РІР»РµРІРѕ
         offset.lat = -3;
         offset.kir = -5;
         offset.num = -3;
@@ -129,14 +139,14 @@ int v1_2_7(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.8: Ш1.2.4 с разными разнонаправленными сдвигами, зависящими от числа месяца
-int v1_2_8(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.8: РЁ1.2.4 СЃ СЂР°Р·РЅС‹РјРё СЂР°Р·РЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹РјРё СЃРґРІРёРіР°РјРё, Р·Р°РІРёСЃСЏС‰РёРјРё РѕС‚ С‡РёСЃР»Р° РјРµСЃСЏС†Р°
+int v1_2_8(wifstream* input_file, wofstream* output_file, offsets offset) {
     int day_of_month = get_mouth_day();
-    if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+    if (day_of_month % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р° - СЃРґРІРёРі РІРїСЂР°РІРѕ
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетный день месяца - сдвиг влево
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р° - СЃРґРІРёРі РІР»РµРІРѕ
         offset.lat = -4;
         offset.kir = -6;
         offset.num = -2;
@@ -144,14 +154,14 @@ int v1_2_8(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.9: Ш1.2.1 с учётом четности дня недели (вправо)
-int v1_2_9(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.9: РЁ1.2.1 СЃ СѓС‡С‘С‚РѕРј С‡РµС‚РЅРѕСЃС‚Рё РґРЅСЏ РЅРµРґРµР»Рё (РІРїСЂР°РІРѕ)
+int v1_2_9(wifstream* input_file, wofstream* output_file, offsets offset) {
     int week_day = get_week_day();
-    if (week_day % 2 == 0) { // Четный день недели
+    if (week_day % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетный день недели
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё
         offset.lat = 4;
         offset.kir = 6;
         offset.num = 2;
@@ -159,14 +169,14 @@ int v1_2_9(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.10: Ш1.2.2 с учётом четности дня недели (влево)
-int v1_2_10(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.10: РЁ1.2.2 СЃ СѓС‡С‘С‚РѕРј С‡РµС‚РЅРѕСЃС‚Рё РґРЅСЏ РЅРµРґРµР»Рё (РІР»РµРІРѕ)
+int v1_2_10(wifstream* input_file, wofstream* output_file, offsets offset) {
     int week_day = get_week_day();
-    if (week_day % 2 == 0) { // Четный день недели
+    if (week_day % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё
         offset.lat = -3;
         offset.kir = -5;
         offset.num = -3;
-    } else { // Нечетный день недели
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё
         offset.lat = -4;
         offset.kir = -6;
         offset.num = -2;
@@ -174,14 +184,14 @@ int v1_2_10(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.11: Ш1.2.3 с одинаковыми разнонаправленными сдвигами, зависящими от дня недели
-int v1_2_11(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.11: РЁ1.2.3 СЃ РѕРґРёРЅР°РєРѕРІС‹РјРё СЂР°Р·РЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹РјРё СЃРґРІРёРіР°РјРё, Р·Р°РІРёСЃСЏС‰РёРјРё РѕС‚ РґРЅСЏ РЅРµРґРµР»Рё
+int v1_2_11(wifstream* input_file, wofstream* output_file, offsets offset) {
     int week_day = get_week_day();
-    if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+    if (week_day % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё - СЃРґРІРёРі РІРїСЂР°РІРѕ
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетный день недели - сдвиг влево
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё - СЃРґРІРёРі РІР»РµРІРѕ
         offset.lat = -3;
         offset.kir = -5;
         offset.num = -3;
@@ -189,14 +199,14 @@ int v1_2_11(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 
-// Ш1.2.12: Ш1.2.4 с разными разнонаправленными сдвигами, зависящими от дня недели
-int v1_2_12(ifstream* input_file, ofstream* output_file, offsets offset) {
+// РЁ1.2.12: РЁ1.2.4 СЃ СЂР°Р·РЅС‹РјРё СЂР°Р·РЅРѕРЅР°РїСЂР°РІР»РµРЅРЅС‹РјРё СЃРґРІРёРіР°РјРё, Р·Р°РІРёСЃСЏС‰РёРјРё РѕС‚ РґРЅСЏ РЅРµРґРµР»Рё
+int v1_2_12(wifstream* input_file, wofstream* output_file, offsets offset) {
     int week_day = get_week_day();
-    if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+    if (week_day % 2 == 0) { // Р§РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё - СЃРґРІРёРі РІРїСЂР°РІРѕ
         offset.lat = 3;
         offset.kir = 5;
         offset.num = 3;
-    } else { // Нечетный день недели - сдвиг влево
+    } else { // РќРµС‡РµС‚РЅС‹Р№ РґРµРЅСЊ РЅРµРґРµР»Рё - СЃРґРІРёРі РІР»РµРІРѕ
         offset.lat = -4;
         offset.kir = -6;
         offset.num = -2;
@@ -204,61 +214,63 @@ int v1_2_12(ifstream* input_file, ofstream* output_file, offsets offset) {
     return caesar(input_file, output_file, offset);
 }
 /*
-int time_based_decorator(ifstream* input_file, ofstream* output_file, offsets offset) {
-    int week_day = get_week_day();  // Получаем текущий день недели
-    int minute = get_minute();      // Получаем текущую минуту
-    int day_of_month = get_mouth_day();  // Получаем текущий день месяца
+int time_based_decorator(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();  // РџРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰РёР№ РґРµРЅСЊ РЅРµРґРµР»Рё
+    int minute = get_minute();      // РџРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰СѓСЋ РјРёРЅСѓС‚Сѓ
+    int day_of_month = get_mouth_day();  // РџРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰РёР№ РґРµРЅСЊ РјРµСЃСЏС†Р°
 
     if (minute%2 == 0)
     {
         offset.lat += 3;
         offset.kir += 5;
         offset.num += 3;
-        cout << "День недели: " << week_day << ", Сдвиг по латинице вправо на " << 3 << endl;
-        cout << "Минуты: " << minute << ", Сдвиг для кириллицы вправо на " << 5 << endl;
-        cout << "День месяца: " << day_of_month << ", Сдвиг для чисел вправо на " << 3 << endl;
+        cout << "Р”РµРЅСЊ РЅРµРґРµР»Рё: " << week_day << ", РЎРґРІРёРі РїРѕ Р»Р°С‚РёРЅРёС†Рµ РІРїСЂР°РІРѕ РЅР° " << 3 << endl;
+        cout << "РњРёРЅСѓС‚С‹: " << minute << ", РЎРґРІРёРі РґР»СЏ РєРёСЂРёР»Р»РёС†С‹ РІРїСЂР°РІРѕ РЅР° " << 5 << endl;
+        cout << "Р”РµРЅСЊ РјРµСЃСЏС†Р°: " << day_of_month << ", РЎРґРІРёРі РґР»СЏ С‡РёСЃРµР» РІРїСЂР°РІРѕ РЅР° " << 3 << endl;
     }
     else
     {
         offset.lat += 4;
         offset.kir += 6;
         offset.num += 2;
-        cout << "День недели: " << week_day << ", Сдвиг по латинице вправо на " << 4 << endl;
-        cout << "Минуты: " << minute << ", Сдвиг для кириллицы вправо на " << 6 << endl;
-        cout << "День месяца: " << day_of_month << ", Сдвиг для чисел вправо на " << 2 << endl;
+        cout << "Р”РµРЅСЊ РЅРµРґРµР»Рё: " << week_day << ", РЎРґРІРёРі РїРѕ Р»Р°С‚РёРЅРёС†Рµ РІРїСЂР°РІРѕ РЅР° " << 4 << endl;
+        cout << "РњРёРЅСѓС‚С‹: " << minute << ", РЎРґРІРёРі РґР»СЏ РєРёСЂРёР»Р»РёС†С‹ РІРїСЂР°РІРѕ РЅР° " << 6 << endl;
+        cout << "Р”РµРЅСЊ РјРµСЃСЏС†Р°: " << day_of_month << ", РЎРґРІРёРі РґР»СЏ С‡РёСЃРµР» РІРїСЂР°РІРѕ РЅР° " << 2 << endl;
     }
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
 */
 //
-int v1_3_1(ifstream* input_file, ofstream* output_file, offsets offset) {
-    // Логика сдвига
+
+int v1_3_1(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Р›РѕРіРёРєР° СЃРґРІРёРіР°
     offset.lat = 3; offset.kir = 5; offset.num = 2; offset.symbol_count_needed = true;
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
-int v1_3_2(ifstream* input_file, ofstream* output_file, offsets offset) {
-    // Логика сдвига
+int v1_3_2(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Р›РѕРіРёРєР° СЃРґРІРёРіР°
     offset.lat = -3; offset.kir = -5; offset.num = -2; offset.symbol_count_needed = true;
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
 
-int v1_4_1(ifstream* input_file, ofstream* output_file, offsets offset) {
-    // Логика сдвига
+int v1_4_1(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Р›РѕРіРёРєР° СЃРґРІРёРіР°
     offset.lat = 3; offset.kir = 5; offset.num = 2; offset.checksum_needed = true;
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
-int v1_4_2(ifstream* input_file, ofstream* output_file, offsets offset) {
-    // Логика сдвига
+int v1_4_2(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Р›РѕРіРёРєР° СЃРґРІРёРіР°
     offset.lat = -3; offset.kir = -5; offset.num = -2; offset.checksum_needed = true;
 
-    // Вызов основной функции (шифр Цезаря)
+    // Р’С‹Р·РѕРІ РѕСЃРЅРѕРІРЅРѕР№ С„СѓРЅРєС†РёРё (С€РёС„СЂ Р¦РµР·Р°СЂСЏ)
     return caesar(input_file, output_file, offset);
 }
+

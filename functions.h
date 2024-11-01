@@ -1,10 +1,10 @@
 #pragma once
 #include "functions.cpp"
+//заголовочный файл
 
+int caesar(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int caesar(ifstream* input_file, ofstream* output_file, offsets offset);
-
-char symboul (ifstream* file);
+char symboul (wifstream* file);
 
 int get_week_day();
 

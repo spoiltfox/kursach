@@ -1,3 +1,9 @@
+/**
+\file
+\brief Основной файл проекта
+
+В данном файле содержится логика ввода-вывода программы
+*/
 #include "functions.h"
 #include "caesar_variations.h"
 
@@ -55,8 +61,8 @@ int main(int argc, char* argv[])
 {
 
     setlocale(LC_ALL, "Russian");
-    ifstream input;
-    ofstream output;
+    wifstream input;
+    wofstream output;
 
     string exe_name = argv[0];
     int variation;
@@ -65,21 +71,20 @@ int main(int argc, char* argv[])
     if (is_debug_run) {
         // Debug
         cin >> variation;
-        input.open("ioFiles\\test.txt", ios::binary);
+        input.open("ioFiles\\testANSI.txt");
         output.open("output.txt", ios::binary);
         if(input.is_open()){cout << "input file open ok\n";}
         else{return 2;}
         if(output.is_open()){cout << "output file open ok\n";}
         else{return 2;}
         offsets test;
-        test.kir = 1; test.lat = 1; test.num = 1;
 
-        // ����� ����������
-         // �������� ������ ���������
+        // Выбор декоратора
+         // Выбираем нужный декоратор
         switch (variation)
         {
         case 1:
-            v1_1_1(&input, &output, test);
+            v1_1_1(&input, &output, test); // 3 5 2
             break;
         case 2:
             v1_1_2(&input, &output, test);
@@ -133,7 +138,7 @@ int main(int argc, char* argv[])
             v1_4_2(&input, &output, test);
             break;
         default:
-            cout << "���������" << endl;
+            cout << "Декоратор" << endl;
             break;
         }
         input.close();
@@ -161,7 +166,7 @@ int main(int argc, char* argv[])
 
     offsets test;
 
-    // ����� ����������
+    // Выбор декоратора
     switch (resolveOption(decorator_choice))
         {
         case decor_choice::Option::Option1_1_1:
@@ -219,7 +224,7 @@ int main(int argc, char* argv[])
             v1_4_2(&input, &output, test);
             break;
         default:
-            cout << "To be continued..." << endl;
+            wcout << "To be continued..." << endl;
             break;
         }
 

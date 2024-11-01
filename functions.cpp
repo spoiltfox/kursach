@@ -1,29 +1,37 @@
+/**
+\file
+\brief Р¤Р°Р№Р» СЃРѕРґРµСЂР¶Р°С‰РёР№ РѕСЃРЅРѕРІРЅС‹Рµ С„СѓРЅРєС†РёРё РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂР°РјРјС‹
+
+*/
 #include <iostream>
 #include <ctime>
 #include <string>
 #include <fstream>
 
 using namespace std;
-struct offsets { //в случае неообходимости могут быть добавлены дополнительные переменные в структуру
-    int lat = 0;
-    int kir = 0;
-    int num = 0;
-    bool symbol_count_needed = false;
-    bool checksum_needed = false;
-    bool checksum_time_dependent = false;
+/**
+\brief РЎС‚СЂСѓРєС‚СѓСЂР° РґР»СЏ РїРµСЂРµРґР°С‡Рё РїР°СЂР°РјРµС‚СЂРѕРІ РІ caesar()
+*/
+struct offsets { //РІ СЃР»СѓС‡Р°Рµ РЅРµРѕРѕР±С…РѕРґРёРјРѕСЃС‚Рё РјРѕРіСѓС‚ Р±С‹С‚СЊ РґРѕР±Р°РІР»РµРЅС‹ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ
+    int lat = 0; ///< РЎРґРІРёРі РґР»СЏ Р»Р°С‚РёРЅРёС†С‹
+    int kir = 0; ///< РЎРґРІРёРі РґР»СЏ РєРёСЂРёР»Р»РёС†С‹
+    int num = 0; ///< РЎРґРІРёРі РґР»СЏ С‡РёСЃРµР»
+    bool symbol_count_needed = false; ///< РќРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° СЃРёРјРІРѕР»РѕРІ
+    bool checksum_needed = false; ///< РќРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕРЅС‚СЂРѕР»СЊРЅРѕР№ СЃСѓРјРјС‹
+    bool checksum_time_dependent = false; ///< Р—Р°РІРёСЃРёС‚ Р»Рё РєРѕРЅС‚СЂРѕР»СЊРЅР°СЏ СЃСѓРјРјР° РѕС‚ РІСЂРµРјРµРЅРё
 };
 
 
 
 
-char symboul (ifstream* file)
+char symboul (wifstream* file)
 {
-    char ch;
+    wchar_t ch;
     char charcount=0;
-    //читаем посимвольно весь файл
+    //С‡РёС‚Р°РµРј РїРѕСЃРёРјРІРѕР»СЊРЅРѕ РІРµСЃСЊ С„Р°Р№Р»
     while(file->get(ch))
     {
-        if (ch!='\r') //т.к. Enter в Windows считается за два символа
+        if (ch!='\r') //С‚.Рє. Enter РІ Windows СЃС‡РёС‚Р°РµС‚СЃСЏ Р·Р° РґРІР° СЃРёРјРІРѕР»Р°
         {
             ++charcount;
         }
@@ -34,23 +42,23 @@ char symboul (ifstream* file)
     return charcount;
 }
 
-int get_week_day() // Функция для получения текущего дня недели
+int get_week_day() // Р¤СѓРЅРєС†РёСЏ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ РґРЅСЏ РЅРµРґРµР»Рё
 {
-    time_t now = time(nullptr); // Получаем текущее время
-    tm* ltm = localtime(&now); // Преобразуем время в tm структуру
+    time_t now = time(nullptr); // РџРѕР»СѓС‡Р°РµРј С‚РµРєСѓС‰РµРµ РІСЂРµРјСЏ
+    tm* ltm = localtime(&now); // РџСЂРµРѕР±СЂР°Р·СѓРµРј РІСЂРµРјСЏ РІ tm СЃС‚СЂСѓРєС‚СѓСЂСѓ
 
-    int week_day = ltm->tm_wday; // Номер дня недели (0-6, где 0 - Sunday, 6 - Saturday)
-    //const char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", // Перевод номера дня недели в текстовое представление
+    int week_day = ltm->tm_wday; // РќРѕРјРµСЂ РґРЅСЏ РЅРµРґРµР»Рё (0-6, РіРґРµ 0 - Sunday, 6 - Saturday)
+    //const char* days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", // РџРµСЂРµРІРѕРґ РЅРѕРјРµСЂР° РґРЅСЏ РЅРµРґРµР»Рё РІ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
     //                       "Thursday", "Friday", "Saturday"};
     return week_day;
 }
 
-int get_mouth_day() // То же самое для дня месяца
+int get_mouth_day() // РўРѕ Р¶Рµ СЃР°РјРѕРµ РґР»СЏ РґРЅСЏ РјРµСЃСЏС†Р°
 {
     time_t now = time(nullptr);
     tm* ltm = localtime(&now);
 
-    int day_of_month = ltm->tm_mday; // Номер дня месяца (1-31)
+    int day_of_month = ltm->tm_mday; // РќРѕРјРµСЂ РґРЅСЏ РјРµСЃСЏС†Р° (1-31)
 
     return day_of_month;
 }
@@ -64,99 +72,121 @@ int get_minute() {
     return minute;
 }
 
-char calcChecksum(ifstream* inputFile, bool timeDependent) {
+char calcChecksum(wifstream* inputFile, bool timeDependent) {
     if (!inputFile->is_open() || !inputFile->good()) {
-        return 1; // Ошибка открытия файла
+        return 1; // РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°
     }
 
-    char ch;
+    wchar_t ch;
     unsigned long long checksum = 0;
     unsigned long long sdvig = 0;
     while (inputFile->get(ch)) {
 
-        // Определяем сдвиг в зависимости от символа
-        if (isalpha(ch)) { // Латинские буквы
-            sdvig = (ch >= 'a' && ch <= 'z') ? 3 : 3; // Латинские буквы - сдвиг 3
-        } else if ((ch >= 0xC0 && ch <= 0xFF) || (ch >= 0xE0 && ch <= 0xEF)) { // Кириллица в UTF-8
-            sdvig = 5; // Кириллица - сдвиг 5
-        } else if (isdigit(ch)) { // Цифры
-            sdvig = 2; // Цифры - сдвиг 2
+        // РћРїСЂРµРґРµР»СЏРµРј СЃРґРІРёРі РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃРёРјРІРѕР»Р°
+        if (isalpha(ch)) { // Р›Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹
+            sdvig = (ch >= 'a' && ch <= 'z') ? 3 : 3; // Р›Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹ - СЃРґРІРёРі 3
+        } else if ((ch >= 0xC0 && ch <= 0xFF) || (ch >= 0xE0 && ch <= 0xEF)) { // РљРёСЂРёР»Р»РёС†Р° РІ UTF-8
+            sdvig = 5; // РљРёСЂРёР»Р»РёС†Р° - СЃРґРІРёРі 5
+        } else if (isdigit(ch)) { // Р¦РёС„СЂС‹
+            sdvig = 2; // Р¦РёС„СЂС‹ - СЃРґРІРёРі 2
         } else {
-            sdvig = 0; // Прочие символы
+            sdvig = 0; // РџСЂРѕС‡РёРµ СЃРёРјРІРѕР»С‹
         }
 
-        // Применяем сдвиг и обновляем контрольную сумму
+        // РџСЂРёРјРµРЅСЏРµРј СЃРґРІРёРі Рё РѕР±РЅРѕРІР»СЏРµРј РєРѕРЅС‚СЂРѕР»СЊРЅСѓСЋ СЃСѓРјРјСѓ
         checksum += (ch + sdvig);
     }
 
     if (timeDependent) {
-        // Можете использовать текущее время для дополнения контрольной суммы
-        checksum += get_minute() % 2; //пример
+        // РњРѕР¶РµС‚Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РµРєСѓС‰РµРµ РІСЂРµРјСЏ РґР»СЏ РґРѕРїРѕР»РЅРµРЅРёСЏ РєРѕРЅС‚СЂРѕР»СЊРЅРѕР№ СЃСѓРјРјС‹
+        checksum += get_minute() % 2; //РїСЂРёРјРµСЂ
     }
 
     inputFile->clear();
     inputFile->seekg(0, ios_base::beg);
     return checksum;
 }
-int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        //внешний вид "декораторов" для "цезаря" должен быть вида:  int func_name(ifstream* a, ofstream* b, offsets c){
-                                                                                                                                                //что-то умное;
-                                                                                                                                                //return caesar(a, b, d);}
 
-    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string abc = "abcdefghijklmnopqrstuvwxyz";
-    string abc_rus = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    string ABC_RUS = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-    string num = "1234567890";
-    string symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
+/**
+\brief Р¤СѓРЅРєС†РёСЏ СЂРµР°Р»РёР·СѓСЋС‰Р°СЏ С€РёС„СЂ С†РµР·Р°СЂСЏ.
+
+Р¤СѓРЅРєС†РёСЏ РїСЂРёРЅРёРјР°РµС‚ РЅР° РІС…РѕРґ wifstream* wofstream*, stuct offsets
+Р’ РєР°С‡РµСЃС‚РІРµ СЃРјРµС‰РµРЅРёР№ РїСЂРёРЅРёРјР°СЋС‚СЃСЏ offsets::lat, offsets::kir Рё offsets::num
+РґР»СЏ СЃРјРµС‰РµРЅРёР№ РїРѕ Р»Р°С‚РёРЅРёС†Рµ, РєРёСЂРёР»Р»РёС†Рµ Рё С‡РёСЃР»Р°Рј СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ.
+РџСЂРё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёСЏС… СЃРґРІРёРі РІРїСЂР°РІРѕ, РїСЂРё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… - РІР»РµРІРѕ.
+\param [offset::symbol_count_needed] == true РїРѕРІР»РµС‡РµС‚ Р·Р°РїРёСЃСЊ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
+РѕРґРЅРѕРіРѕ Р±Р°Р№С‚Р° - РєРѕР»РёС‡РµСЃС‚РІР° СЃРёРјРІРѕР»РѕРІ РІ РёСЃС…РѕРґРЅРѕРј С„Р°Р№Р»Рµ.
+\param [offset::checksum_needed] == true РїРѕРІР»РµС‡РµС‚ Р·Р°РїРёСЃСЊ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
+РѕРґРЅРѕРіРѕ Р±Р°Р№С‚Р° - РєРѕРЅС‚СЂРѕР»СЊРЅРѕР№ СЃСѓРјРјС‹.
+\param [offset::checksum_time_dependent] == true РїРѕРІР»РµС‡РµС‚ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ
+РєРѕРЅС‚СЂРѕР»СЊРЅРѕР№ СЃСѓРјРјС‹ РѕС‚ РІСЂРµРјРµРЅРё.
+*/
+int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
+
+    wchar_t* ABC = L"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    wchar_t* abc = L"abcdefghijklmnopqrstuvwxyz";
+    wchar_t* abc_rus = L"Р°Р±РІРіРґРµС‘Р¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ";
+    wchar_t* ABC_RUS = L"РђР‘Р’Р“Р”Р•РЃР–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ";
+    wchar_t* num = L"1234567890";
+    wchar_t* symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
     char x, y;
 
     if(offset.symbol_count_needed)
     {
-        x = symboul(input_file);
+        //x = symboul(input_file);
     }
     if(offset.checksum_needed)
     {
-        y = calcChecksum(input_file, offset.checksum_time_dependent);
+        //y = calcChecksum(input_file, offset.checksum_time_dependent);
     }
 
     bool symbol_found = false;
-    char current_byte = 0;
+    wchar_t current_byte = 0;
+    wchar_t additional_utf_byte = 0;
     int crypted_symbol_pos = 0;
     int crypted_symbol_abc = 0;
     while (input_file[0].get(current_byte)){
         symbol_found = false;
+        /*
+        if(current_byte == 0xd0 || current_byte == 0xd1){ //РєРёСЂРёР»РёС†Р° РІ СЋС‚С„8
+            input_file->get(additional_utf_byte); current_byte = additional_utf_byte + current_byte*256;
+            current_byte -= 4;
+            wcout << current_byte;
+            continue;
+        }
+        */
         for(int i = 0; i < 5; i++){
-            for(int j = 0; j < symbols[i].length(); j++)
+            for(int j = 0; j < wcslen(symbols[i]); j++)
             {
                 if(current_byte == symbols[i][j])
                 {
                     symbol_found = true;
                     crypted_symbol_abc = i;
                     if(i < 2){
-                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()*16) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.lat + wcslen(symbols[i])*16) % wcslen(symbols[i]);
                     }
                     else if(i < 4){
-                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()*16) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.kir + wcslen(symbols[i])*16) % wcslen(symbols[i]);
                     }
                     else{
-                        crypted_symbol_pos = (j + offset.num + symbols[i].length()*16) % symbols[i].length();
+                        crypted_symbol_pos = (j + offset.num + wcslen(symbols[i])*16) % wcslen(symbols[i]);
                     }
                     break;
                 }
 
             }
         }
-        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
-        else {cout << current_byte; output_file[0].put(current_byte);}
+        if(symbol_found){wcout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
+        else {wcout << current_byte; output_file[0].put(current_byte);}
     }
     if(offset.symbol_count_needed)
     {
-        cout << x;
+        wcout << x;
         output_file[0].put(x);
     }
     if(offset.checksum_needed)
     {
-        cout << y;
+        wcout << y;
         output_file[0].put(y);
     }
     input_file->clear();
@@ -166,6 +196,6 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){        
 
 }
 
-void print_help(){          //вывод помощи
+void print_help(){          //РІС‹РІРѕРґ РїРѕРјРѕС‰Рё
     cout << "Usage:\n\t kursach.exe [input_file] [output_file] [cipher_number]\n";
 }
