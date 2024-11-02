@@ -80,11 +80,12 @@ char calcChecksum(wifstream* inputFile, bool timeDependent) {
     wchar_t ch;
     unsigned long long checksum = 0;
     unsigned long long sdvig = 0;
-    while (inputFile->get(ch)) {
+    unsigned long long index = 0; // Индекс для определения позиции символа
 
+    while (inputFile->get(ch)) {
         // Определяем сдвиг в зависимости от символа
         if (isalpha(ch)) { // Латинские буквы
-            sdvig = (ch >= 'a' && ch <= 'z') ? 3 : 3; // Латинские буквы - сдвиг 3
+            sdvig = (ch >= L'a' && ch <= L'z') ? 3 : 3; // Латинские буквы - сдвиг 3
         } else if ((ch >= 0xC0 && ch <= 0xFF) || (ch >= 0xE0 && ch <= 0xEF)) { // Кириллица в UTF-8
             sdvig = 5; // Кириллица - сдвиг 5
         } else if (isdigit(ch)) { // Цифры
@@ -93,17 +94,19 @@ char calcChecksum(wifstream* inputFile, bool timeDependent) {
             sdvig = 0; // Прочие символы
         }
 
-        // Применяем сдвиг и обновляем контрольную сумму
-        checksum += (ch + sdvig);
+        // Применяем сдвиг и обновляем контрольную сумму, учитывая индекс символа
+        checksum += (ch + sdvig) * (index + 1); // Увеличиваем значение в зависимости от позиции
+        index++; // Увеличиваем индекс
     }
 
     if (timeDependent) {
-        // Можете использовать текущее время для дополнения контрольной суммы
-        checksum += get_minute() % 2; //пример
+        // Добавляем текущее время к контрольной сумме
+        checksum += get_minute() % 2; // Пример
     }
 
     inputFile->clear();
     inputFile->seekg(0, ios_base::beg);
+
     return checksum;
 }
 
