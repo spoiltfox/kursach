@@ -71,7 +71,16 @@ int get_minute() {
 
     return minute;
 }
+/*!
+\brief Функция вычисляющая контрольную сумму текста.
 
+Функция принимает на вход wifstream* input_file , bool timeDependent
+
+\param checksum содержит в себе контрольную сумму текста
+\param sdvig содержит в себе значение сдвига для латиницы, кириллицы и цифр
+\param index индекс для определения позиции файла
+
+*/
 char calcChecksum(wifstream* inputFile, bool timeDependent) {
     if (!inputFile->is_open() || !inputFile->good()) {
         return 1; // Ошибка открытия файла
