@@ -50,11 +50,11 @@ int v1_2_1(wifstream* input_file, wofstream* output_file, offsets offset) {
 // Ш1.2.2 - однонаправленный сдвиг влево, зависящий от времени начала шифрования
 int v1_2_2(wifstream* input_file, wofstream* output_file, offsets offset) {
     int minute = get_minute();
-    if (minute % 2 == 0) {
+    if (minute % 2 == 0) { // Четная минута
         offset.lat = -3;
         offset.kir = -5;
         offset.num = -3;
-    } else {
+    } else { // Нечетная минута
         offset.lat = -4;
         offset.kir = -6;
         offset.num = -2;
@@ -513,5 +513,413 @@ int v1_5_12(wifstream* input_file, wofstream* output_file, offsets offset) {
             textpole-=1;
         }
     }
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.1. Ш1.2.1 с контрольной суммой, не зависящей от времени
+int v1_6_1_1(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетная минута
+        offset.lat = 4;
+        offset.kir = 6;
+        offset.num = 2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.2. Ш1.2.2 с контрольной суммой, не зависящей от времени
+int v1_6_1_2(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    } else { // Нечетная минута
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.3. Ш1.2.3 с контрольной суммой, не зависящей от времени
+int v1_6_1_3(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетная минута - сдвиг влево
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.4. Ш1.2.4 с контрольной суммой, не зависящей от времени
+int v1_6_1_4(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута - - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетная минута - - сдвиг влево
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.5. Ш1.2.5 с контрольной суммой, не зависящей от времени
+int v1_6_1_5(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день месяца
+        offset.lat = 4;
+        offset.kir = 6;
+        offset.num = 2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.6. Ш1.2.6 с контрольной суммой, не зависящей от времени
+int v1_6_1_6(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    } else { // Нечетный день месяца
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.7. Ш1.2.7 с контрольной суммой, не зависящей от времени
+int v1_6_1_7(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день месяца - сдвиг влево
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.8. Ш1.2.8 с контрольной суммой, не зависящей от времени
+int v1_6_1_8(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день месяца - сдвиг влево
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.9. Ш1.2.9 с контрольной суммой, не зависящей от времени
+int v1_6_1_9(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день недели
+        offset.lat = 4;
+        offset.kir = 6;
+        offset.num = 2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.10. Ш1.2.10 с контрольной суммой, не зависящей от времени
+int v1_6_1_10(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    } else { // Нечетный день недели
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.11. Ш1.2.11 с контрольной суммой, не зависящей от времени
+int v1_6_1_11(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день недели - сдвиг влево
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.1.12. Ш1.2.12 с контрольной суммой, не зависящей от времени
+int v1_6_1_12(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день недели - сдвиг влево
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = false;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.1. Ш1.2.1 с контрольной суммой, зависящей от времени
+int v1_6_2_1(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетная минута
+        offset.lat = 4;
+        offset.kir = 6;
+        offset.num = 2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.2. Ш1.2.2 с контрольной суммой, зависящей от времени
+int v1_6_2_2(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) {
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    } else {
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.3. Ш1.2.3 с контрольной суммой, зависящей от времени
+int v1_6_2_3(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетная минута - сдвиг влево
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.4. Ш1.2.4 с контрольной суммой, зависящей от времени
+int v1_6_2_4(wifstream* input_file, wofstream* output_file, offsets offset) {
+   int minute = get_minute();
+    if (minute % 2 == 0) { // Четная минута - - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетная минута - - сдвиг влево
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.5. Ш1.2.5 с контрольной суммой, зависящей от времени
+int v1_6_2_5(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день месяца
+        offset.lat = 4;
+        offset.kir = 6;
+        offset.num = 2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.6. Ш1.2.6 с контрольной суммой, зависящей от времени
+int v1_6_2_6(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    } else { // Нечетный день месяца
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.7. Ш1.2.7 с контрольной суммой, зависящей от времени
+int v1_6_2_7(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день месяца - сдвиг влево
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.8. Ш1.2.8 с контрольной суммой, зависящей от времени
+int v1_6_2_8(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int day_of_month = get_mouth_day();
+    if (day_of_month % 2 == 0) { // Четный день месяца - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день месяца - сдвиг влево
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.9. Ш1.2.9 с контрольной суммой, зависящей от времени
+int v1_6_2_9(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день недели
+        offset.lat = 4;
+        offset.kir = 6;
+        offset.num = 2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.10. Ш1.2.10 с контрольной суммой, зависящей от времени
+int v1_6_2_10(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    } else { // Нечетный день недели
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.11. Ш1.2.11 с контрольной суммой, зависящей от времени
+int v1_6_2_11(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день недели - сдвиг влево
+        offset.lat = -3;
+        offset.kir = -5;
+        offset.num = -3;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
+    return caesar(input_file, output_file, offset);
+}
+
+// Ш1.6.2.12. Ш1.2.12 с контрольной суммой, зависящей от времени
+int v1_6_2_12(wifstream* input_file, wofstream* output_file, offsets offset) {
+    int week_day = get_week_day();
+    if (week_day % 2 == 0) { // Четный день недели - сдвиг вправо
+        offset.lat = 3;
+        offset.kir = 5;
+        offset.num = 3;
+    } else { // Нечетный день недели - сдвиг влево
+        offset.lat = -4;
+        offset.kir = -6;
+        offset.num = -2;
+    }
+    offset.checksum_needed = true;
+    offset.checksum_time_dependent = true;
     return caesar(input_file, output_file, offset);
 }

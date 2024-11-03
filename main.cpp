@@ -77,6 +77,30 @@ decor_choice::Option resolveOption(string input){
     if (input == "1.5.10") return decor_choice::Option::Option1_5_10;
     if (input == "1.5.11") return decor_choice::Option::Option1_5_11;
     if (input == "1.5.12") return decor_choice::Option::Option1_5_12;
+    if (input == "1.6.1.1") return decor_choice::Option::Option1_6_1_1;
+    if (input == "1.6.1.2") return decor_choice::Option::Option1_6_1_2;
+    if (input == "1.6.1.3") return decor_choice::Option::Option1_6_1_3;
+    if (input == "1.6.1.4") return decor_choice::Option::Option1_6_1_4;
+    if (input == "1.6.1.5") return decor_choice::Option::Option1_6_1_5;
+    if (input == "1.6.1.6") return decor_choice::Option::Option1_6_1_6;
+    if (input == "1.6.1.7") return decor_choice::Option::Option1_6_1_7;
+    if (input == "1.6.1.8") return decor_choice::Option::Option1_6_1_8;
+    if (input == "1.6.1.9") return decor_choice::Option::Option1_6_1_9;
+    if (input == "1.6.1.10") return decor_choice::Option::Option1_6_1_10;
+    if (input == "1.6.1.11") return decor_choice::Option::Option1_6_1_11;
+    if (input == "1.6.1.12") return decor_choice::Option::Option1_6_1_12;
+    if (input == "1.6.2.1") return decor_choice::Option::Option1_6_2_1;
+    if (input == "1.6.2.2") return decor_choice::Option::Option1_6_2_2;
+    if (input == "1.6.2.3") return decor_choice::Option::Option1_6_2_3;
+    if (input == "1.6.2.4") return decor_choice::Option::Option1_6_2_4;
+    if (input == "1.6.2.5") return decor_choice::Option::Option1_6_2_5;
+    if (input == "1.6.2.6") return decor_choice::Option::Option1_6_2_6;
+    if (input == "1.6.2.7") return decor_choice::Option::Option1_6_2_7;
+    if (input == "1.6.2.8") return decor_choice::Option::Option1_6_2_8;
+    if (input == "1.6.2.9") return decor_choice::Option::Option1_6_2_9;
+    if (input == "1.6.2.10") return decor_choice::Option::Option1_6_2_10;
+    if (input == "1.6.2.11") return decor_choice::Option::Option1_6_2_11;
+    if (input == "1.6.2.12") return decor_choice::Option::Option1_6_2_12;
 
     return decor_choice::Option::Option_invalid;
 }
@@ -196,6 +220,78 @@ int main(int argc, char* argv[])
             break;
         case 30:
             v1_5_12(&input, &output, test);
+            break;
+        case 31:
+            v1_6_1_1(&input, &output, test);
+            break;
+        case 32:
+            v1_6_1_2(&input, &output, test);
+            break;
+        case 33:
+            v1_6_1_3(&input, &output, test);
+            break;
+        case 34:
+            v1_6_1_4(&input, &output, test);
+            break;
+        case 35:
+            v1_6_1_5(&input, &output, test);
+            break;
+        case 36:
+            v1_6_1_6(&input, &output, test);
+            break;
+        case 37:
+            v1_6_1_7(&input, &output, test);
+            break;
+        case 38:
+            v1_6_1_8(&input, &output, test);
+            break;
+        case 39:
+            v1_6_1_9(&input, &output, test);
+            break;
+        case 40:
+            v1_6_1_10(&input, &output, test);
+            break;
+        case 41:
+            v1_6_1_11(&input, &output, test);
+            break;
+        case 42:
+            v1_6_1_12(&input, &output, test);
+            break;
+        case 43:
+            v1_6_2_1(&input, &output, test);
+            break;
+        case 44:
+            v1_6_1_2(&input, &output, test);
+            break;
+        case 45:
+            v1_6_2_3(&input, &output, test);
+            break;
+        case 46:
+            v1_6_2_4(&input, &output, test);
+            break;
+        case 47:
+            v1_6_2_5(&input, &output, test);
+            break;
+        case 48:
+            v1_6_2_6(&input, &output, test);
+            break;
+        case 49:
+            v1_6_2_7(&input, &output, test);
+            break;
+        case 50:
+            v1_6_2_8(&input, &output, test);
+            break;
+        case 51:
+            v1_6_2_9(&input, &output, test);
+            break;
+        case 52:
+            v1_6_2_10(&input, &output, test);
+            break;
+        case 53:
+            v1_6_2_11(&input, &output, test);
+            break;
+        case 54:
+            v1_6_2_12(&input, &output, test);
             break;
         default:
             cout << "Декоратор" << endl;
@@ -318,6 +414,79 @@ int main(int argc, char* argv[])
             break;
         case decor_choice::Option::Option1_5_12:
             v1_5_12(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_1:
+            v1_6_1_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_2:
+            v1_6_1_2(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_3:
+            v1_6_1_3(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_4:
+            v1_6_1_4(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_5:
+            v1_6_1_5(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_6:
+            v1_6_1_6(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_7:
+            v1_6_1_7(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_8:
+            v1_6_1_8(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_9:
+            v1_6_1_9(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_10:
+            v1_6_1_10(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_1_11:
+            v1_6_1_11(&input, &output, test);
+            break;
+        case 4decor_choice::Option::Option:v1_6_1_12:
+            v1_6_1_12(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_1:
+            v1_6_2_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_2:
+            v1_6_1_2(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_3:
+            v1_6_2_3(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_4:
+            v1_6_2_4(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_5:
+            v1_6_2_5(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_6:
+            v1_6_2_6(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_7:
+            v1_6_2_7(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_8:
+            v1_6_2_8(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_9:
+            v1_6_2_9(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_10:
+            v1_6_2_10(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_11:
+            v1_6_2_11(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_6_2_12:
+            v1_6_2_12(&input, &output, test);
+            break;
         default:
             wcout << "To be continued..." << endl;
             break;
