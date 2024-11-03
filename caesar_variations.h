@@ -60,6 +60,8 @@ int v1_5_10(ifstream* input_file, ofstream* output_file, offsets offset);
 
 int v1_5_11(ifstream* input_file, ofstream* output_file, offsets offset);
 
+int v1_5_12(ifstream* input_file, ofstream* output_file, offsets offset);
+
 int v1_6_1_1(ifstream* input_file, ofstream* output_file, offsets offset);
 
 int v1_6_1_2(ifstream* input_file, ofstream* output_file, offsets offset);
