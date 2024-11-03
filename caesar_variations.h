@@ -112,5 +112,4 @@ int v1_6_2_12(ifstream* input_file, ofstream* output_file, offsets offset);
 
 
 
-
 //int time_based_decorator(wifstream* input_file, wofstream* output_file, offsets offset);
