@@ -101,6 +101,8 @@ decor_choice::Option resolveOption(string input){
     if (input == "1.6.2.10") return decor_choice::Option::Option1_6_2_10;
     if (input == "1.6.2.11") return decor_choice::Option::Option1_6_2_11;
     if (input == "1.6.2.12") return decor_choice::Option::Option1_6_2_12;
+    if (input == "1.7.1") return decor_choice::Option::Option1_6_2_12;
+    if (input == "1.7.2") return decor_choice::Option::Option1_6_2_12;
 */
     return decor_choice::Option::Option_invalid;
 }
@@ -292,6 +294,12 @@ int main(int argc, char* argv[])
             break;
         case 54:
             v1_6_2_12(&input, &output, test);
+            break;
+        case 55:
+            v1_7_1(&input, &output, test);
+            break;
+        case 56:
+            v1_7_2(&input, &output, test);
             break;
         default:
             cout << "Декоратор" << endl;
@@ -486,6 +494,12 @@ int main(int argc, char* argv[])
             break;
         case decor_choice::Option::Option:v1_6_2_12:
             v1_6_2_12(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_7_1:
+            v1_7_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option:v1_7_2:
+            v1_7_1(&input, &output, test);
             break;
 */        default:
             wcout << "To be continued..." << endl;

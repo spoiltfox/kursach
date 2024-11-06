@@ -923,3 +923,30 @@ int v1_6_2_12(wifstream* input_file, wofstream* output_file, offsets offset) {
     offset.checksum_time_dependent = true;
     return caesar(input_file, output_file, offset);
 }
+
+//Ш1.7.1. Ш1.1.1 с полем длины открытого текста и контрольной суммой.
+int v1_7_1(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = 3;
+    offset.kir = 5;
+    offset.num = 2;
+    offset.symbol_count_needed = true;
+    offset.checksum_needed = true;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}
+//Ш1.7.2. Ш1.1.2 с полем длины открытого текста и контрольной суммой.
+
+int v1_7_2(wifstream* input_file, wofstream* output_file, offsets offset) {
+    // Логика сдвига
+    offset.lat = -3;
+    offset.kir = -5;
+    offset.num = -2;
+
+    offset.symbol_count_needed = true;
+    offset.checksum_needed = true;
+
+    // Вызов основной функции (шифр Цезаря)
+    return caesar(input_file, output_file, offset);
+}

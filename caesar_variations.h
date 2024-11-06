@@ -110,6 +110,10 @@ int v1_6_2_11(wifstream* input_file, wofstream* output_file, offsets offset);
 
 int v1_6_2_12(wifstream* input_file, wofstream* output_file, offsets offset);
 
+int v1_7_1(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_7_2(wifstream* input_file, wofstream* output_file, offsets offset);
+
 
 
 //int time_based_decorator(wifstream* input_file, wofstream* output_file, offsets offset);
