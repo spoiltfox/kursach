@@ -77,7 +77,7 @@ decor_choice::Option resolveOption(string input){
     if (input == "1.5.10") return decor_choice::Option::Option1_5_10;
     if (input == "1.5.11") return decor_choice::Option::Option1_5_11;
     if (input == "1.5.12") return decor_choice::Option::Option1_5_12;
-    if (input == "1.6.1.1") return decor_choice::Option::Option1_6_1_1;
+/*    if (input == "1.6.1.1") return decor_choice::Option::Option1_6_1_1;
     if (input == "1.6.1.2") return decor_choice::Option::Option1_6_1_2;
     if (input == "1.6.1.3") return decor_choice::Option::Option1_6_1_3;
     if (input == "1.6.1.4") return decor_choice::Option::Option1_6_1_4;
@@ -101,7 +101,7 @@ decor_choice::Option resolveOption(string input){
     if (input == "1.6.2.10") return decor_choice::Option::Option1_6_2_10;
     if (input == "1.6.2.11") return decor_choice::Option::Option1_6_2_11;
     if (input == "1.6.2.12") return decor_choice::Option::Option1_6_2_12;
-
+*/
     return decor_choice::Option::Option_invalid;
 }
 
@@ -415,7 +415,7 @@ int main(int argc, char* argv[])
         case decor_choice::Option::Option1_5_12:
             v1_5_12(&input, &output, test);
             break;
-        case decor_choice::Option::Option:v1_6_1_1:
+/*        case decor_choice::Option::Option:v1_6_1_1:
             v1_6_1_1(&input, &output, test);
             break;
         case decor_choice::Option::Option:v1_6_1_2:
@@ -487,7 +487,7 @@ int main(int argc, char* argv[])
         case decor_choice::Option::Option:v1_6_2_12:
             v1_6_2_12(&input, &output, test);
             break;
-        default:
+*/        default:
             wcout << "To be continued..." << endl;
             break;
         }

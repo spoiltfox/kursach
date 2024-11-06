@@ -9,6 +9,7 @@
 #include <fstream>
 
 using namespace std;
+
 /**
 \brief Структура для передачи параметров в caesar()
 */
@@ -116,7 +117,7 @@ char calcChecksum(wifstream* inputFile, bool timeDependent) {
     inputFile->clear();
     inputFile->seekg(0, ios_base::beg);
 
-    return checksum;
+    return (char)checksum;
 }
 
 /**
@@ -135,21 +136,21 @@ char calcChecksum(wifstream* inputFile, bool timeDependent) {
 */
 int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
 
-    wchar_t* ABC = L"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    wchar_t* abc = L"abcdefghijklmnopqrstuvwxyz";
-    wchar_t* abc_rus = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    wchar_t* ABC_RUS = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-    wchar_t* num = L"1234567890";
-    wchar_t* symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
-    char x, y;
+    const wchar_t* ABC = L"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const wchar_t* abc = L"abcdefghijklmnopqrstuvwxyz";
+    const wchar_t* abc_rus = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+    const wchar_t* ABC_RUS = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+    const wchar_t* num = L"1234567890";
+    const wchar_t* symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
+    wchar_t x, y;
 
     if(offset.symbol_count_needed)
     {
-        //x = symboul(input_file);
+        x = symboul(input_file);
     }
     if(offset.checksum_needed)
     {
-        //y = calcChecksum(input_file, offset.checksum_time_dependent);
+        y = calcChecksum(input_file, offset.checksum_time_dependent);
     }
 
     bool symbol_found = false;
@@ -168,7 +169,7 @@ int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
         }
         */
         for(int i = 0; i < 5; i++){
-            for(int j = 0; j < wcslen(symbols[i]); j++)
+            for(size_t j = 0; j < wcslen(symbols[i]); j++)
             {
                 if(current_byte == symbols[i][j])
                 {
@@ -193,13 +194,13 @@ int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
     }
     if(offset.symbol_count_needed)
     {
-        wcout << x;
-        output_file[0].put(x);
+        wcout << x%256;
+        output_file->put(x%256);
     }
     if(offset.checksum_needed)
     {
-        wcout << y;
-        output_file[0].put(y);
+        wcout << y%256;
+        output_file->put(y%256);
     }
     input_file->clear();
     input_file->seekg(0, ios_base::beg);

@@ -38,77 +38,77 @@ int v1_4_1(wifstream* input_file, wofstream* output_file, offsets offset);
 
 int v1_4_2(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_1(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_1(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_2(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_2(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_3(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_3(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_4(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_4(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_5(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_5(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_6(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_6(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_7(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_7(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_8(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_8(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_9(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_9(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_10(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_10(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_11(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_11(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_5_12(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_5_12(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_1(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_1(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_2(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_2(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_3(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_3(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_4(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_4(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_5(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_5(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_6(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_6(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_7(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_7(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_8(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_8(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_9(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_9(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_10(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_10(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_11(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_11(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_1_12(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_1_12(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_1(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_1(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_2(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_2(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_3(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_3(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_4(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_4(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_5(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_5(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_6(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_6(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_7(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_7(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_8(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_8(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_9(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_9(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_10(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_10(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_11(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_11(wifstream* input_file, wofstream* output_file, offsets offset);
 
-int v1_6_2_12(ifstream* input_file, ofstream* output_file, offsets offset);
+int v1_6_2_12(wifstream* input_file, wofstream* output_file, offsets offset);
 
 
 
