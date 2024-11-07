@@ -119,6 +119,53 @@ int v1_7_1(wifstream* input_file, wofstream* output_file, offsets offset);
 
 int v1_7_2(wifstream* input_file, wofstream* output_file, offsets offset);
 
+int v1_8_1_1(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_2(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_3(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_4(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_5(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_6(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_7(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_8(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_9(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_10(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_11(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_1_12(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_1(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_2(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_3(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_4(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_5(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_6(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_7(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_8(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_9(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_10(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_11(wifstream* input_file, wofstream* output_file, offsets offset);
+
+int v1_8_2_12(wifstream* input_file, wofstream* output_file, offsets offset);
 
 
 //int time_based_decorator(wifstream* input_file, wofstream* output_file, offsets offset);
