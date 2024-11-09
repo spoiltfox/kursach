@@ -17,4 +17,6 @@ int get_mouth_day();
 
 int get_minute();
 
+char calcChecksum(wifstream* inputFile, bool timeDependent);
+
 void print_help();

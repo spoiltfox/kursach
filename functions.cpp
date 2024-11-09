@@ -45,6 +45,13 @@ char symboul (wifstream* file)
     return charcount;
 }
 
+/**
+\brief Функция выводящая текущий день недели, используется в задании 1.2
+
+\param now содержит текущее время календарное время
+\param ltm содержит преобразованное значение параметра now в виде tm структуры
+\param week_day содержит номер дня недели
+*/
 int get_week_day() // Функция для получения текущего дня недели
 {
     time_t now = time(nullptr); // Получаем текущее время
@@ -56,6 +63,13 @@ int get_week_day() // Функция для получения текущего 
     return week_day;
 }
 
+/**
+\brief Функция выводящая текущий день месяца, используется в задании 1.2
+
+\param now содержит текущее время календарное время
+\param ltm содержит преобразованное значение параметра now в виде tm структуры
+\param day_of_month содержит номер дня месяца
+*/
 int get_mouth_day() // То же самое для дня месяца
 {
     time_t now = time(nullptr);
@@ -66,6 +80,13 @@ int get_mouth_day() // То же самое для дня месяца
     return day_of_month;
 }
 
+/**
+\brief Функция выводящая текущую минуту, используется в задании 1.2
+
+\param now содержит текущее время календарное время
+\param local_time содержит преобразованное значение параметра now в виде tm структуры
+\param minute содержит значение минуты
+*/
 int get_minute() {
     time_t now = time(0);
     tm* local_time = localtime(&now);
@@ -211,6 +232,9 @@ int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
 
 }
 
+/**
+\brief Функция выводящая подсказку при неправильном запуске программы
+*/
 void print_help(){          //вывод помощи
     cout << "Usage:\n\t kursach.exe [input_file] [output_file] [cipher_number]\n";
 }
