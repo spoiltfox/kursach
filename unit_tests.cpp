@@ -1,3 +1,7 @@
+/**
+    \file
+    \brief Файл содержащий юнит-тесты
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -6,7 +10,10 @@ using namespace std;
 
 #include "functions.h"
 
-/*void test_caesar() {
+/**
+    \brief Юнит-тест для функции ceaser()
+*/
+void test_caesar() {
     ofstream output("output.txt");
     ifstream input;
     offsets test_offset;
@@ -35,8 +42,11 @@ using namespace std;
     } else {
         cout << "test_caesar failed: expected 'BCDbcd', got '" << result_string << "'\n";
     }
-}*/
+}
 
+/**
+    \brief Юнит-тест для функции symboul(),которая считает количество символов в файле
+*/
 void test_character_count()
 {
     ofstream input_test_file("input.txt");
@@ -57,6 +67,9 @@ void test_character_count()
     }
 }
 
+/**
+    \brief Юнит-тест для функции get_week_day(), которая выводит номер текущего дня недели
+*/
 void test_week_day()
 {
     int day = get_week_day();
@@ -70,6 +83,9 @@ void test_week_day()
     }
 }
 
+/**
+    \brief Юнит-тест для функции get_mouth_day(), которая выводит день месяца
+*/
 void test_month_day()
 {
     int day = get_mouth_day();
@@ -83,6 +99,9 @@ void test_month_day()
     }
 }
 
+/**
+    \brief Юнит-тест для функции get_minute(), которая выводит текущую минуту
+*/
 void test_minute_range()
 {
     int minute = get_minute();
@@ -95,7 +114,10 @@ void test_minute_range()
         cout << "test_minute_range failed: expected value between 0 and 59, got " << minute << "\n";
     }
 }
-
+ /**
+    \brief Запуск юнит-тестов
+    \return Код завершения программы
+ */
 int main()
 {
     test_caesar();
@@ -103,9 +125,5 @@ int main()
     test_week_day();
     test_month_day();
     test_minute_range();
-
     return 0;
 }
-
-// Эти тесты следует вставить в отдельный файл, например, "unit_tests.cpp".
-// Добавьте "unit_tests.cpp" в проект и скомпилируйте вместе с остальными исходными файлами.
