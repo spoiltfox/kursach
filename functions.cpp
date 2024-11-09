@@ -22,9 +22,9 @@ struct offsets { //в случае неообходимости могут бы�
     bool checksum_time_dependent = false; ///< Зависит ли контрольная сумма от времени
 };
 
-char symboul (wifstream* file)
+char symboul (ifstream* file)
 {
-    wchar_t ch;
+    char ch;
     char charcount=0;
     //читаем посимвольно весь файл
     while(file->get(ch))
@@ -70,12 +70,12 @@ int get_minute() {
     return minute;
 }
 
-char calcChecksum(wifstream* inputFile, bool timeDependent) {
+char calcChecksum(ifstream* inputFile, bool timeDependent) {
     if (!inputFile->is_open() || !inputFile->good()) {
         return 1; // Ошибка открытия файла
     }
 
-    wchar_t ch;
+    char ch;
     unsigned long long checksum = 0;
     unsigned long long sdvig = 0;
     unsigned long long index = 0; // Индекс для определения позиции символа
@@ -108,15 +108,23 @@ char calcChecksum(wifstream* inputFile, bool timeDependent) {
     return (char)checksum;
 }
 
-int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
+int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
 
-    const wchar_t* ABC = L"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const wchar_t* abc = L"abcdefghijklmnopqrstuvwxyz";
-    const wchar_t* abc_rus = L"абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-    const wchar_t* ABC_RUS = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-    const wchar_t* num = L"1234567890";
-    const wchar_t* symbols[] = {ABC, abc, abc_rus, ABC_RUS, num};
-    wchar_t x, y;
+    string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string abc = "abcdefghijklmnopqrstuvwxyz";
+    string abc_rus_ANSI = {(char)0xE0, (char)0xE1, (char)0xE2, (char)0xE3, (char)0xE4,
+    (char)0xE5, (char)0xB8, (char)0xE6, (char)0xE7, (char)0xE8, (char)0xE9, (char)0xEA,
+    (char)0xEB, (char)0xEC, (char)0xED, (char)0xEE, (char)0xEF, (char)0xF0, (char)0xF1,
+    (char)0xF2, (char)0xF3, (char)0xF4, (char)0xF5, (char)0xF6, (char)0xF7, (char)0xF8,
+    (char)0xF9, (char)0xFA, (char)0xFB, (char)0xFC, (char)0xFD, (char)0xFE, (char)0xFF};
+    string ABC_RUS_ANSI = {(char)0xC0, (char)0xC1, (char)0xC2, (char)0xC3, (char)0xC4,
+    (char)0xC5, (char)0xA8, (char)0xC6, (char)0xC7, (char)0xC8, (char)0xC9, (char)0xCA,
+    (char)0xCB, (char)0xCC, (char)0xCD, (char)0xCE, (char)0xCF, (char)0xD0, (char)0xD1,
+    (char)0xD2, (char)0xD3, (char)0xD4, (char)0xD5, (char)0xD6, (char)0xD7, (char)0xD8, (char)0xD9,
+    (char)0xDA, (char)0xDB, (char)0xDC, (char)0xDD, (char)0xDE, (char)0xDF};
+    string num = "1234567890";
+    string symbols[] = {ABC, abc, abc_rus_ANSI, ABC_RUS_ANSI, num};
+    char x, y;
 
     if(offset.symbol_count_needed)
     {
@@ -126,54 +134,50 @@ int caesar(wifstream* input_file, wofstream* output_file, offsets offset){
     {
         y = calcChecksum(input_file, offset.checksum_time_dependent);
     }
-
     bool symbol_found = false;
-    wchar_t current_byte = 0;
-    wchar_t additional_utf_byte = 0;
+    char current_byte = 0;
     int crypted_symbol_pos = 0;
     int crypted_symbol_abc = 0;
     while (input_file[0].get(current_byte)){
         symbol_found = false;
         for(int i = 0; i < 5; i++){
-            for(size_t j = 0; j < wcslen(symbols[i]); j++)
+            for(int j = 0; j < symbols[i].length(); j++)
             {
                 if(current_byte == symbols[i][j])
                 {
                     symbol_found = true;
                     crypted_symbol_abc = i;
                     if(i < 2){
-                        crypted_symbol_pos = (j + offset.lat + wcslen(symbols[i])*16) % wcslen(symbols[i]);
+                        crypted_symbol_pos = (j + offset.lat + symbols[i].length()*16) % symbols[i].length();
                     }
                     else if(i < 4){
-                        crypted_symbol_pos = (j + offset.kir + wcslen(symbols[i])*16) % wcslen(symbols[i]);
+                        crypted_symbol_pos = (j + offset.kir + symbols[i].length()*16) % symbols[i].length();
                     }
                     else{
-                        crypted_symbol_pos = (j + offset.num + wcslen(symbols[i])*16) % wcslen(symbols[i]);
+                        crypted_symbol_pos = (j + offset.num + symbols[i].length()*16) % symbols[i].length();
                     }
                     break;
                 }
-
             }
         }
-        if(symbol_found){wcout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
-        else {wcout << current_byte; output_file[0].put(current_byte);}
+        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
+        else {cout << current_byte; output_file[0].put(current_byte);}
     }
     if(offset.symbol_count_needed)
     {
-        wcout << x%256;
-        output_file->put(x%256);
+        cout << x;
+        output_file[0].put(x);
     }
     if(offset.checksum_needed)
     {
-        wcout << y%256;
-        output_file->put(y%256);
+        cout << y;
+        output_file[0].put(y);
     }
     input_file->clear();
     input_file->seekg(0, ios_base::beg);
     return 0;
-
-
 }
+
 
 void print_help(){          //вывод помощи
     cout << "Usage:\n\t kursach.exe [input_file] [output_file] [cipher_number]\n";

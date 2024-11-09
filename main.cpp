@@ -146,17 +146,17 @@ int main(int argc, char* argv[])
 {
 
     setlocale(LC_ALL, "Russian");
-    wifstream input;
-    wofstream output;
+    ifstream input;
+    ofstream output;
 
     string exe_name = argv[0];
     int variation;
 
-    bool is_debug_run = (exe_name.find("kursach\\bin\\Debug\\kursach.exe") <= exe_name.length() && argc == 1);
+    bool is_debug_run = (exe_name.find('kursach/bin/Debug/kursach') <= exe_name.length() && argc == 1);
     if (is_debug_run) {
         // Debug
         cin >> variation;
-        input.open("ioFiles\\testANSI.txt");
+        input.open("ioFiles/testANSI.txt");
         output.open("output.txt", ios::binary);
         if(input.is_open()){cout << "input file open ok\n";}
         else{return 2;}
@@ -537,7 +537,7 @@ int main(int argc, char* argv[])
             v1_7_2(&input, &output, test);
             break;
         default:
-            wcout << "To be continued..." << endl;
+            cout << "To be continued..." << endl;
             break;
         }
 

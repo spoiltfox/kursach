@@ -24,14 +24,14 @@
     контрольной суммы от времени.
     \return Код завершения функции
 */
-int caesar(wifstream* input_file, wofstream* output_file, offsets offset);
+int caesar(ifstream* input_file, ofstream* output_file, offsets offset);
 
 /**
     \brief Функция вычисляющая длину открытого текста
     \param[in] file Файл с исходным текстом
     \return Количество символов в передаваемом файле
 */
-char symboul (wifstream* file);
+char symboul (ifstream* file);
 
 /**
     \brief Функция выводящая текущий день недели, используется в задании 1.2, 1.5, 1.6, 1.8
@@ -57,7 +57,7 @@ int get_minute();
     \param[in] timeDependent == true, означает зависимость контрольной суммы от времени
     \return Контрольную сумму незашифрованного текста
 */
-char calcChecksum(wifstream* inputFile, bool timeDependent);
+char calcChecksum(ifstream* inputFile, bool timeDependent);
 
 /**
     \brief Функция выводящая подсказку при неправильном запуске программы
