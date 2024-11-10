@@ -70,6 +70,30 @@ namespace decor_choice {
         Option1_6_2_12,///< Выбор пункта Ш1.6.2.12
         Option1_7_1,///< Выбор пункта Ш1.7.1
         Option1_7_2,///< Выбор пункта Ш1.7.2
+        Option1_8_1_1,///< Выбор пункта Ш1.8.1.1
+        Option1_8_1_2,///< Выбор пункта Ш1.8.1.2
+        Option1_8_1_3,///< Выбор пункта Ш1.8.1.3
+        Option1_8_1_4,///< Выбор пункта Ш1.8.1.4
+        Option1_8_1_5,///< Выбор пункта Ш1.8.1.5
+        Option1_8_1_6,///< Выбор пункта Ш1.8.1.6
+        Option1_8_1_7,///< Выбор пункта Ш1.8.1.7
+        Option1_8_1_8,///< Выбор пункта Ш1.8.1.8
+        Option1_8_1_9,///< Выбор пункта Ш1.8.1.9
+        Option1_8_1_10,///< Выбор пункта Ш1.8.1.10
+        Option1_8_1_11,///< Выбор пункта Ш1.8.1.11
+        Option1_8_1_12,///< Выбор пункта Ш1.8.1.12
+        Option1_8_2_1,///< Выбор пункта Ш1.8.2.1
+        Option1_8_2_2,///< Выбор пункта Ш1.8.2.2
+        Option1_8_2_3,///< Выбор пункта Ш1.8.2.3
+        Option1_8_2_4,///< Выбор пункта Ш1.8.2.4
+        Option1_8_2_5,///< Выбор пункта Ш1.8.2.5
+        Option1_8_2_6,///< Выбор пункта Ш1.8.2.6
+        Option1_8_2_7,///< Выбор пункта Ш1.8.2.7
+        Option1_8_2_8,///< Выбор пункта Ш1.8.2.8
+        Option1_8_2_9,///< Выбор пункта Ш1.8.2.9
+        Option1_8_2_10,///< Выбор пункта Ш1.8.2.10
+        Option1_8_2_11,///< Выбор пункта Ш1.8.2.11
+        Option1_8_2_12,///< Выбор пункта Ш1.8.2.12
     };
 }
 /**
@@ -134,6 +158,30 @@ decor_choice::Option resolveOption(string input){
     if (input == "1.6.2.12") return decor_choice::Option::Option1_6_2_12;
     if (input == "1.7.1") return decor_choice::Option::Option1_7_1;
     if (input == "1.7.2") return decor_choice::Option::Option1_7_2;
+    if (input == "1.8.1.1") return decor_choice::Option::Option1_8_1_1;
+    if (input == "1.8.1.2") return decor_choice::Option::Option1_8_1_2;
+    if (input == "1.8.1.3") return decor_choice::Option::Option1_8_1_3;
+    if (input == "1.8.1.4") return decor_choice::Option::Option1_8_1_4;
+    if (input == "1.8.1.5") return decor_choice::Option::Option1_8_1_5;
+    if (input == "1.8.1.6") return decor_choice::Option::Option1_8_1_6;
+    if (input == "1.8.1.7") return decor_choice::Option::Option1_8_1_7;
+    if (input == "1.8.1.8") return decor_choice::Option::Option1_8_1_8;
+    if (input == "1.8.1.9") return decor_choice::Option::Option1_8_1_9;
+    if (input == "1.8.1.10") return decor_choice::Option::Option1_8_1_10;
+    if (input == "1.8.1.11") return decor_choice::Option::Option1_8_1_11;
+    if (input == "1.8.1.12") return decor_choice::Option::Option1_8_1_12;
+    if (input == "1.8.2.1") return decor_choice::Option::Option1_8_2_1;
+    if (input == "1.8.2.2") return decor_choice::Option::Option1_8_2_2;
+    if (input == "1.8.2.3") return decor_choice::Option::Option1_8_2_3;
+    if (input == "1.8.2.4") return decor_choice::Option::Option1_8_2_4;
+    if (input == "1.8.2.5") return decor_choice::Option::Option1_8_2_5;
+    if (input == "1.8.2.6") return decor_choice::Option::Option1_8_2_6;
+    if (input == "1.8.2.7") return decor_choice::Option::Option1_8_2_7;
+    if (input == "1.8.2.8") return decor_choice::Option::Option1_8_2_8;
+    if (input == "1.8.2.9") return decor_choice::Option::Option1_8_2_9;
+    if (input == "1.8.2.10") return decor_choice::Option::Option1_8_2_10;
+    if (input == "1.8.2.11") return decor_choice::Option::Option1_8_2_11;
+    if (input == "1.8.2.12") return decor_choice::Option::Option1_8_2_12;
     return decor_choice::Option::Option_invalid;
 }
 
@@ -336,8 +384,80 @@ int main(int argc, char* argv[])
         case 56:
             v1_7_2(&input, &output, test);
             break;
+        case 57:
+            v1_8_1_1(&input, &output, test);
+            break;
+        case 58:
+            v1_8_1_2(&input, &output, test);
+            break;
+        case 59:
+            v1_8_1_3(&input, &output, test);
+            break;
+        case 60:
+            v1_8_1_4(&input, &output, test);
+            break;
+        case 61:
+            v1_8_1_5(&input, &output, test);
+            break;
+        case 62:
+            v1_8_1_6(&input, &output, test);
+            break;
+        case 63:
+            v1_8_1_7(&input, &output, test);
+            break;
+        case 64:
+            v1_8_1_8(&input, &output, test);
+            break;
+        case 65:
+            v1_8_1_9(&input, &output, test);
+            break;
+        case 66:
+            v1_8_1_10(&input, &output, test);
+            break;
+        case 67:
+            v1_8_1_11(&input, &output, test);
+            break;
+        case 68:
+            v1_8_1_12(&input, &output, test);
+            break;
+        case 69:
+            v1_8_2_1(&input, &output, test);
+            break;
+        case 70:
+            v1_8_1_2(&input, &output, test);
+            break;
+        case 71:
+            v1_8_2_3(&input, &output, test);
+            break;
+        case 72:
+            v1_8_2_4(&input, &output, test);
+            break;
+        case 73:
+            v1_8_2_5(&input, &output, test);
+            break;
+        case 74:
+            v1_8_2_6(&input, &output, test);
+            break;
+        case 75:
+            v1_8_2_7(&input, &output, test);
+            break;
+        case 76:
+            v1_8_2_8(&input, &output, test);
+            break;
+        case 77:
+            v1_8_2_9(&input, &output, test);
+            break;
+        case 78:
+            v1_8_2_10(&input, &output, test);
+            break;
+        case 79:
+            v1_8_2_11(&input, &output, test);
+            break;
+        case 80:
+            v1_8_2_12(&input, &output, test);
+            break;
         default:
-            cout << "Декоратор" << endl;
+            cout << "This cipher option has not been added yet" << endl;
             break;
         }
         input.close();
@@ -352,9 +472,6 @@ int main(int argc, char* argv[])
     }
 
     // Release
-
-    /*cout << "Print the number of variant(1 - 1.1.1, 2 - 1.1.2): ";
-    cin >> variation;*/
     input.open(argv[1], ios::binary);
     output.open(argv[2], ios::binary);
     string decorator_choice = argv[3];
@@ -536,8 +653,80 @@ int main(int argc, char* argv[])
         case decor_choice::Option::Option1_7_2:
             v1_7_2(&input, &output, test);
             break;
+        case decor_choice::Option::Option1_8_1_1:
+            v1_8_1_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_2:
+            v1_8_1_2(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_3:
+            v1_8_1_3(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_4:
+            v1_8_1_4(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_5:
+            v1_8_1_5(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_6:
+            v1_8_1_6(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_7:
+            v1_8_1_7(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_8:
+            v1_8_1_8(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_9:
+            v1_8_1_9(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_10:
+            v1_8_1_10(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_11:
+            v1_8_1_11(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_1_12:
+            v1_8_1_12(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_1:
+            v1_8_2_1(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_2:
+            v1_8_1_2(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_3:
+            v1_8_2_3(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_4:
+            v1_8_2_4(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_5:
+            v1_8_2_5(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_6:
+            v1_8_2_6(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_7:
+            v1_8_2_7(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_8:
+            v1_8_2_8(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_9:
+            v1_8_2_9(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_10:
+            v1_8_2_10(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_11:
+            v1_8_2_11(&input, &output, test);
+            break;
+        case decor_choice::Option::Option1_8_2_12:
+            v1_8_2_12(&input, &output, test);
+            break;
         default:
-            cout << "To be continued..." << endl;
+            cout << "This cipher option is not available" << endl;
             break;
         }
 
