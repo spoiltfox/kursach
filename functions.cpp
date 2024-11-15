@@ -111,17 +111,41 @@ char calcChecksum(ifstream* inputFile, bool timeDependent) {
 int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
 
     string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
     string abc = "abcdefghijklmnopqrstuvwxyz";
+
     string abc_rus_ANSI = {(char)0xE0, (char)0xE1, (char)0xE2, (char)0xE3, (char)0xE4,
     (char)0xE5, (char)0xB8, (char)0xE6, (char)0xE7, (char)0xE8, (char)0xE9, (char)0xEA,
     (char)0xEB, (char)0xEC, (char)0xED, (char)0xEE, (char)0xEF, (char)0xF0, (char)0xF1,
     (char)0xF2, (char)0xF3, (char)0xF4, (char)0xF5, (char)0xF6, (char)0xF7, (char)0xF8,
     (char)0xF9, (char)0xFA, (char)0xFB, (char)0xFC, (char)0xFD, (char)0xFE, (char)0xFF};
+
     string ABC_RUS_ANSI = {(char)0xC0, (char)0xC1, (char)0xC2, (char)0xC3, (char)0xC4,
     (char)0xC5, (char)0xA8, (char)0xC6, (char)0xC7, (char)0xC8, (char)0xC9, (char)0xCA,
     (char)0xCB, (char)0xCC, (char)0xCD, (char)0xCE, (char)0xCF, (char)0xD0, (char)0xD1,
-    (char)0xD2, (char)0xD3, (char)0xD4, (char)0xD5, (char)0xD6, (char)0xD7, (char)0xD8, (char)0xD9,
-    (char)0xDA, (char)0xDB, (char)0xDC, (char)0xDD, (char)0xDE, (char)0xDF};
+    (char)0xD2, (char)0xD3, (char)0xD4, (char)0xD5, (char)0xD6, (char)0xD7, (char)0xD8,
+    (char)0xD9, (char)0xDA, (char)0xDB, (char)0xDC, (char)0xDD, (char)0xDE, (char)0xDF};
+
+    char ABC_RUS_UTF8[][2] = {{(char)0xD0, (char)0x90}, {(char)0xD0, (char)0x91}, {(char)0xD0, (char)0x92},
+    {(char)0xD0, (char)0x93}, {(char)0xD0, (char)0x94}, {(char)0xD0, (char)0x95}, {(char)0xD0, (char)0x81},
+    {(char)0xD0, (char)0x96}, {(char)0xD0, (char)0x97}, {(char)0xD0, (char)0x98}, {(char)0xD0, (char)0x99},
+    {(char)0xD0, (char)0x9A}, {(char)0xD0, (char)0x9B}, {(char)0xD0, (char)0x9C}, {(char)0xD0, (char)0x9D},
+    {(char)0xD0, (char)0x9E}, {(char)0xD0, (char)0x9F}, {(char)0xD0, (char)0xA0}, {(char)0xD0, (char)0xA1},
+    {(char)0xD0, (char)0xA2}, {(char)0xD0, (char)0xA3}, {(char)0xD0, (char)0xA4}, {(char)0xD0, (char)0xA5},
+    {(char)0xD0, (char)0xA6}, {(char)0xD0, (char)0xA7}, {(char)0xD0, (char)0xA8}, {(char)0xD0, (char)0xA9},
+    {(char)0xD0, (char)0xAA}, {(char)0xD0, (char)0xAB}, {(char)0xD0, (char)0xAC}, {(char)0xD0, (char)0xAD},
+    {(char)0xD0, (char)0xAE}, {(char)0xD0, (char)0xAF}};
+
+    char abc_rus_UTF8[][2] = {{(char)0xD0, (char)0xB0}, {(char)0xD0, (char)0xB1}, {(char)0xD0, (char)0xB2},
+    {(char)0xD0, (char)0xB3}, {(char)0xD0, (char)0xB4}, {(char)0xD0, (char)0xB5}, {(char)0xD1, (char)0x91},
+    {(char)0xD0, (char)0xB6}, {(char)0xD0, (char)0xB7}, {(char)0xD0, (char)0xB8}, {(char)0xD0, (char)0xB9},
+    {(char)0xD0, (char)0xBA}, {(char)0xD0, (char)0xBB}, {(char)0xD0, (char)0xBC}, {(char)0xD0, (char)0xBD},
+    {(char)0xD0, (char)0xBE}, {(char)0xD0, (char)0xBF}, {(char)0xD1, (char)0x80}, {(char)0xD1, (char)0x81},
+    {(char)0xD1, (char)0x82}, {(char)0xD1, (char)0x83}, {(char)0xD1, (char)0x84}, {(char)0xD1, (char)0x85},
+    {(char)0xD1, (char)0x86}, {(char)0xD1, (char)0x87}, {(char)0xD1, (char)0x88}, {(char)0xD1, (char)0x89},
+    {(char)0xD1, (char)0x8A}, {(char)0xD1, (char)0x8B}, {(char)0xD1, (char)0x8C}, {(char)0xD1, (char)0x8D},
+    {(char)0xD1, (char)0x8E}, {(char)0xD1, (char)0x8F}};
+
     string num = "1234567890";
     string symbols[] = {ABC, abc, abc_rus_ANSI, ABC_RUS_ANSI, num};
     char x, y;
@@ -135,11 +159,49 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
         y = calcChecksum(input_file, offset.checksum_time_dependent);
     }
     bool symbol_found = false;
+    bool addicional_byte_is_good = false;
+
     char current_byte = 0;
+    char addicional_byte = 0;
+
     int crypted_symbol_pos = 0;
     int crypted_symbol_abc = 0;
-    while (input_file[0].get(current_byte)){
+
+    while (input_file[0].get(current_byte)){ //Шифрование
         symbol_found = false;
+        if((unsigned char)current_byte == 0xd1 || (unsigned char)current_byte == 0xd0) //Шифрование кириллицы в UTF-8
+        {
+            input_file->get(addicional_byte);
+            for(int i = 0; i < 33; i++){
+                if(addicional_byte == abc_rus_UTF8[i][1] && current_byte == abc_rus_UTF8[i][0]){
+                    crypted_symbol_pos = (i + offset.kir + 33*16) % 33;
+                    crypted_symbol_abc = 0;
+                    symbol_found = true;
+                }
+                else if(addicional_byte == ABC_RUS_UTF8[i][1] && current_byte == ABC_RUS_UTF8[i][0]){
+                    crypted_symbol_pos = (i + offset.kir + 33*16) % 33;
+                    crypted_symbol_abc = 1;
+                    symbol_found = true;
+                }
+            }
+            if(symbol_found && crypted_symbol_abc == 0){
+                cout << abc_rus_UTF8[crypted_symbol_pos][0]; output_file->put(abc_rus_UTF8[crypted_symbol_pos][0]);
+                cout << abc_rus_UTF8[crypted_symbol_pos][1]; output_file->put(abc_rus_UTF8[crypted_symbol_pos][1]);
+            }
+            else if(symbol_found && crypted_symbol_abc == 1){
+                cout << ABC_RUS_UTF8[crypted_symbol_pos][0]; output_file->put(ABC_RUS_UTF8[crypted_symbol_pos][0]);
+                cout << ABC_RUS_UTF8[crypted_symbol_pos][1]; output_file->put(ABC_RUS_UTF8[crypted_symbol_pos][1]);
+            }
+            else if(!symbol_found && (unsigned char)current_byte == 0xd0){
+                cout << ABC_RUS_ANSI[(17+ offset.kir + 33*16) % 33]; output_file->put(ABC_RUS_ANSI[(17+ offset.kir + 33*16) % 33]);
+                current_byte = addicional_byte;
+            }
+            else if(!symbol_found && (unsigned char)current_byte == 0xd1){
+                cout << ABC_RUS_ANSI[(18+ offset.kir + 33*16) % 33]; output_file->put(ABC_RUS_ANSI[(18+ offset.kir + 33*16) % 33]);
+                current_byte = addicional_byte;
+            }
+        }
+        if(symbol_found){continue;}
         for(int i = 0; i < 5; i++){
             for(int j = 0; j < symbols[i].length(); j++)
             {
@@ -160,6 +222,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
                 }
             }
         }
+
         if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
         else {cout << current_byte; output_file[0].put(current_byte);}
     }
