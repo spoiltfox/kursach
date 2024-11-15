@@ -11,5 +11,4 @@ output.txt
 main.o
 main.exe
 functions.o
-doxygen/html
 doxygen/latex

@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Full_House::Caesar: Исходный файл C:/Users/hokag/Desktop/kursach/functions.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Full_House::Caesar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">C:/Users/hokag/Desktop/kursach/functions.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="functions_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structoffsets.html">   16</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structoffsets.html">offsets</a> { <span class="comment">//в случае неообходимости могут быть добавлены дополнительные переменные в структуру</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structoffsets.html#a9de0771372d6e4da933a53ffabc64fb1">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structoffsets.html#a9de0771372d6e4da933a53ffabc64fb1">lat</a> = 0; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structoffsets.html#a56298e8fdfe36e279deceeee73161b9e">   18</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structoffsets.html#a56298e8fdfe36e279deceeee73161b9e">kir</a> = 0; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structoffsets.html#a40b5e6be65bc10bef4fa816bbc711357">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structoffsets.html#a40b5e6be65bc10bef4fa816bbc711357">num</a> = 0; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structoffsets.html#af9f167a91d5d2dc2c39904d7435d991b">   20</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structoffsets.html#af9f167a91d5d2dc2c39904d7435d991b">symbol_count_needed</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structoffsets.html#ab9087699b752f721b1928bffdbc58d93">   21</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structoffsets.html#ab9087699b752f721b1928bffdbc58d93">checksum_needed</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structoffsets.html#aedfd82cb1b120ee29b49846a9e3bf110">   22</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structoffsets.html#aedfd82cb1b120ee29b49846a9e3bf110">checksum_time_dependent</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="functions_8cpp.html#af636242585851f5e12c769e6869f4137">   25</a></span><span class="keywordtype">char</span> <a class="code hl_function" href="functions_8cpp.html#af636242585851f5e12c769e6869f4137">symboul</a> (ifstream* file)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">char</span> charcount=0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//читаем посимвольно весь файл</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">while</span>(file-&gt;get(ch))</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (ch!=<span class="charliteral">&#39;\r&#39;</span>) <span class="comment">//т.к. Enter в Windows считается за два символа</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            ++charcount;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    file-&gt;clear();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    file-&gt;seekg(0, ios_base::beg);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> charcount;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="functions_8cpp.html#a17d567751ba068724692cd3edc0ce195">   43</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="functions_8cpp.html#a17d567751ba068724692cd3edc0ce195">get_week_day</a>() <span class="comment">// Функция для получения текущего дня недели</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    time_t now = time(<span class="keyword">nullptr</span>); <span class="comment">// Получаем текущее время</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    tm* ltm = localtime(&amp;now); <span class="comment">// Преобразуем время в tm структуру</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">int</span> week_day = ltm-&gt;tm_wday; <span class="comment">// Номер дня недели (0-6, где 0 - Sunday, 6 - Saturday)</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">//const char* days[] = {&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, // Перевод номера дня недели в текстовое представление</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//                       &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;};</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> week_day;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="functions_8cpp.html#aba1d27a1ffb7db4b601e2e68227561a9">   54</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="functions_8cpp.html#aba1d27a1ffb7db4b601e2e68227561a9">get_mouth_day</a>() <span class="comment">// То же самое для дня месяца</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    time_t now = time(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    tm* ltm = localtime(&amp;now);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">int</span> day_of_month = ltm-&gt;tm_mday; <span class="comment">// Номер дня месяца (1-31)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> day_of_month;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="functions_8cpp.html#a5de3456b741e2aef14a9f421d0d6ce5f">   64</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="functions_8cpp.html#a5de3456b741e2aef14a9f421d0d6ce5f">get_minute</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    time_t now = time(0);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    tm* local_time = localtime(&amp;now);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">int</span> minute = local_time-&gt;tm_min;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> minute;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="functions_8cpp.html#a8c339071ac2f5efeea08e1d3e0c7e7c7">   73</a></span><span class="keywordtype">char</span> <a class="code hl_function" href="functions_8cpp.html#a8c339071ac2f5efeea08e1d3e0c7e7c7">calcChecksum</a>(ifstream* inputFile, <span class="keywordtype">bool</span> timeDependent) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span> (!inputFile-&gt;is_open() || !inputFile-&gt;good()) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> 1; <span class="comment">// Ошибка открытия файла</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> checksum = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> sdvig = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> index = 0; <span class="comment">// Индекс для определения позиции символа</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">while</span> (inputFile-&gt;get(ch)) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// Определяем сдвиг в зависимости от символа</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (isalpha(ch)) { <span class="comment">// Латинские буквы</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            sdvig = (ch &gt;= L<span class="charliteral">&#39;a&#39;</span> &amp;&amp; ch &lt;= L<span class="charliteral">&#39;z&#39;</span>) ? 3 : 3; <span class="comment">// Латинские буквы - сдвиг 3</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((ch &gt;= 0xC0 &amp;&amp; ch &lt;= 0xFF) || (ch &gt;= 0xE0 &amp;&amp; ch &lt;= 0xEF)) { <span class="comment">// Кириллица в UTF-8</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            sdvig = 5; <span class="comment">// Кириллица - сдвиг 5</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isdigit(ch)) { <span class="comment">// Цифры</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            sdvig = 2; <span class="comment">// Цифры - сдвиг 2</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            sdvig = 0; <span class="comment">// Прочие символы</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// Применяем сдвиг и обновляем контрольную сумму, учитывая индекс символа</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        checksum += (ch + sdvig) * (index + 1); <span class="comment">// Увеличиваем значение в зависимости от позиции</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        index++; <span class="comment">// Увеличиваем индекс</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">if</span> (timeDependent) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="comment">// Добавляем текущее время к контрольной сумме</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        checksum += <a class="code hl_function" href="functions_8cpp.html#a5de3456b741e2aef14a9f421d0d6ce5f">get_minute</a>() % 2; <span class="comment">// Пример</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    inputFile-&gt;clear();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    inputFile-&gt;seekg(0, ios_base::beg);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> (<span class="keywordtype">char</span>)checksum;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="functions_8cpp.html#a60a000fcefd3226d52c0c8a4fe20d6b4">  111</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="functions_8cpp.html#a60a000fcefd3226d52c0c8a4fe20d6b4">caesar</a>(ifstream* input_file, ofstream* output_file, <a class="code hl_struct" href="structoffsets.html">offsets</a> offset){</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">string</span> ABC = <span class="stringliteral">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">string</span> abc = <span class="stringliteral">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">string</span> abc_rus_ANSI = {(char)0xE0, (<span class="keywordtype">char</span>)0xE1, (char)0xE2, (<span class="keywordtype">char</span>)0xE3, (char)0xE4,</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    (<span class="keywordtype">char</span>)0xE5, (char)0xB8, (<span class="keywordtype">char</span>)0xE6, (char)0xE7, (<span class="keywordtype">char</span>)0xE8, (char)0xE9, (<span class="keywordtype">char</span>)0xEA,</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    (char)0xEB, (<span class="keywordtype">char</span>)0xEC, (char)0xED, (<span class="keywordtype">char</span>)0xEE, (char)0xEF, (<span class="keywordtype">char</span>)0xF0, (char)0xF1,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    (<span class="keywordtype">char</span>)0xF2, (char)0xF3, (<span class="keywordtype">char</span>)0xF4, (char)0xF5, (<span class="keywordtype">char</span>)0xF6, (char)0xF7, (<span class="keywordtype">char</span>)0xF8,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    (char)0xF9, (<span class="keywordtype">char</span>)0xFA, (char)0xFB, (<span class="keywordtype">char</span>)0xFC, (char)0xFD, (<span class="keywordtype">char</span>)0xFE, (char)0xFF};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">string</span> ABC_RUS_ANSI = {(char)0xC0, (<span class="keywordtype">char</span>)0xC1, (char)0xC2, (<span class="keywordtype">char</span>)0xC3, (char)0xC4,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    (<span class="keywordtype">char</span>)0xC5, (char)0xA8, (<span class="keywordtype">char</span>)0xC6, (char)0xC7, (<span class="keywordtype">char</span>)0xC8, (char)0xC9, (<span class="keywordtype">char</span>)0xCA,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    (char)0xCB, (<span class="keywordtype">char</span>)0xCC, (char)0xCD, (<span class="keywordtype">char</span>)0xCE, (char)0xCF, (<span class="keywordtype">char</span>)0xD0, (char)0xD1,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    (<span class="keywordtype">char</span>)0xD2, (char)0xD3, (<span class="keywordtype">char</span>)0xD4, (char)0xD5, (<span class="keywordtype">char</span>)0xD6, (char)0xD7, (<span class="keywordtype">char</span>)0xD8, (char)0xD9,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    (<span class="keywordtype">char</span>)0xDA, (char)0xDB, (<span class="keywordtype">char</span>)0xDC, (char)0xDD, (<span class="keywordtype">char</span>)0xDE, (char)0xDF};</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">string</span> num = <span class="stringliteral">&quot;1234567890&quot;</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">string</span> symbols[] = {ABC, abc, abc_rus_ANSI, ABC_RUS_ANSI, num};</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">char</span> x, y;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span>(offset.<a class="code hl_variable" href="structoffsets.html#af9f167a91d5d2dc2c39904d7435d991b">symbol_count_needed</a>)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        x = <a class="code hl_function" href="functions_8cpp.html#af636242585851f5e12c769e6869f4137">symboul</a>(input_file);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span>(offset.<a class="code hl_variable" href="structoffsets.html#ab9087699b752f721b1928bffdbc58d93">checksum_needed</a>)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        y = <a class="code hl_function" href="functions_8cpp.html#a8c339071ac2f5efeea08e1d3e0c7e7c7">calcChecksum</a>(input_file, offset.<a class="code hl_variable" href="structoffsets.html#aedfd82cb1b120ee29b49846a9e3bf110">checksum_time_dependent</a>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">bool</span> symbol_found = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">char</span> current_byte = 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">int</span> crypted_symbol_pos = 0;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">int</span> crypted_symbol_abc = 0;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">while</span> (input_file[0].get(current_byte)){</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        symbol_found = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 5; i++){</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; symbols[i].length(); j++)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                <span class="keywordflow">if</span>(current_byte == symbols[i][j])</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    symbol_found = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                    crypted_symbol_abc = i;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                    <span class="keywordflow">if</span>(i &lt; 2){</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        crypted_symbol_pos = (j + offset.<a class="code hl_variable" href="structoffsets.html#a9de0771372d6e4da933a53ffabc64fb1">lat</a> + symbols[i].length()*16) % symbols[i].length();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i &lt; 4){</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                        crypted_symbol_pos = (j + offset.<a class="code hl_variable" href="structoffsets.html#a56298e8fdfe36e279deceeee73161b9e">kir</a> + symbols[i].length()*16) % symbols[i].length();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                    <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                        crypted_symbol_pos = (j + offset.<a class="code hl_variable" href="structoffsets.html#a40b5e6be65bc10bef4fa816bbc711357">num</a> + symbols[i].length()*16) % symbols[i].length();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">if</span>(symbol_found){cout &lt;&lt; symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">else</span> {cout &lt;&lt; current_byte; output_file[0].put(current_byte);}</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">if</span>(offset.<a class="code hl_variable" href="structoffsets.html#af9f167a91d5d2dc2c39904d7435d991b">symbol_count_needed</a>)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        cout &lt;&lt; x;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        output_file[0].put(x);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">if</span>(offset.<a class="code hl_variable" href="structoffsets.html#ab9087699b752f721b1928bffdbc58d93">checksum_needed</a>)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        cout &lt;&lt; y;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        output_file[0].put(y);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    input_file-&gt;clear();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    input_file-&gt;seekg(0, ios_base::beg);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="functions_8cpp.html#a853216ac51aa181669ff4d3de74058a7">  182</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="functions_8cpp.html#a853216ac51aa181669ff4d3de74058a7">print_help</a>(){          <span class="comment">//вывод помощи</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    cout &lt;&lt; <span class="stringliteral">&quot;Usage:\n\t kursach.exe [input_file] [output_file] [cipher_number]\n&quot;</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+</div>
+<div class="ttc" id="afunctions_8cpp_html_a17d567751ba068724692cd3edc0ce195"><div class="ttname"><a href="functions_8cpp.html#a17d567751ba068724692cd3edc0ce195">get_week_day</a></div><div class="ttdeci">int get_week_day()</div><div class="ttdoc">Функция выводящая текущий день недели, используется в задании 1.2, 1.5, 1.6, 1.8.</div><div class="ttdef"><b>Definition</b> functions.cpp:43</div></div>
+<div class="ttc" id="afunctions_8cpp_html_a5de3456b741e2aef14a9f421d0d6ce5f"><div class="ttname"><a href="functions_8cpp.html#a5de3456b741e2aef14a9f421d0d6ce5f">get_minute</a></div><div class="ttdeci">int get_minute()</div><div class="ttdoc">Функция выводящая текущую минуту, используется в задании 1.2, 1.5, 1.6, 1.8.</div><div class="ttdef"><b>Definition</b> functions.cpp:64</div></div>
+<div class="ttc" id="afunctions_8cpp_html_a60a000fcefd3226d52c0c8a4fe20d6b4"><div class="ttname"><a href="functions_8cpp.html#a60a000fcefd3226d52c0c8a4fe20d6b4">caesar</a></div><div class="ttdeci">int caesar(ifstream *input_file, ofstream *output_file, offsets offset)</div><div class="ttdoc">Функция реализующая шифр цезаря.</div><div class="ttdef"><b>Definition</b> functions.cpp:111</div></div>
+<div class="ttc" id="afunctions_8cpp_html_a853216ac51aa181669ff4d3de74058a7"><div class="ttname"><a href="functions_8cpp.html#a853216ac51aa181669ff4d3de74058a7">print_help</a></div><div class="ttdeci">void print_help()</div><div class="ttdoc">Функция выводящая подсказку при неправильном запуске программы</div><div class="ttdef"><b>Definition</b> functions.cpp:182</div></div>
+<div class="ttc" id="afunctions_8cpp_html_a8c339071ac2f5efeea08e1d3e0c7e7c7"><div class="ttname"><a href="functions_8cpp.html#a8c339071ac2f5efeea08e1d3e0c7e7c7">calcChecksum</a></div><div class="ttdeci">char calcChecksum(ifstream *inputFile, bool timeDependent)</div><div class="ttdoc">Функция вычисляющая контрольную сумму текста.</div><div class="ttdef"><b>Definition</b> functions.cpp:73</div></div>
+<div class="ttc" id="afunctions_8cpp_html_aba1d27a1ffb7db4b601e2e68227561a9"><div class="ttname"><a href="functions_8cpp.html#aba1d27a1ffb7db4b601e2e68227561a9">get_mouth_day</a></div><div class="ttdeci">int get_mouth_day()</div><div class="ttdoc">Функция выводящая текущий день месяца, используется в задании 1.2, 1.5, 1.6, 1.8.</div><div class="ttdef"><b>Definition</b> functions.cpp:54</div></div>
+<div class="ttc" id="afunctions_8cpp_html_af636242585851f5e12c769e6869f4137"><div class="ttname"><a href="functions_8cpp.html#af636242585851f5e12c769e6869f4137">symboul</a></div><div class="ttdeci">char symboul(ifstream *file)</div><div class="ttdoc">Функция вычисляющая длину открытого текста</div><div class="ttdef"><b>Definition</b> functions.cpp:25</div></div>
+<div class="ttc" id="astructoffsets_html"><div class="ttname"><a href="structoffsets.html">offsets</a></div><div class="ttdoc">Структура для передачи параметров в caesar()</div><div class="ttdef"><b>Definition</b> functions.cpp:16</div></div>
+<div class="ttc" id="astructoffsets_html_a40b5e6be65bc10bef4fa816bbc711357"><div class="ttname"><a href="structoffsets.html#a40b5e6be65bc10bef4fa816bbc711357">offsets::num</a></div><div class="ttdeci">int num</div><div class="ttdoc">Сдвиг для чисел</div><div class="ttdef"><b>Definition</b> functions.cpp:19</div></div>
+<div class="ttc" id="astructoffsets_html_a56298e8fdfe36e279deceeee73161b9e"><div class="ttname"><a href="structoffsets.html#a56298e8fdfe36e279deceeee73161b9e">offsets::kir</a></div><div class="ttdeci">int kir</div><div class="ttdoc">Сдвиг для кириллицы</div><div class="ttdef"><b>Definition</b> functions.cpp:18</div></div>
+<div class="ttc" id="astructoffsets_html_a9de0771372d6e4da933a53ffabc64fb1"><div class="ttname"><a href="structoffsets.html#a9de0771372d6e4da933a53ffabc64fb1">offsets::lat</a></div><div class="ttdeci">int lat</div><div class="ttdoc">Сдвиг для латиницы</div><div class="ttdef"><b>Definition</b> functions.cpp:17</div></div>
+<div class="ttc" id="astructoffsets_html_ab9087699b752f721b1928bffdbc58d93"><div class="ttname"><a href="structoffsets.html#ab9087699b752f721b1928bffdbc58d93">offsets::checksum_needed</a></div><div class="ttdeci">bool checksum_needed</div><div class="ttdoc">Необходимость вычисления контрольной суммы</div><div class="ttdef"><b>Definition</b> functions.cpp:21</div></div>
+<div class="ttc" id="astructoffsets_html_aedfd82cb1b120ee29b49846a9e3bf110"><div class="ttname"><a href="structoffsets.html#aedfd82cb1b120ee29b49846a9e3bf110">offsets::checksum_time_dependent</a></div><div class="ttdeci">bool checksum_time_dependent</div><div class="ttdoc">Зависит ли контрольная сумма от времени</div><div class="ttdef"><b>Definition</b> functions.cpp:22</div></div>
+<div class="ttc" id="astructoffsets_html_af9f167a91d5d2dc2c39904d7435d991b"><div class="ttname"><a href="structoffsets.html#af9f167a91d5d2dc2c39904d7435d991b">offsets::symbol_count_needed</a></div><div class="ttdeci">bool symbol_count_needed</div><div class="ttdoc">Необходимость вычисления количества символов</div><div class="ttdef"><b>Definition</b> functions.cpp:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

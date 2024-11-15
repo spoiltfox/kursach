@@ -1,0 +1,3316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Full_House::Caesar: Файл C:/Users/hokag/Desktop/kursach/caesar_variations.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Full_House::Caesar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл C:/Users/hokag/Desktop/kursach/caesar_variations.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл содержащий вариации шифратора  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+</div>
+<p><a href="caesar__variations_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a2ba689aac99d837d69fa372c64d61f64" id="r_a2ba689aac99d837d69fa372c64d61f64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ba689aac99d837d69fa372c64d61f64">v1_1_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2ba689aac99d837d69fa372c64d61f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с сдвигом вправо  <br /></td></tr>
+<tr class="separator:a2ba689aac99d837d69fa372c64d61f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8681b2613341c8c98bcb484db0b0695" id="r_af8681b2613341c8c98bcb484db0b0695"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8681b2613341c8c98bcb484db0b0695">v1_1_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af8681b2613341c8c98bcb484db0b0695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с сдвигом влево  <br /></td></tr>
+<tr class="separator:af8681b2613341c8c98bcb484db0b0695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93f43c76b44c7ead919cc3aa7d5cab6" id="r_ac93f43c76b44c7ead919cc3aa7d5cab6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93f43c76b44c7ead919cc3aa7d5cab6">v1_2_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ac93f43c76b44c7ead919cc3aa7d5cab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с разными однонаправленными сдвигами вправо, зависящими от времени начала шифрования  <br /></td></tr>
+<tr class="separator:ac93f43c76b44c7ead919cc3aa7d5cab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f12b0ce0e5ba979ccfe5a334da9758" id="r_a43f12b0ce0e5ba979ccfe5a334da9758"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43f12b0ce0e5ba979ccfe5a334da9758">v1_2_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a43f12b0ce0e5ba979ccfe5a334da9758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с разными однонаправленными сдвигами, влево зависящими от времени начала шифрования  <br /></td></tr>
+<tr class="separator:a43f12b0ce0e5ba979ccfe5a334da9758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b0177ecdbec03ac690cad08bec3fce" id="r_a20b0177ecdbec03ac690cad08bec3fce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b0177ecdbec03ac690cad08bec3fce">v1_2_3</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a20b0177ecdbec03ac690cad08bec3fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с одинаковыми разнонаправленными сдвигами, зависящими от времени начала шифрования  <br /></td></tr>
+<tr class="separator:a20b0177ecdbec03ac690cad08bec3fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3dcd3de6947a37484701a54d215716" id="r_a8e3dcd3de6947a37484701a54d215716"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e3dcd3de6947a37484701a54d215716">v1_2_4</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a8e3dcd3de6947a37484701a54d215716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с разными разнонаправленными сдвигами, зависящими от времени начала шифрования  <br /></td></tr>
+<tr class="separator:a8e3dcd3de6947a37484701a54d215716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f759e0b5fc89928cbe2c0b8352b519" id="r_a48f759e0b5fc89928cbe2c0b8352b519"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f759e0b5fc89928cbe2c0b8352b519">v1_2_5</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a48f759e0b5fc89928cbe2c0b8352b519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с сдвигом зависящим от числа месяца  <br /></td></tr>
+<tr class="separator:a48f759e0b5fc89928cbe2c0b8352b519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636bc87554eace9f98fa483f7963ce8d" id="r_a636bc87554eace9f98fa483f7963ce8d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636bc87554eace9f98fa483f7963ce8d">v1_2_6</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a636bc87554eace9f98fa483f7963ce8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с сдвигом зависящим от числа месяца  <br /></td></tr>
+<tr class="separator:a636bc87554eace9f98fa483f7963ce8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787442a6be06c5ff4b7eb820651a455f" id="r_a787442a6be06c5ff4b7eb820651a455f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a787442a6be06c5ff4b7eb820651a455f">v1_2_7</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a787442a6be06c5ff4b7eb820651a455f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с сдвигом зависящим от числа месяца  <br /></td></tr>
+<tr class="separator:a787442a6be06c5ff4b7eb820651a455f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714b2a71e7dbc58fbd5519bed5097ff6" id="r_a714b2a71e7dbc58fbd5519bed5097ff6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714b2a71e7dbc58fbd5519bed5097ff6">v1_2_8</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a714b2a71e7dbc58fbd5519bed5097ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с сдвигом зависящим от числа месяца  <br /></td></tr>
+<tr class="separator:a714b2a71e7dbc58fbd5519bed5097ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace113360cc8fe285ae4ab4ff6a75720b" id="r_ace113360cc8fe285ae4ab4ff6a75720b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace113360cc8fe285ae4ab4ff6a75720b">v1_2_9</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ace113360cc8fe285ae4ab4ff6a75720b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с сдвигом зависящим от дня недели  <br /></td></tr>
+<tr class="separator:ace113360cc8fe285ae4ab4ff6a75720b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871b05499fcc6a3b649e2fc71a57c615" id="r_a871b05499fcc6a3b649e2fc71a57c615"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a871b05499fcc6a3b649e2fc71a57c615">v1_2_10</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a871b05499fcc6a3b649e2fc71a57c615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с сдвигом зависящим от дня недели  <br /></td></tr>
+<tr class="separator:a871b05499fcc6a3b649e2fc71a57c615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7320d0392aa4080a343a95672c039fa8" id="r_a7320d0392aa4080a343a95672c039fa8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7320d0392aa4080a343a95672c039fa8">v1_2_11</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a7320d0392aa4080a343a95672c039fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с сдвигом зависящим от дня недели  <br /></td></tr>
+<tr class="separator:a7320d0392aa4080a343a95672c039fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55cbb538115b87b0d46565278e1a58de" id="r_a55cbb538115b87b0d46565278e1a58de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55cbb538115b87b0d46565278e1a58de">v1_2_12</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a55cbb538115b87b0d46565278e1a58de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с сдвигом зависящим от дня недели  <br /></td></tr>
+<tr class="separator:a55cbb538115b87b0d46565278e1a58de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce5ac3f1804abb3d51ade83df2da9aa" id="r_a2ce5ac3f1804abb3d51ade83df2da9aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ce5ac3f1804abb3d51ade83df2da9aa">v1_3_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2ce5ac3f1804abb3d51ade83df2da9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с сдвигом вправо и полем длины открытого текста  <br /></td></tr>
+<tr class="separator:a2ce5ac3f1804abb3d51ade83df2da9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffe1bbc675ff710446b7803eb52bde7" id="r_aeffe1bbc675ff710446b7803eb52bde7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeffe1bbc675ff710446b7803eb52bde7">v1_3_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:aeffe1bbc675ff710446b7803eb52bde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с сдвигом влево и полем длины открытого текста  <br /></td></tr>
+<tr class="separator:aeffe1bbc675ff710446b7803eb52bde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff705fe1f6ddcc3a44a3074d855ddb0" id="r_a0ff705fe1f6ddcc3a44a3074d855ddb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ff705fe1f6ddcc3a44a3074d855ddb0">v1_4_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a0ff705fe1f6ddcc3a44a3074d855ddb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с сдвигом вправо и контрольной суммой  <br /></td></tr>
+<tr class="separator:a0ff705fe1f6ddcc3a44a3074d855ddb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a6922e92a6f6d50fffa615a8dea19c0" id="r_a1a6922e92a6f6d50fffa615a8dea19c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a6922e92a6f6d50fffa615a8dea19c0">v1_4_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a1a6922e92a6f6d50fffa615a8dea19c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шифр Цезаря с сдвигом влево контрольной суммой  <br /></td></tr>
+<tr class="separator:a1a6922e92a6f6d50fffa615a8dea19c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad327592bae94ad7a46715123ef950d51" id="r_ad327592bae94ad7a46715123ef950d51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad327592bae94ad7a46715123ef950d51">v1_5_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ad327592bae94ad7a46715123ef950d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:ad327592bae94ad7a46715123ef950d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2992b4fe2bb4add960f8aa8b4016094" id="r_ad2992b4fe2bb4add960f8aa8b4016094"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2992b4fe2bb4add960f8aa8b4016094">v1_5_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ad2992b4fe2bb4add960f8aa8b4016094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:ad2992b4fe2bb4add960f8aa8b4016094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65035124c6c88aeb5fd753e7583eaa9a" id="r_a65035124c6c88aeb5fd753e7583eaa9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65035124c6c88aeb5fd753e7583eaa9a">v1_5_3</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a65035124c6c88aeb5fd753e7583eaa9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:a65035124c6c88aeb5fd753e7583eaa9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714c564886c5165a11584be4d904b7c3" id="r_a714c564886c5165a11584be4d904b7c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714c564886c5165a11584be4d904b7c3">v1_5_4</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a714c564886c5165a11584be4d904b7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:a714c564886c5165a11584be4d904b7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b6939104bad78a4894499e67a5022d" id="r_ab2b6939104bad78a4894499e67a5022d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2b6939104bad78a4894499e67a5022d">v1_5_5</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ab2b6939104bad78a4894499e67a5022d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.5 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:ab2b6939104bad78a4894499e67a5022d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe9db2415e4bf8278e07caf68c63ad7" id="r_acbe9db2415e4bf8278e07caf68c63ad7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe9db2415e4bf8278e07caf68c63ad7">v1_5_6</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:acbe9db2415e4bf8278e07caf68c63ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.6 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:acbe9db2415e4bf8278e07caf68c63ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a01265e7c8d63fb893a21834890d66" id="r_ab3a01265e7c8d63fb893a21834890d66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a01265e7c8d63fb893a21834890d66">v1_5_7</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ab3a01265e7c8d63fb893a21834890d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.7 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:ab3a01265e7c8d63fb893a21834890d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1f80adbdc48ce4392db712e4c2cf9c" id="r_a2a1f80adbdc48ce4392db712e4c2cf9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a1f80adbdc48ce4392db712e4c2cf9c">v1_5_8</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2a1f80adbdc48ce4392db712e4c2cf9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.8 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:a2a1f80adbdc48ce4392db712e4c2cf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be1c4aeb5e5450401adb74ca825ec5a" id="r_a5be1c4aeb5e5450401adb74ca825ec5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5be1c4aeb5e5450401adb74ca825ec5a">v1_5_9</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a5be1c4aeb5e5450401adb74ca825ec5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.9 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:a5be1c4aeb5e5450401adb74ca825ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27187d4c5b2e50da1720e2915fe857b" id="r_ae27187d4c5b2e50da1720e2915fe857b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae27187d4c5b2e50da1720e2915fe857b">v1_5_10</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ae27187d4c5b2e50da1720e2915fe857b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.10 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:ae27187d4c5b2e50da1720e2915fe857b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5006623e1b1da15a9535bd16816347e" id="r_aa5006623e1b1da15a9535bd16816347e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5006623e1b1da15a9535bd16816347e">v1_5_11</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:aa5006623e1b1da15a9535bd16816347e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.11 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:aa5006623e1b1da15a9535bd16816347e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9d58592c2217ef06efef44352cda80" id="r_a5c9d58592c2217ef06efef44352cda80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c9d58592c2217ef06efef44352cda80">v1_5_12</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a5c9d58592c2217ef06efef44352cda80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.12 с полем длины открытого текста  <br /></td></tr>
+<tr class="separator:a5c9d58592c2217ef06efef44352cda80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d83d16d2b7ec71346f219c6fcbdcf1c" id="r_a2d83d16d2b7ec71346f219c6fcbdcf1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d83d16d2b7ec71346f219c6fcbdcf1c">v1_6_1_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2d83d16d2b7ec71346f219c6fcbdcf1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a2d83d16d2b7ec71346f219c6fcbdcf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af773a6b74834bbcd2643c10d1499dcf1" id="r_af773a6b74834bbcd2643c10d1499dcf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af773a6b74834bbcd2643c10d1499dcf1">v1_6_1_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af773a6b74834bbcd2643c10d1499dcf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:af773a6b74834bbcd2643c10d1499dcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d28ba0182a5f951c8ae284a02497bc2" id="r_a2d28ba0182a5f951c8ae284a02497bc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d28ba0182a5f951c8ae284a02497bc2">v1_6_1_3</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2d28ba0182a5f951c8ae284a02497bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a2d28ba0182a5f951c8ae284a02497bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661e409938f9b1e1b94096e4fcb7fc77" id="r_a661e409938f9b1e1b94096e4fcb7fc77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a661e409938f9b1e1b94096e4fcb7fc77">v1_6_1_4</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a661e409938f9b1e1b94096e4fcb7fc77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a661e409938f9b1e1b94096e4fcb7fc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e5873946bce16d01e139a577fbbd54" id="r_af4e5873946bce16d01e139a577fbbd54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4e5873946bce16d01e139a577fbbd54">v1_6_1_5</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af4e5873946bce16d01e139a577fbbd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.5 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:af4e5873946bce16d01e139a577fbbd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db6e6cd0a85826c1b7edf7f6d3126e7" id="r_a5db6e6cd0a85826c1b7edf7f6d3126e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5db6e6cd0a85826c1b7edf7f6d3126e7">v1_6_1_6</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a5db6e6cd0a85826c1b7edf7f6d3126e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.6 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a5db6e6cd0a85826c1b7edf7f6d3126e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab244d3127ee225457ee78f8af3d51f1a" id="r_ab244d3127ee225457ee78f8af3d51f1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab244d3127ee225457ee78f8af3d51f1a">v1_6_1_7</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ab244d3127ee225457ee78f8af3d51f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.7 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:ab244d3127ee225457ee78f8af3d51f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6512b0a5b3ca4383e882ef4c0caf938" id="r_ac6512b0a5b3ca4383e882ef4c0caf938"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6512b0a5b3ca4383e882ef4c0caf938">v1_6_1_8</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ac6512b0a5b3ca4383e882ef4c0caf938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.8 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:ac6512b0a5b3ca4383e882ef4c0caf938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131aa2d67355a0a9278bb8b8b36da111" id="r_a131aa2d67355a0a9278bb8b8b36da111"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a131aa2d67355a0a9278bb8b8b36da111">v1_6_1_9</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a131aa2d67355a0a9278bb8b8b36da111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.9 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a131aa2d67355a0a9278bb8b8b36da111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a0ece4fb967585eba12afc82b08e37" id="r_a46a0ece4fb967585eba12afc82b08e37"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46a0ece4fb967585eba12afc82b08e37">v1_6_1_10</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a46a0ece4fb967585eba12afc82b08e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.10 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a46a0ece4fb967585eba12afc82b08e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715a4b3a589e49cb30a73c6bd8221c9d" id="r_a715a4b3a589e49cb30a73c6bd8221c9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a715a4b3a589e49cb30a73c6bd8221c9d">v1_6_1_11</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a715a4b3a589e49cb30a73c6bd8221c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.11 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a715a4b3a589e49cb30a73c6bd8221c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4e182024f0e8a8b0faa02199bb5a01" id="r_ade4e182024f0e8a8b0faa02199bb5a01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade4e182024f0e8a8b0faa02199bb5a01">v1_6_1_12</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ade4e182024f0e8a8b0faa02199bb5a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.12 с контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:ade4e182024f0e8a8b0faa02199bb5a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7a1f7f04fcbdfed70f8702756a8006" id="r_a2b7a1f7f04fcbdfed70f8702756a8006"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b7a1f7f04fcbdfed70f8702756a8006">v1_6_2_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2b7a1f7f04fcbdfed70f8702756a8006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a2b7a1f7f04fcbdfed70f8702756a8006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a905785350e8296f7b12e73fc708b4" id="r_ab4a905785350e8296f7b12e73fc708b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4a905785350e8296f7b12e73fc708b4">v1_6_2_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ab4a905785350e8296f7b12e73fc708b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:ab4a905785350e8296f7b12e73fc708b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df1c6d8dda7fb7962b8ac2458d29919" id="r_a1df1c6d8dda7fb7962b8ac2458d29919"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1df1c6d8dda7fb7962b8ac2458d29919">v1_6_2_3</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a1df1c6d8dda7fb7962b8ac2458d29919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a1df1c6d8dda7fb7962b8ac2458d29919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af286a0b529884726b0bbcae2d845c47e" id="r_af286a0b529884726b0bbcae2d845c47e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af286a0b529884726b0bbcae2d845c47e">v1_6_2_4</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af286a0b529884726b0bbcae2d845c47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:af286a0b529884726b0bbcae2d845c47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9149235136ead58cf8571d6cdf83cfe8" id="r_a9149235136ead58cf8571d6cdf83cfe8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9149235136ead58cf8571d6cdf83cfe8">v1_6_2_5</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a9149235136ead58cf8571d6cdf83cfe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.5 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a9149235136ead58cf8571d6cdf83cfe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abf20016e381fc229962ed5eab07d7c" id="r_a3abf20016e381fc229962ed5eab07d7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3abf20016e381fc229962ed5eab07d7c">v1_6_2_6</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a3abf20016e381fc229962ed5eab07d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.6 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a3abf20016e381fc229962ed5eab07d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e9fe73cc74fe239684c618b0765caa" id="r_a38e9fe73cc74fe239684c618b0765caa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e9fe73cc74fe239684c618b0765caa">v1_6_2_7</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a38e9fe73cc74fe239684c618b0765caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.7 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a38e9fe73cc74fe239684c618b0765caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23902b49186c67a5cedd0b25d4b7d727" id="r_a23902b49186c67a5cedd0b25d4b7d727"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23902b49186c67a5cedd0b25d4b7d727">v1_6_2_8</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a23902b49186c67a5cedd0b25d4b7d727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.8 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a23902b49186c67a5cedd0b25d4b7d727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae468d9f77297c7937308aec8a2c146" id="r_acae468d9f77297c7937308aec8a2c146"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acae468d9f77297c7937308aec8a2c146">v1_6_2_9</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:acae468d9f77297c7937308aec8a2c146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.9 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:acae468d9f77297c7937308aec8a2c146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b6823d5ae1cfb4b687ab1e6e479367" id="r_a64b6823d5ae1cfb4b687ab1e6e479367"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b6823d5ae1cfb4b687ab1e6e479367">v1_6_2_10</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a64b6823d5ae1cfb4b687ab1e6e479367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.10 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a64b6823d5ae1cfb4b687ab1e6e479367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666398164fdb9c0d11d0f1515f886173" id="r_a666398164fdb9c0d11d0f1515f886173"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a666398164fdb9c0d11d0f1515f886173">v1_6_2_11</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a666398164fdb9c0d11d0f1515f886173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.11 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a666398164fdb9c0d11d0f1515f886173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad532207f5bad3b1bfc5dda9f196f5e40" id="r_ad532207f5bad3b1bfc5dda9f196f5e40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad532207f5bad3b1bfc5dda9f196f5e40">v1_6_2_12</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ad532207f5bad3b1bfc5dda9f196f5e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.12 с контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:ad532207f5bad3b1bfc5dda9f196f5e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c56c432192e7be8c0a076c8625d4dec" id="r_a2c56c432192e7be8c0a076c8625d4dec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c56c432192e7be8c0a076c8625d4dec">v1_7_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2c56c432192e7be8c0a076c8625d4dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.1.1 с полем длины открытого текста и контрольной суммой.  <br /></td></tr>
+<tr class="separator:a2c56c432192e7be8c0a076c8625d4dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67cd0c61a38de854b4dc96eecc370f74" id="r_a67cd0c61a38de854b4dc96eecc370f74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67cd0c61a38de854b4dc96eecc370f74">v1_7_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a67cd0c61a38de854b4dc96eecc370f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.1.2 с полем длины открытого текста и контрольной суммой.  <br /></td></tr>
+<tr class="separator:a67cd0c61a38de854b4dc96eecc370f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92cc5524891ad1fa99a676487a11366" id="r_af92cc5524891ad1fa99a676487a11366"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af92cc5524891ad1fa99a676487a11366">v1_8_1_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af92cc5524891ad1fa99a676487a11366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:af92cc5524891ad1fa99a676487a11366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc80e83314abfb9f13629681b6defb4b" id="r_abc80e83314abfb9f13629681b6defb4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc80e83314abfb9f13629681b6defb4b">v1_8_1_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:abc80e83314abfb9f13629681b6defb4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:abc80e83314abfb9f13629681b6defb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab1e0abac77f2586618861fa3e33646" id="r_a2ab1e0abac77f2586618861fa3e33646"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ab1e0abac77f2586618861fa3e33646">v1_8_1_3</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2ab1e0abac77f2586618861fa3e33646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a2ab1e0abac77f2586618861fa3e33646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0712ccee1e20df32f2602cbfafc85781" id="r_a0712ccee1e20df32f2602cbfafc85781"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0712ccee1e20df32f2602cbfafc85781">v1_8_1_4</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a0712ccee1e20df32f2602cbfafc85781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a0712ccee1e20df32f2602cbfafc85781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b66a3b8f588e50e1ad20d30736984b7" id="r_a1b66a3b8f588e50e1ad20d30736984b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b66a3b8f588e50e1ad20d30736984b7">v1_8_1_5</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a1b66a3b8f588e50e1ad20d30736984b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.5 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a1b66a3b8f588e50e1ad20d30736984b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2167ea6dd545b03e0131666d0f6949c0" id="r_a2167ea6dd545b03e0131666d0f6949c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2167ea6dd545b03e0131666d0f6949c0">v1_8_1_6</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a2167ea6dd545b03e0131666d0f6949c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.6 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a2167ea6dd545b03e0131666d0f6949c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91211dc5cdd6dfef70282f75b51cb4b3" id="r_a91211dc5cdd6dfef70282f75b51cb4b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91211dc5cdd6dfef70282f75b51cb4b3">v1_8_1_7</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a91211dc5cdd6dfef70282f75b51cb4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.7 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a91211dc5cdd6dfef70282f75b51cb4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7624885e65cbec3187c7f7b06b23001e" id="r_a7624885e65cbec3187c7f7b06b23001e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7624885e65cbec3187c7f7b06b23001e">v1_8_1_8</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a7624885e65cbec3187c7f7b06b23001e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.8 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a7624885e65cbec3187c7f7b06b23001e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6fae934a3b3a4143bc8c6822dddd42" id="r_a7d6fae934a3b3a4143bc8c6822dddd42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d6fae934a3b3a4143bc8c6822dddd42">v1_8_1_9</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a7d6fae934a3b3a4143bc8c6822dddd42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.9 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a7d6fae934a3b3a4143bc8c6822dddd42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2beb26cf4a995c35f8633d9bb2d110" id="r_a7d2beb26cf4a995c35f8633d9bb2d110"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d2beb26cf4a995c35f8633d9bb2d110">v1_8_1_10</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a7d2beb26cf4a995c35f8633d9bb2d110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.10 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a7d2beb26cf4a995c35f8633d9bb2d110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3087e6e288ae5a30dc1278593b1e776a" id="r_a3087e6e288ae5a30dc1278593b1e776a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3087e6e288ae5a30dc1278593b1e776a">v1_8_1_11</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a3087e6e288ae5a30dc1278593b1e776a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.11 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a3087e6e288ae5a30dc1278593b1e776a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e57f200392768b58345b93693b3da17" id="r_a1e57f200392768b58345b93693b3da17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e57f200392768b58345b93693b3da17">v1_8_1_12</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a1e57f200392768b58345b93693b3da17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.12 с полем длины открытого текста и контрольной суммой, не зависящей от времени  <br /></td></tr>
+<tr class="separator:a1e57f200392768b58345b93693b3da17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a23ac1ef19caaafbd94284d03fc8b" id="r_a044a23ac1ef19caaafbd94284d03fc8b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a044a23ac1ef19caaafbd94284d03fc8b">v1_8_2_1</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a044a23ac1ef19caaafbd94284d03fc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.1 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a044a23ac1ef19caaafbd94284d03fc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b256830035801881f0801a893c7817" id="r_a13b256830035801881f0801a893c7817"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13b256830035801881f0801a893c7817">v1_8_2_2</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a13b256830035801881f0801a893c7817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.2 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a13b256830035801881f0801a893c7817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d7ab64860333eb5ed57dd065489ad1" id="r_a70d7ab64860333eb5ed57dd065489ad1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70d7ab64860333eb5ed57dd065489ad1">v1_8_2_3</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a70d7ab64860333eb5ed57dd065489ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.3 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a70d7ab64860333eb5ed57dd065489ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72dc5a9b0cd0e7e3d6226731f828b56e" id="r_a72dc5a9b0cd0e7e3d6226731f828b56e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72dc5a9b0cd0e7e3d6226731f828b56e">v1_8_2_4</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a72dc5a9b0cd0e7e3d6226731f828b56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.4 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a72dc5a9b0cd0e7e3d6226731f828b56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89b0037995ac08075c12d92677c6392" id="r_af89b0037995ac08075c12d92677c6392"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af89b0037995ac08075c12d92677c6392">v1_8_2_5</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af89b0037995ac08075c12d92677c6392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.5 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:af89b0037995ac08075c12d92677c6392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19cfd46bcac9a50cf7e6310e18d30fb" id="r_ab19cfd46bcac9a50cf7e6310e18d30fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab19cfd46bcac9a50cf7e6310e18d30fb">v1_8_2_6</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:ab19cfd46bcac9a50cf7e6310e18d30fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.6 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:ab19cfd46bcac9a50cf7e6310e18d30fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e977a6ae25a8e0209d90961ebab1d7" id="r_a04e977a6ae25a8e0209d90961ebab1d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04e977a6ae25a8e0209d90961ebab1d7">v1_8_2_7</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a04e977a6ae25a8e0209d90961ebab1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.7 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a04e977a6ae25a8e0209d90961ebab1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca8c06b2d1b333a5b5de4ff80c3ce04" id="r_aeca8c06b2d1b333a5b5de4ff80c3ce04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeca8c06b2d1b333a5b5de4ff80c3ce04">v1_8_2_8</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:aeca8c06b2d1b333a5b5de4ff80c3ce04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.8 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:aeca8c06b2d1b333a5b5de4ff80c3ce04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eeb02fa97e827284b7d999eb652afc2" id="r_a7eeb02fa97e827284b7d999eb652afc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eeb02fa97e827284b7d999eb652afc2">v1_8_2_9</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a7eeb02fa97e827284b7d999eb652afc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.9 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a7eeb02fa97e827284b7d999eb652afc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55d1f2db19f4318dc1b57c8e263d6d8" id="r_af55d1f2db19f4318dc1b57c8e263d6d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af55d1f2db19f4318dc1b57c8e263d6d8">v1_8_2_10</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:af55d1f2db19f4318dc1b57c8e263d6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.10 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:af55d1f2db19f4318dc1b57c8e263d6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa7e6a22fe9cea46416806adb4330ce" id="r_acaa7e6a22fe9cea46416806adb4330ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa7e6a22fe9cea46416806adb4330ce">v1_8_2_11</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:acaa7e6a22fe9cea46416806adb4330ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.11 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:acaa7e6a22fe9cea46416806adb4330ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4434e9b70c1d77947c05a73ef156e9" id="r_a9d4434e9b70c1d77947c05a73ef156e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d4434e9b70c1d77947c05a73ef156e9">v1_8_2_12</a> (ifstream *input_file, ofstream *output_file, <a class="el" href="structoffsets.html">offsets</a> offset)</td></tr>
+<tr class="memdesc:a9d4434e9b70c1d77947c05a73ef156e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ш1.2.12 с полем длины открытого текста и контрольной суммой, зависящей от времени  <br /></td></tr>
+<tr class="separator:a9d4434e9b70c1d77947c05a73ef156e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Файл содержащий вариации шифратора </p>
+<p>В данный файл выведены все функции вида vX_X_X(ifstream*, ofstream*, offsets), где Х_Х_Х номер соответствующего шифра из файла с ТЗ. Каждая функция вызывает <a class="el" href="functions_8cpp.html#a60a000fcefd3226d52c0c8a4fe20d6b4" title="Функция реализующая шифр цезаря.">caesar(ifstream*, ofstream*, offsets)</a>, где через структуру offsets передаются параметры шифратора </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a2ba689aac99d837d69fa372c64d61f64" name="a2ba689aac99d837d69fa372c64d61f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba689aac99d837d69fa372c64d61f64">&#9670;&#160;</a></span>v1_1_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_1_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с сдвигом вправо </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af8681b2613341c8c98bcb484db0b0695" name="af8681b2613341c8c98bcb484db0b0695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8681b2613341c8c98bcb484db0b0695">&#9670;&#160;</a></span>v1_1_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_1_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с сдвигом влево </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ac93f43c76b44c7ead919cc3aa7d5cab6" name="ac93f43c76b44c7ead919cc3aa7d5cab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93f43c76b44c7ead919cc3aa7d5cab6">&#9670;&#160;</a></span>v1_2_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с разными однонаправленными сдвигами вправо, зависящими от времени начала шифрования </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a871b05499fcc6a3b649e2fc71a57c615" name="a871b05499fcc6a3b649e2fc71a57c615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871b05499fcc6a3b649e2fc71a57c615">&#9670;&#160;</a></span>v1_2_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_10 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с сдвигом зависящим от дня недели </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a7320d0392aa4080a343a95672c039fa8" name="a7320d0392aa4080a343a95672c039fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7320d0392aa4080a343a95672c039fa8">&#9670;&#160;</a></span>v1_2_11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_11 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с сдвигом зависящим от дня недели </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a55cbb538115b87b0d46565278e1a58de" name="a55cbb538115b87b0d46565278e1a58de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55cbb538115b87b0d46565278e1a58de">&#9670;&#160;</a></span>v1_2_12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_12 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с сдвигом зависящим от дня недели </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a43f12b0ce0e5ba979ccfe5a334da9758" name="a43f12b0ce0e5ba979ccfe5a334da9758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f12b0ce0e5ba979ccfe5a334da9758">&#9670;&#160;</a></span>v1_2_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с разными однонаправленными сдвигами, влево зависящими от времени начала шифрования </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a20b0177ecdbec03ac690cad08bec3fce" name="a20b0177ecdbec03ac690cad08bec3fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b0177ecdbec03ac690cad08bec3fce">&#9670;&#160;</a></span>v1_2_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_3 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с одинаковыми разнонаправленными сдвигами, зависящими от времени начала шифрования </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a8e3dcd3de6947a37484701a54d215716" name="a8e3dcd3de6947a37484701a54d215716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3dcd3de6947a37484701a54d215716">&#9670;&#160;</a></span>v1_2_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_4 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с разными разнонаправленными сдвигами, зависящими от времени начала шифрования </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a48f759e0b5fc89928cbe2c0b8352b519" name="a48f759e0b5fc89928cbe2c0b8352b519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f759e0b5fc89928cbe2c0b8352b519">&#9670;&#160;</a></span>v1_2_5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_5 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с сдвигом зависящим от числа месяца </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a636bc87554eace9f98fa483f7963ce8d" name="a636bc87554eace9f98fa483f7963ce8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636bc87554eace9f98fa483f7963ce8d">&#9670;&#160;</a></span>v1_2_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_6 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с сдвигом зависящим от числа месяца </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a787442a6be06c5ff4b7eb820651a455f" name="a787442a6be06c5ff4b7eb820651a455f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787442a6be06c5ff4b7eb820651a455f">&#9670;&#160;</a></span>v1_2_7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_7 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с сдвигом зависящим от числа месяца </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a714b2a71e7dbc58fbd5519bed5097ff6" name="a714b2a71e7dbc58fbd5519bed5097ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714b2a71e7dbc58fbd5519bed5097ff6">&#9670;&#160;</a></span>v1_2_8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_8 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с сдвигом зависящим от числа месяца </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ace113360cc8fe285ae4ab4ff6a75720b" name="ace113360cc8fe285ae4ab4ff6a75720b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace113360cc8fe285ae4ab4ff6a75720b">&#9670;&#160;</a></span>v1_2_9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_2_9 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с сдвигом зависящим от дня недели </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2ce5ac3f1804abb3d51ade83df2da9aa" name="a2ce5ac3f1804abb3d51ade83df2da9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce5ac3f1804abb3d51ade83df2da9aa">&#9670;&#160;</a></span>v1_3_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_3_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с сдвигом вправо и полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="aeffe1bbc675ff710446b7803eb52bde7" name="aeffe1bbc675ff710446b7803eb52bde7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeffe1bbc675ff710446b7803eb52bde7">&#9670;&#160;</a></span>v1_3_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_3_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с сдвигом влево и полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a0ff705fe1f6ddcc3a44a3074d855ddb0" name="a0ff705fe1f6ddcc3a44a3074d855ddb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ff705fe1f6ddcc3a44a3074d855ddb0">&#9670;&#160;</a></span>v1_4_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_4_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с сдвигом вправо и контрольной суммой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a1a6922e92a6f6d50fffa615a8dea19c0" name="a1a6922e92a6f6d50fffa615a8dea19c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6922e92a6f6d50fffa615a8dea19c0">&#9670;&#160;</a></span>v1_4_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_4_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шифр Цезаря с сдвигом влево контрольной суммой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ad327592bae94ad7a46715123ef950d51" name="ad327592bae94ad7a46715123ef950d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad327592bae94ad7a46715123ef950d51">&#9670;&#160;</a></span>v1_5_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ae27187d4c5b2e50da1720e2915fe857b" name="ae27187d4c5b2e50da1720e2915fe857b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27187d4c5b2e50da1720e2915fe857b">&#9670;&#160;</a></span>v1_5_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_10 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.10 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="aa5006623e1b1da15a9535bd16816347e" name="aa5006623e1b1da15a9535bd16816347e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5006623e1b1da15a9535bd16816347e">&#9670;&#160;</a></span>v1_5_11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_11 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.11 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a5c9d58592c2217ef06efef44352cda80" name="a5c9d58592c2217ef06efef44352cda80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9d58592c2217ef06efef44352cda80">&#9670;&#160;</a></span>v1_5_12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_12 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.12 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ad2992b4fe2bb4add960f8aa8b4016094" name="ad2992b4fe2bb4add960f8aa8b4016094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2992b4fe2bb4add960f8aa8b4016094">&#9670;&#160;</a></span>v1_5_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a65035124c6c88aeb5fd753e7583eaa9a" name="a65035124c6c88aeb5fd753e7583eaa9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65035124c6c88aeb5fd753e7583eaa9a">&#9670;&#160;</a></span>v1_5_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_3 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a714c564886c5165a11584be4d904b7c3" name="a714c564886c5165a11584be4d904b7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714c564886c5165a11584be4d904b7c3">&#9670;&#160;</a></span>v1_5_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_4 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ab2b6939104bad78a4894499e67a5022d" name="ab2b6939104bad78a4894499e67a5022d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b6939104bad78a4894499e67a5022d">&#9670;&#160;</a></span>v1_5_5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_5 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.5 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="acbe9db2415e4bf8278e07caf68c63ad7" name="acbe9db2415e4bf8278e07caf68c63ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe9db2415e4bf8278e07caf68c63ad7">&#9670;&#160;</a></span>v1_5_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_6 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.6 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ab3a01265e7c8d63fb893a21834890d66" name="ab3a01265e7c8d63fb893a21834890d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a01265e7c8d63fb893a21834890d66">&#9670;&#160;</a></span>v1_5_7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_7 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.7 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2a1f80adbdc48ce4392db712e4c2cf9c" name="a2a1f80adbdc48ce4392db712e4c2cf9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1f80adbdc48ce4392db712e4c2cf9c">&#9670;&#160;</a></span>v1_5_8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_8 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.8 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a5be1c4aeb5e5450401adb74ca825ec5a" name="a5be1c4aeb5e5450401adb74ca825ec5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be1c4aeb5e5450401adb74ca825ec5a">&#9670;&#160;</a></span>v1_5_9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_5_9 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.9 с полем длины открытого текста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2d83d16d2b7ec71346f219c6fcbdcf1c" name="a2d83d16d2b7ec71346f219c6fcbdcf1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d83d16d2b7ec71346f219c6fcbdcf1c">&#9670;&#160;</a></span>v1_6_1_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a46a0ece4fb967585eba12afc82b08e37" name="a46a0ece4fb967585eba12afc82b08e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a0ece4fb967585eba12afc82b08e37">&#9670;&#160;</a></span>v1_6_1_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_10 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.10 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a715a4b3a589e49cb30a73c6bd8221c9d" name="a715a4b3a589e49cb30a73c6bd8221c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715a4b3a589e49cb30a73c6bd8221c9d">&#9670;&#160;</a></span>v1_6_1_11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_11 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.11 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ade4e182024f0e8a8b0faa02199bb5a01" name="ade4e182024f0e8a8b0faa02199bb5a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4e182024f0e8a8b0faa02199bb5a01">&#9670;&#160;</a></span>v1_6_1_12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_12 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.12 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af773a6b74834bbcd2643c10d1499dcf1" name="af773a6b74834bbcd2643c10d1499dcf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af773a6b74834bbcd2643c10d1499dcf1">&#9670;&#160;</a></span>v1_6_1_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2d28ba0182a5f951c8ae284a02497bc2" name="a2d28ba0182a5f951c8ae284a02497bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d28ba0182a5f951c8ae284a02497bc2">&#9670;&#160;</a></span>v1_6_1_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_3 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a661e409938f9b1e1b94096e4fcb7fc77" name="a661e409938f9b1e1b94096e4fcb7fc77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661e409938f9b1e1b94096e4fcb7fc77">&#9670;&#160;</a></span>v1_6_1_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_4 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af4e5873946bce16d01e139a577fbbd54" name="af4e5873946bce16d01e139a577fbbd54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e5873946bce16d01e139a577fbbd54">&#9670;&#160;</a></span>v1_6_1_5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_5 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.5 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a5db6e6cd0a85826c1b7edf7f6d3126e7" name="a5db6e6cd0a85826c1b7edf7f6d3126e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db6e6cd0a85826c1b7edf7f6d3126e7">&#9670;&#160;</a></span>v1_6_1_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_6 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.6 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ab244d3127ee225457ee78f8af3d51f1a" name="ab244d3127ee225457ee78f8af3d51f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab244d3127ee225457ee78f8af3d51f1a">&#9670;&#160;</a></span>v1_6_1_7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_7 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.7 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ac6512b0a5b3ca4383e882ef4c0caf938" name="ac6512b0a5b3ca4383e882ef4c0caf938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6512b0a5b3ca4383e882ef4c0caf938">&#9670;&#160;</a></span>v1_6_1_8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_8 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.8 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a131aa2d67355a0a9278bb8b8b36da111" name="a131aa2d67355a0a9278bb8b8b36da111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131aa2d67355a0a9278bb8b8b36da111">&#9670;&#160;</a></span>v1_6_1_9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_1_9 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.9 с контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2b7a1f7f04fcbdfed70f8702756a8006" name="a2b7a1f7f04fcbdfed70f8702756a8006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7a1f7f04fcbdfed70f8702756a8006">&#9670;&#160;</a></span>v1_6_2_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a64b6823d5ae1cfb4b687ab1e6e479367" name="a64b6823d5ae1cfb4b687ab1e6e479367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b6823d5ae1cfb4b687ab1e6e479367">&#9670;&#160;</a></span>v1_6_2_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_10 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.10 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a666398164fdb9c0d11d0f1515f886173" name="a666398164fdb9c0d11d0f1515f886173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666398164fdb9c0d11d0f1515f886173">&#9670;&#160;</a></span>v1_6_2_11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_11 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.11 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ad532207f5bad3b1bfc5dda9f196f5e40" name="ad532207f5bad3b1bfc5dda9f196f5e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad532207f5bad3b1bfc5dda9f196f5e40">&#9670;&#160;</a></span>v1_6_2_12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_12 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.12 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ab4a905785350e8296f7b12e73fc708b4" name="ab4a905785350e8296f7b12e73fc708b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a905785350e8296f7b12e73fc708b4">&#9670;&#160;</a></span>v1_6_2_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a1df1c6d8dda7fb7962b8ac2458d29919" name="a1df1c6d8dda7fb7962b8ac2458d29919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df1c6d8dda7fb7962b8ac2458d29919">&#9670;&#160;</a></span>v1_6_2_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_3 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af286a0b529884726b0bbcae2d845c47e" name="af286a0b529884726b0bbcae2d845c47e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af286a0b529884726b0bbcae2d845c47e">&#9670;&#160;</a></span>v1_6_2_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_4 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a9149235136ead58cf8571d6cdf83cfe8" name="a9149235136ead58cf8571d6cdf83cfe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9149235136ead58cf8571d6cdf83cfe8">&#9670;&#160;</a></span>v1_6_2_5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_5 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.5 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a3abf20016e381fc229962ed5eab07d7c" name="a3abf20016e381fc229962ed5eab07d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3abf20016e381fc229962ed5eab07d7c">&#9670;&#160;</a></span>v1_6_2_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_6 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.6 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a38e9fe73cc74fe239684c618b0765caa" name="a38e9fe73cc74fe239684c618b0765caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e9fe73cc74fe239684c618b0765caa">&#9670;&#160;</a></span>v1_6_2_7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_7 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.7 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a23902b49186c67a5cedd0b25d4b7d727" name="a23902b49186c67a5cedd0b25d4b7d727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23902b49186c67a5cedd0b25d4b7d727">&#9670;&#160;</a></span>v1_6_2_8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_8 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.8 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="acae468d9f77297c7937308aec8a2c146" name="acae468d9f77297c7937308aec8a2c146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae468d9f77297c7937308aec8a2c146">&#9670;&#160;</a></span>v1_6_2_9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_6_2_9 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.9 с контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2c56c432192e7be8c0a076c8625d4dec" name="a2c56c432192e7be8c0a076c8625d4dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c56c432192e7be8c0a076c8625d4dec">&#9670;&#160;</a></span>v1_7_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_7_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.1.1 с полем длины открытого текста и контрольной суммой. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a67cd0c61a38de854b4dc96eecc370f74" name="a67cd0c61a38de854b4dc96eecc370f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67cd0c61a38de854b4dc96eecc370f74">&#9670;&#160;</a></span>v1_7_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_7_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.1.2 с полем длины открытого текста и контрольной суммой. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af92cc5524891ad1fa99a676487a11366" name="af92cc5524891ad1fa99a676487a11366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92cc5524891ad1fa99a676487a11366">&#9670;&#160;</a></span>v1_8_1_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a7d2beb26cf4a995c35f8633d9bb2d110" name="a7d2beb26cf4a995c35f8633d9bb2d110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2beb26cf4a995c35f8633d9bb2d110">&#9670;&#160;</a></span>v1_8_1_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_10 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.10 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a3087e6e288ae5a30dc1278593b1e776a" name="a3087e6e288ae5a30dc1278593b1e776a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3087e6e288ae5a30dc1278593b1e776a">&#9670;&#160;</a></span>v1_8_1_11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_11 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.11 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a1e57f200392768b58345b93693b3da17" name="a1e57f200392768b58345b93693b3da17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e57f200392768b58345b93693b3da17">&#9670;&#160;</a></span>v1_8_1_12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_12 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.12 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="abc80e83314abfb9f13629681b6defb4b" name="abc80e83314abfb9f13629681b6defb4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc80e83314abfb9f13629681b6defb4b">&#9670;&#160;</a></span>v1_8_1_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2ab1e0abac77f2586618861fa3e33646" name="a2ab1e0abac77f2586618861fa3e33646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab1e0abac77f2586618861fa3e33646">&#9670;&#160;</a></span>v1_8_1_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_3 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a0712ccee1e20df32f2602cbfafc85781" name="a0712ccee1e20df32f2602cbfafc85781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0712ccee1e20df32f2602cbfafc85781">&#9670;&#160;</a></span>v1_8_1_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_4 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a1b66a3b8f588e50e1ad20d30736984b7" name="a1b66a3b8f588e50e1ad20d30736984b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b66a3b8f588e50e1ad20d30736984b7">&#9670;&#160;</a></span>v1_8_1_5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_5 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.5 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a2167ea6dd545b03e0131666d0f6949c0" name="a2167ea6dd545b03e0131666d0f6949c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2167ea6dd545b03e0131666d0f6949c0">&#9670;&#160;</a></span>v1_8_1_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_6 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.6 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a91211dc5cdd6dfef70282f75b51cb4b3" name="a91211dc5cdd6dfef70282f75b51cb4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91211dc5cdd6dfef70282f75b51cb4b3">&#9670;&#160;</a></span>v1_8_1_7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_7 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.7 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a7624885e65cbec3187c7f7b06b23001e" name="a7624885e65cbec3187c7f7b06b23001e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7624885e65cbec3187c7f7b06b23001e">&#9670;&#160;</a></span>v1_8_1_8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_8 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.8 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a7d6fae934a3b3a4143bc8c6822dddd42" name="a7d6fae934a3b3a4143bc8c6822dddd42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6fae934a3b3a4143bc8c6822dddd42">&#9670;&#160;</a></span>v1_8_1_9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_1_9 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.9 с полем длины открытого текста и контрольной суммой, не зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a044a23ac1ef19caaafbd94284d03fc8b" name="a044a23ac1ef19caaafbd94284d03fc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a044a23ac1ef19caaafbd94284d03fc8b">&#9670;&#160;</a></span>v1_8_2_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_1 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.1 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af55d1f2db19f4318dc1b57c8e263d6d8" name="af55d1f2db19f4318dc1b57c8e263d6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55d1f2db19f4318dc1b57c8e263d6d8">&#9670;&#160;</a></span>v1_8_2_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_10 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.10 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="acaa7e6a22fe9cea46416806adb4330ce" name="acaa7e6a22fe9cea46416806adb4330ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa7e6a22fe9cea46416806adb4330ce">&#9670;&#160;</a></span>v1_8_2_11()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_11 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.11 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a9d4434e9b70c1d77947c05a73ef156e9" name="a9d4434e9b70c1d77947c05a73ef156e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4434e9b70c1d77947c05a73ef156e9">&#9670;&#160;</a></span>v1_8_2_12()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_12 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.12 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a13b256830035801881f0801a893c7817" name="a13b256830035801881f0801a893c7817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b256830035801881f0801a893c7817">&#9670;&#160;</a></span>v1_8_2_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_2 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.2 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a70d7ab64860333eb5ed57dd065489ad1" name="a70d7ab64860333eb5ed57dd065489ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d7ab64860333eb5ed57dd065489ad1">&#9670;&#160;</a></span>v1_8_2_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_3 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.3 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a72dc5a9b0cd0e7e3d6226731f828b56e" name="a72dc5a9b0cd0e7e3d6226731f828b56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72dc5a9b0cd0e7e3d6226731f828b56e">&#9670;&#160;</a></span>v1_8_2_4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_4 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.4 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="af89b0037995ac08075c12d92677c6392" name="af89b0037995ac08075c12d92677c6392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89b0037995ac08075c12d92677c6392">&#9670;&#160;</a></span>v1_8_2_5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_5 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.5 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="ab19cfd46bcac9a50cf7e6310e18d30fb" name="ab19cfd46bcac9a50cf7e6310e18d30fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19cfd46bcac9a50cf7e6310e18d30fb">&#9670;&#160;</a></span>v1_8_2_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_6 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.6 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a04e977a6ae25a8e0209d90961ebab1d7" name="a04e977a6ae25a8e0209d90961ebab1d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e977a6ae25a8e0209d90961ebab1d7">&#9670;&#160;</a></span>v1_8_2_7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_7 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.7 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="aeca8c06b2d1b333a5b5de4ff80c3ce04" name="aeca8c06b2d1b333a5b5de4ff80c3ce04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca8c06b2d1b333a5b5de4ff80c3ce04">&#9670;&#160;</a></span>v1_8_2_8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_8 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.8 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+<a id="a7eeb02fa97e827284b7d999eb652afc2" name="a7eeb02fa97e827284b7d999eb652afc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eeb02fa97e827284b7d999eb652afc2">&#9670;&#160;</a></span>v1_8_2_9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int v1_8_2_9 </td>
+          <td>(</td>
+          <td class="paramtype">ifstream *</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ofstream *</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structoffsets.html">offsets</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ш1.2.9 с полем длины открытого текста и контрольной суммой, зависящей от времени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>Файл с исходным текстом </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output_file</td><td>Созданный файл с зашифрованным текстом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Структура задающая сдвиги </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат работы функции ceasar() </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
