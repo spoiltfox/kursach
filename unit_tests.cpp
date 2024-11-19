@@ -14,7 +14,7 @@ using namespace std;
     \brief Юнит-тест для функции ceaser()
 */
 void test_caesar() {
-    ofstream output("output.txt");
+    ofstream output;
     ifstream input;
     offsets test_offset;
     test_offset.lat = 1;
@@ -114,6 +114,96 @@ void test_minute_range()
         cout << "test_minute_range failed: expected value between 0 and 59, got " << minute << "\n";
     }
 }
+
+void test_calcChecksum() {
+    ofstream input_test_file("input.txt");
+    input_test_file << "Hello123";
+    input_test_file.close();
+
+    ifstream input("input.txt");
+    char checksum = calcChecksum(&input, false);
+    input.close();
+
+    // Предполагаемое значение контрольной суммы для "Hello123"
+    // Считаем сумму вручную:
+    // H = 72 + 3 = 75
+    // e = 101 + 3 = 104
+    // l = 108 + 3 = 111
+    // l = 108 + 3 = 111
+    // o = 111 + 3 = 114
+    // 1 = 49 + 2 = 51
+    // 2 = 50 + 2 = 52
+    // 3 = 51 + 2 = 53
+    // Итого: 75 + 104 + 111 + 111 + 114 + 51 + 52 + 53 = 671
+    char expected_checksum = 671;
+
+    if (checksum == expected_checksum) {
+        cout << "test_calcChecksum passed\n";
+    } else {
+        cout << "test_calcChecksum failed: expected " << static_cast<int>(expected_checksum) << ", got " << static_cast<int>(checksum) << "\n";
+    }
+}
+
+void test_calcChecksum_with_special_characters() {
+    ofstream input_test_file("input_special.txt");
+    input_test_file << "!@#123";
+    input_test_file.close();
+
+    ifstream input("input_special.txt");
+    char checksum = calcChecksum(&input, false);
+    input.close();
+
+    // Предполагаемое значение контрольной суммы для "!@#123"
+    // ! = 33 + 0 = 33
+    // @ = 64 + 0 = 64
+    // # = 35 + 0 = 35
+    // 1 = 49 + 2 = 51
+    // 2 = 50 + 2 = 52
+    // 3 = 51 + 2 = 53
+    // Итого: 33 + 64 + 35 + 51 + 52 + 53 = 288
+    char expected_checksum = 288;
+
+    if (checksum == expected_checksum) {
+        cout << "test_calcChecksum_with_special_characters passed\n";
+    } else {
+        cout << "test_calcChecksum_with_special_characters failed: expected " << static_cast<int>(expected_checksum) << ", got " << static_cast<int>(checksum) << "\n";
+    }
+}
+
+void test_calcChecksum_with_russian_characters() {
+    ofstream input_test_file("input_russian.txt");
+    input_test_file << "Привет123";
+    input_test_file.close();
+
+    ifstream input("input_russian.txt");
+    char checksum = calcChecksum(&input, false);
+    input.close();
+
+    // Предполагаемое значение контрольной суммы для "Привет123"
+    // П = 208 + 5 = 213
+    // р = 240 + 5 = 245
+    // и = 232 + 5 = 237
+    // в = 226 + 5 = 231
+    // е = 229 + 5 = 234
+    // т = 242 + 5 = 247
+    // 1 = 49 + 2 = 51
+    // 2 = 50 + 2 = 52
+    // 3 = 51 + 2 = 53
+    // Итого: 213 + 245 + 237 + 231 + 234 + 247 + 51 + 52 + 53 = 1563
+    char expected_checksum = 1563;
+
+    if (checksum == expected_checksum) {
+        cout << "test_calcChecksum_with_russian_characters passed\n";
+    } else {
+        cout << "test_calcChecksum_with_russian_characters failed: expected " << static_cast<int>(expected_checksum) << ", got " << static_cast<int>(checksum) << "\n";
+    }
+}
+void int_pow_test(){
+    cout << "2^0 = " << int_pow(2, 0) << endl;
+    cout << "2^1 = " << int_pow(2, 1) << endl;
+    cout << "2^2 = " << int_pow(2, 2) << endl;
+    cout << "2^3 = " << int_pow(2, 3) << endl;
+}
  /**
     \brief Запуск юнит-тестов
     \return Код завершения программы
@@ -125,5 +215,9 @@ int main()
     test_week_day();
     test_month_day();
     test_minute_range();
+    test_calcChecksum();
+    test_calcChecksum_with_special_characters();
+    test_calcChecksum_with_russian_characters();
+    int_pow_test();
     return 0;
 }

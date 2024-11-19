@@ -211,7 +211,15 @@ int main(int argc, char* argv[])
         if(output.is_open()){cout << "output file open ok\n";}
         else{return 2;}
         offsets test;
-
+        /*
+        unsigned char integer_byte_split;
+        unsigned int a = 0xffffffff;
+        output<< a<< endl;
+        for (int i = 0; i < 4; i++){
+            integer_byte_split = ((a / int_pow(256, i))% 256);
+            output << (char)integer_byte_split<< endl;
+        }*/
+        output << endl;
         // Выбор декоратора
          // Выбираем нужный декоратор
         switch (variation)
@@ -424,7 +432,7 @@ int main(int argc, char* argv[])
             v1_8_2_1(&input, &output, test);
             break;
         case 70:
-            v1_8_1_2(&input, &output, test);
+            v1_8_2_2(&input, &output, test);
             break;
         case 71:
             v1_8_2_3(&input, &output, test);
@@ -693,7 +701,7 @@ int main(int argc, char* argv[])
             v1_8_2_1(&input, &output, test);
             break;
         case decor_choice::Option::Option1_8_2_2:
-            v1_8_1_2(&input, &output, test);
+            v1_8_2_2(&input, &output, test);
             break;
         case decor_choice::Option::Option1_8_2_3:
             v1_8_2_3(&input, &output, test);

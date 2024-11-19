@@ -10,6 +10,15 @@
 
 using namespace std;
 
+
+uint32_t int_pow(uint32_t base, uint32_t power){
+    uint32_t answer = 1;
+    for(uint32_t i = 0; i < power; i++){
+        answer *= base;
+    }
+    return answer;
+}
+
 /**
 \brief Структура для передачи параметров в caesar()
 */
@@ -22,10 +31,10 @@ struct offsets { //в случае неообходимости могут бы�
     bool checksum_time_dependent = false; ///< Зависит ли контрольная сумма от времени
 };
 
-char symboul (ifstream* file)
+uint32_t symboul (ifstream* file)
 {
     char ch;
-    char charcount=0;
+    uint32_t charcount=0;
     //читаем посимвольно весь файл
     while(file->get(ch))
     {
@@ -70,13 +79,13 @@ int get_minute() {
     return minute;
 }
 
-char calcChecksum(ifstream* inputFile, bool timeDependent) {
+uint32_t calcChecksum(ifstream* inputFile, bool timeDependent) {
     if (!inputFile->is_open() || !inputFile->good()) {
         return 1; // Ошибка открытия файла
     }
 
     char ch;
-    unsigned long long checksum = 0;
+    uint32_t checksum = 0;
     unsigned long long sdvig = 0;
     unsigned long long index = 0; // Индекс для определения позиции символа
 
@@ -105,7 +114,7 @@ char calcChecksum(ifstream* inputFile, bool timeDependent) {
     inputFile->clear();
     inputFile->seekg(0, ios_base::beg);
 
-    return (char)checksum;
+    return checksum;
 }
 
 int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
@@ -148,7 +157,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
 
     string num = "1234567890";
     string symbols[] = {ABC, abc, abc_rus_ANSI, ABC_RUS_ANSI, num};
-    char x, y;
+    uint32_t x, y;
 
     if(offset.symbol_count_needed)
     {
@@ -163,6 +172,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
 
     char current_byte = 0;
     char addicional_byte = 0;
+    unsigned char integer_byte_split= 0;
 
     int crypted_symbol_pos = 0;
     int crypted_symbol_abc = 0;
@@ -226,15 +236,24 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
         if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
         else {cout << current_byte; output_file[0].put(current_byte);}
     }
+
     if(offset.symbol_count_needed)
     {
-        cout << x;
-        output_file[0].put(x);
+        integer_byte_split = 0;
+        for (int i = 0; i < 4; i++){
+            integer_byte_split = ((x / int_pow(256, i))% 256);
+            output_file->put((char)integer_byte_split);
+        }
+
     }
+
     if(offset.checksum_needed)
     {
-        cout << y;
-        output_file[0].put(y);
+        integer_byte_split = 0;
+        for (int i = 0; i < 4; i++){
+            integer_byte_split = ((y / int_pow(256, i))% 256);
+            output_file->put((char)integer_byte_split);
+        }
     }
     input_file->clear();
     input_file->seekg(0, ios_base::beg);

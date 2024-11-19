@@ -8,6 +8,10 @@
 //заголовочный файл
 
 /**
+\brief Функция вычисляющая неотрицательную целую степень числа
+*/
+uint32_t int_pow(uint32_t base, uint32_t power);
+/**
 
     В качестве смещений принимаются offsets::lat, offsets::kir и offsets::num
     для смещений по латинице, кириллице и числам соответственно.
@@ -31,7 +35,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset);
     \param[in] file Файл с исходным текстом
     \return Количество символов в передаваемом файле
 */
-char symboul (ifstream* file);
+uint32_t symboul (ifstream* file);
 
 /**
     \brief Функция выводящая текущий день недели, используется в задании 1.2, 1.5, 1.6, 1.8
@@ -57,7 +61,7 @@ int get_minute();
     \param[in] timeDependent == true, означает зависимость контрольной суммы от времени
     \return Контрольную сумму незашифрованного текста
 */
-char calcChecksum(ifstream* inputFile, bool timeDependent);
+uint32_t calcChecksum(ifstream* inputFile, bool timeDependent);
 
 /**
     \brief Функция выводящая подсказку при неправильном запуске программы
