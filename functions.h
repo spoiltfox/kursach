@@ -7,6 +7,8 @@
 #include "functions.cpp"
 //заголовочный файл
 
+
+
 /**
 \brief Функция вычисляющая неотрицательную целую степень числа
 */
@@ -67,3 +69,5 @@ uint32_t calcChecksum(ifstream* inputFile, bool timeDependent);
     \brief Функция выводящая подсказку при неправильном запуске программы
 */
 void print_help();
+
+void helpWithCipherNumbers();

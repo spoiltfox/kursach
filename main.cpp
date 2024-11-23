@@ -6,7 +6,8 @@
 */
 #include "functions.h"
 #include "caesar_variations.h"
-
+#include "help.h"
+#include <string.h>
 using namespace std;
 
 ///Набор возможных вариаций шифра Цезаря
@@ -196,11 +197,10 @@ int main(int argc, char* argv[])
     setlocale(LC_ALL, "Russian");
     ifstream input;
     ofstream output;
-
     string exe_name = argv[0];
     int variation;
 
-    bool is_debug_run = (exe_name.find('kursach/bin/Debug/kursach') <= exe_name.length() && argc == 1);
+    bool is_debug_run = (exe_name.find("kursach\\bin\\Debug\\kursach") <= exe_name.length() && argc == 1);
     if (is_debug_run) {
         // Debug
         cin >> variation;
@@ -211,14 +211,7 @@ int main(int argc, char* argv[])
         if(output.is_open()){cout << "output file open ok\n";}
         else{return 2;}
         offsets test;
-        /*
-        unsigned char integer_byte_split;
-        unsigned int a = 0xffffffff;
-        output<< a<< endl;
-        for (int i = 0; i < 4; i++){
-            integer_byte_split = ((a / int_pow(256, i))% 256);
-            output << (char)integer_byte_split<< endl;
-        }*/
+
         output << endl;
         // Выбор декоратора
          // Выбираем нужный декоратор
@@ -473,9 +466,15 @@ int main(int argc, char* argv[])
         return 0;
         // Debug end
     }
+    if (argc == 2 && (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0)){
+        helpWithCipherNumbers();
+        return 0;
+
+    }
 
     if (argc != 4) {
         print_help();
+        cout << "To get help on existing encoder numbers, enter --help\n";
         return 1;
     }
 

@@ -16,3 +16,5 @@ input.txt
 input_russian.txt
 input_special.txt
 output
+doxygen/html/
+output.file
