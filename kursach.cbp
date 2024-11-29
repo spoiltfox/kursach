@@ -42,6 +42,7 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="functions.h" />
+		<Unit filename="help.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
