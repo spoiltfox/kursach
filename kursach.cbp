@@ -43,6 +43,10 @@
 		</Unit>
 		<Unit filename="functions.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="unit_tests.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

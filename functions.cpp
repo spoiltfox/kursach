@@ -34,14 +34,45 @@ struct offsets { //в случае неообходимости могут бы�
 uint32_t symboul (ifstream* file)
 {
     char ch;
-    uint32_t charcount=0;
+    unsigned char prev_char = 0x00;
+    uint32_t charcount = 0;
     //читаем посимвольно весь файл
+    bool unicode_beg = false;
+    bool unicode_cont = false;
     while(file->get(ch))
     {
-        if (ch!='\r') //т.к. Enter в Windows считается за два символа
-        {
-            ++charcount;
+        if (!(prev_char == 0xd0) && (static_cast<unsigned char>(ch) == 0xa8 || static_cast<unsigned char>(ch) == 0xb8)){
+            charcount++;
         }
+
+        if (unicode_beg && (static_cast<unsigned char>(ch) <= 0xbf && static_cast<unsigned char>(ch) >= 0x80)){
+            unicode_cont = true;
+        }
+        else if (unicode_beg && unicode_cont){
+            bool unicode_beg = false;
+            bool unicode_cont = false;
+            charcount++;
+        }
+        else if (static_cast<unsigned char>(ch) >= 0xc0){
+            charcount++;
+        }
+
+
+        if (ch=='\r') //т.к. Enter в Windows считается за два символа
+        {
+            prev_char = static_cast<unsigned char>(ch);
+            continue;
+        }
+        else if (static_cast<unsigned char>(ch) >= 0xc0){
+            unicode_beg = true;
+        }
+        else if (unicode_beg){
+            prev_char = static_cast<unsigned char>(ch);
+            continue;
+        }
+        else {charcount++;}
+
+        prev_char = static_cast<unsigned char>(ch);
     }
 
     file->clear();
