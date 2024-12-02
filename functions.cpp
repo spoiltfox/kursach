@@ -19,6 +19,7 @@ uint32_t int_pow(uint32_t base, uint32_t power){
     return answer;
 }
 
+
 /**
 \brief Структура для передачи параметров в caesar()
 */

@@ -6,7 +6,8 @@
 */
 #include "functions.h"
 #include "caesar_variations.h"
-
+#include "help.h"
+#include <string.h>
 using namespace std;
 
 ///Набор возможных вариаций шифра Цезаря
@@ -196,11 +197,10 @@ int main(int argc, char* argv[])
     setlocale(LC_ALL, "Russian");
     ifstream input;
     ofstream output;
-
     string exe_name = argv[0];
     int variation;
 
-    bool is_debug_run = (exe_name.find('kursach/bin/Debug/kursach') <= exe_name.length() && argc == 1);
+    bool is_debug_run = (exe_name.find("kursach/bin/Debug/kursach") <= exe_name.length() && argc == 1);
     if (is_debug_run) {
         // Debug
         cin >> variation;
@@ -211,14 +211,7 @@ int main(int argc, char* argv[])
         if(output.is_open()){cout << "output file open ok\n";}
         else{return 2;}
         offsets test;
-        /*
-        unsigned char integer_byte_split;
-        unsigned int a = 0xffffffff;
-        output<< a<< endl;
-        for (int i = 0; i < 4; i++){
-            integer_byte_split = ((a / int_pow(256, i))% 256);
-            output << (char)integer_byte_split<< endl;
-        }*/
+
         output << endl;
         // Выбор декоратора
          // Выбираем нужный декоратор
@@ -473,9 +466,114 @@ int main(int argc, char* argv[])
         return 0;
         // Debug end
     }
+    if (argc == 2 && (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0)){
+        helpWithCipherNumbers();
+        return 0;
+
+    }
+    if (argc == 3 && (strcmp(argv[2], "--help") == 0 || strcmp(argv[2], "-h") == 0)) {
+        string decorator_choice = argv[1];
+        switch (resolveOption(decorator_choice)) {
+            case decor_choice::Option::Option1_1_1:
+                help_1_1_1();
+                break;
+            case decor_choice::Option::Option1_1_2:
+                help_1_1_2();
+                break;
+            case decor_choice::Option::Option1_2_1:
+                help_1_2_1();
+                break;
+            case decor_choice::Option::Option1_2_2:
+                help_1_2_2();
+                break;
+            case decor_choice::Option::Option1_2_3:
+                help_1_2_3();
+                break;
+            case decor_choice::Option::Option1_2_4:
+                help_1_2_4();
+                break;
+            case decor_choice::Option::Option1_2_5:
+                help_1_2_5();
+                break;
+            case decor_choice::Option::Option1_2_6:
+                help_1_2_6();
+                break;
+            case decor_choice::Option::Option1_2_7:
+                help_1_2_7();
+                break;
+            case decor_choice::Option::Option1_2_8:
+                help_1_2_8();
+                break;
+            case decor_choice::Option::Option1_2_9:
+                help_1_2_9();
+                break;
+            case decor_choice::Option::Option1_2_10:
+                help_1_2_10();
+                break;
+            case decor_choice::Option::Option1_2_11:
+                help_1_2_11();
+                break;
+            case decor_choice::Option::Option1_2_12:
+                help_1_2_12();
+                break;
+            case decor_choice::Option::Option1_3_1:
+                help_1_3_1();
+                break;
+            case decor_choice::Option::Option1_3_2:
+                help_1_3_2();
+                break;
+            case decor_choice::Option::Option1_4_1:
+                help_1_4_1();
+                break;
+            case decor_choice::Option::Option1_4_2:
+                help_1_4_2();
+                break;
+            case decor_choice::Option::Option1_5_1:
+                help_1_5_1();
+                break;
+            case decor_choice::Option::Option1_5_2:
+                help_1_5_2();
+                break;
+            case decor_choice::Option::Option1_5_3:
+                help_1_5_3();
+                break;
+            case decor_choice::Option::Option1_5_4:
+                help_1_5_4();
+                break;
+            case decor_choice::Option::Option1_5_5:
+                help_1_5_5();
+                break;
+            case decor_choice::Option::Option1_5_6:
+                help_1_5_6();
+                break;
+            case decor_choice::Option::Option1_5_7:
+                help_1_5_7();
+                break;
+            case decor_choice::Option::Option1_5_8:
+                help_1_5_8();
+                break;
+            case decor_choice::Option::Option1_5_9:
+                help_1_5_9();
+                break;
+            case decor_choice::Option::Option1_5_10:
+                help_1_5_10();
+                break;
+            case decor_choice::Option::Option1_5_11:
+                help_1_5_11();
+                break;
+            case decor_choice::Option::Option1_5_12:
+                help_1_5_12();
+                break;
+            default:
+                cout << "Help is not available for the specified cipher option." << endl;
+                break;
+        }
+        return(0);
+    }
 
     if (argc != 4) {
         print_help();
+        cout << "To get help on existing encoder numbers, enter --help\n";
         return 1;
     }
 
