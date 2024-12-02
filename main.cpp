@@ -200,7 +200,7 @@ int main(int argc, char* argv[])
     string exe_name = argv[0];
     int variation;
 
-    bool is_debug_run = (exe_name.find("kursach/bin/Debug/kursach") <= exe_name.length() && argc == 1);
+    bool is_debug_run = (exe_name.find("kursach\\bin\\Debug\\kursach") <= exe_name.length() && argc == 1);
     if (is_debug_run) {
         // Debug
         cin >> variation;
