@@ -65,9 +65,6 @@ int get_minute();
 */
 uint32_t calcChecksum(ifstream* inputFile, bool timeDependent);
 
-/**
-    \brief Функция выводящая подсказку при неправильном запуске программы
-*/
-void print_help();
 
-void helpWithCipherNumbers();
+
+

@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Full_House::Caesar: Исходный файл C:/Users/Hokag/OneDrive/Desktop/kursach/help.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Full_House::Caesar
+   </div>
+   <div id="projectbrief">Наша курсовая работа по ЯИМП</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">C:/Users/Hokag/OneDrive/Desktop/kursach/help.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="help_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifdef __WIN32__</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="help___windows_8cpp.html">help_Windows.cpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif </span><span class="comment">// __WIN32__</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifdef __linux__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;help_Linnux.cpp&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">// __linux__</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a853216ac51aa181669ff4d3de74058a7">print_help</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a5b280e0a4805fd4b4fb8051ccb92686b">helpWithCipherNumbers</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a558c548c278b8fd9997e9b19580860b2">help_1_1_1</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#adde3f1ba652d3b3a5d2ae9f093cd943a">help_1_1_2</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#acbf73d9bf31240d035942f16e58f1a8d">help_1_2_1</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a2638f93ec250c2f23a49a296c4388382">help_1_2_2</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#accdf9ffa4a0c09f78864c5e4fe616717">help_1_2_3</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a301b8619e5a8cd29d407108f4432f530">help_1_2_4</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a6ef24120670c65a47f5ff646d5461e9b">help_1_2_5</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab2fb6fabf07fec38b40cad652c825491">help_1_2_6</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a5f7f41dcda152b86ebba9c09e70ffd97">help_1_2_7</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a6be81cdde155121d588b0500455d0921">help_1_2_8</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#afc90ef91dcddb0a6d70966e271981566">help_1_2_9</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#aca9da2e018068a51116d62d74337c6b7">help_1_2_10</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab82e8988597ad6b7d5b4039c449426e7">help_1_2_11</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab2efc7c892ecfcb4cb498ea1f1a9e87a">help_1_2_12</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#aa9ec4f0aaa753d02af83cd289d2d48df">help_1_3_1</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#af4666912e4403e1dc3cb606a18727aa1">help_1_3_2</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ac515c90b4e11fc497d938f73d842c064">help_1_4_1</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a14ee6b4c739ab7e0bcacf2ad38824281">help_1_4_2</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#aaad7b610ca2b93cf6ab2b3074ab68155">help_1_5_1</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab90e2ca988a1664b5c3db97beff2901d">help_1_5_2</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a43c2d1796f23436388e8162c73426a4a">help_1_5_3</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a17d761985677e470f449c6f87621b9ec">help_1_5_4</a>();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a78bca5ef57a56bdd026d639807014b6c">help_1_5_5</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a8265887cd054ffb3598a9b5503328da1">help_1_5_6</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a26094af1ee8519d301123f0d1544bdd2">help_1_5_7</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a595e12dc0cb9eaf2d6c3e9d8e076f653">help_1_5_8</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ae0e8620740bbebd905f73667e9aec420">help_1_5_9</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a87792ee359d90b6dede5d991a767a85a">help_1_5_10</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a58387fc67b863b228216620818ddf5c2">help_1_5_11</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a5b05e5dd5dc2387d35f139301a9f84a2">help_1_5_12</a>();</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab72d99122455962d6b934eee1c2ff276">help_1_6_1_1</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a30420952197b5978fb306bb65b6c8c1f">help_1_6_1_2</a>();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ae56e9052eff9c7990cbb5ae5b23a6b80">help_1_6_1_3</a>();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab3dfee2d946a5afbbb8201ba5253b6cb">help_1_6_1_4</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a66d5df0862035ad6235126bbe56b9c3a">help_1_6_1_5</a>();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a4fb04ca78346c29dc98b873590c385d1">help_1_6_1_6</a>();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab3af6e0f746e43b46ccbbef9f86f89a9">help_1_6_1_7</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a66d038279242b6cd9465ac7b025a838b">help_1_6_1_8</a>();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a2362cf1dac4be7fdd3cd2527b8c3bf48">help_1_6_1_9</a>();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#abb2656f5bf3f3c04ddc25212b0f6d4de">help_1_6_1_10</a>();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a7e7e10dd68d2da6c07193d0bb3e11b1c">help_1_6_1_11</a>();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ac52c32ad52ed5d8b24a11df6ff1a1c23">help_1_6_1_12</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a86cb4cbc949a8db2076c8bb12560975c">help_1_6_2_1</a>();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a6b4d20e7aa648cd479baa46732c49473">help_1_6_2_2</a>();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a28a96c7b0176adb20194b7daf60620ba">help_1_6_2_3</a>();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a138b0b533d3e9635468d74034778d938">help_1_6_2_4</a>();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a8a524ee283381e19775824dfa739f9d0">help_1_6_2_5</a>();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a114252ee280794e85f97d96e6b7ec084">help_1_6_2_6</a>();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a8b7e03e7a7444cfdcf74823bcadc524b">help_1_6_2_7</a>();</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a70a120c74a1c214f6584f0f3c959fbaf">help_1_6_2_8</a>();</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ac6556d69d2afaa49a7d686142b38599f">help_1_6_2_9</a>();</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a6428d36bdf3e6b002ba388edc58629d3">help_1_6_2_10</a>();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a276630f0657807707065ba786380309f">help_1_6_2_11</a>();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#aaf0c194b55f0aa3d07d3f35e6c41c265">help_1_6_2_12</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ad05ae21012de0bfbf6cb6953b66ed001">help_1_7_1</a>();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a31a50a9092fa600eb48f5255b236d817">help_1_7_2</a>();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a10bc41e6feab5a2fdf3a6642c61b98f0">help_1_8_1_1</a>();</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a5aba7c0bd6e3bd86aa9c9f6b3dd7e111">help_1_8_1_2</a>();</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#af9546222f657546aca2efe64e4ea081a">help_1_8_1_3</a>();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a7e60239f52b5580f1b2f6c316d9d708b">help_1_8_1_4</a>();</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a624bf96323818c01ebc7bcd3d3d85d8c">help_1_8_1_5</a>();</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#aa25c356aab26df5bc34d00e6ce6252a3">help_1_8_1_6</a>();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#acb86d7240e01614f06b1f2b78f29d78a">help_1_8_1_7</a>();</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a394f1bfedcbb23ccc72bdb65aadb6d1d">help_1_8_1_8</a>();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a5d56939634b87a78a1f3b2e1fab5a45d">help_1_8_1_9</a>();</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#add04d69bb19f126209cf03fd35c622a4">help_1_8_1_10</a>();</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a1fbdced862e83ca54d299225cbe334fe">help_1_8_1_11</a>();</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a516d53f8ef0af949dfbc13e935d6c712">help_1_8_1_12</a>();</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a03e24c0b190acb87347c7254bab03db2">help_1_8_2_1</a>();</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a1adfa81112ffd2a84762e3390a351671">help_1_8_2_2</a>();</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#addd0ce16e3109625c3f664830f60b55e">help_1_8_2_3</a>();</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#aa9a1931119d33a1f8ba6e3950e01c9f0">help_1_8_2_4</a>();</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ab41a9c32919a1981b18542a84b291acc">help_1_8_2_5</a>();</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ae89175e6ace89d06418864e103312928">help_1_8_2_6</a>();</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ae202c7b8608b5ed2a54f890bff304d58">help_1_8_2_7</a>();</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a85d53863818a322b9c0522b70ae4149a">help_1_8_2_8</a>();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a20e60b82c7c705bcedab5417013540f6">help_1_8_2_9</a>();</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#adb1234d0cc23ffc3e34f10bcb40d5fdf">help_1_8_2_10</a>();</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#a30550098a3528b1c57aade201b877044">help_1_8_2_11</a>();</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="keywordtype">void</span> <a class="code hl_function" href="help_8h.html#ae856792f7513b16c86825d334a319202">help_1_8_2_12</a>();</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="ttc" id="ahelp_8h_html_a03e24c0b190acb87347c7254bab03db2"><div class="ttname"><a href="help_8h.html#a03e24c0b190acb87347c7254bab03db2">help_1_8_2_1</a></div><div class="ttdeci">void help_1_8_2_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:290</div></div>
+<div class="ttc" id="ahelp_8h_html_a10bc41e6feab5a2fdf3a6642c61b98f0"><div class="ttname"><a href="help_8h.html#a10bc41e6feab5a2fdf3a6642c61b98f0">help_1_8_1_1</a></div><div class="ttdeci">void help_1_8_1_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:239</div></div>
+<div class="ttc" id="ahelp_8h_html_a114252ee280794e85f97d96e6b7ec084"><div class="ttname"><a href="help_8h.html#a114252ee280794e85f97d96e6b7ec084">help_1_6_2_6</a></div><div class="ttdeci">void help_1_6_2_6()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.6.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:199</div></div>
+<div class="ttc" id="ahelp_8h_html_a138b0b533d3e9635468d74034778d938"><div class="ttname"><a href="help_8h.html#a138b0b533d3e9635468d74034778d938">help_1_6_2_4</a></div><div class="ttdeci">void help_1_6_2_4()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.4.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:191</div></div>
+<div class="ttc" id="ahelp_8h_html_a14ee6b4c739ab7e0bcacf2ad38824281"><div class="ttname"><a href="help_8h.html#a14ee6b4c739ab7e0bcacf2ad38824281">help_1_4_2</a></div><div class="ttdeci">void help_1_4_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.4.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:82</div></div>
+<div class="ttc" id="ahelp_8h_html_a17d761985677e470f449c6f87621b9ec"><div class="ttname"><a href="help_8h.html#a17d761985677e470f449c6f87621b9ec">help_1_5_4</a></div><div class="ttdeci">void help_1_5_4()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.4.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:99</div></div>
+<div class="ttc" id="ahelp_8h_html_a1adfa81112ffd2a84762e3390a351671"><div class="ttname"><a href="help_8h.html#a1adfa81112ffd2a84762e3390a351671">help_1_8_2_2</a></div><div class="ttdeci">void help_1_8_2_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:294</div></div>
+<div class="ttc" id="ahelp_8h_html_a1fbdced862e83ca54d299225cbe334fe"><div class="ttname"><a href="help_8h.html#a1fbdced862e83ca54d299225cbe334fe">help_1_8_1_11</a></div><div class="ttdeci">void help_1_8_1_11()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.11.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:279</div></div>
+<div class="ttc" id="ahelp_8h_html_a20e60b82c7c705bcedab5417013540f6"><div class="ttname"><a href="help_8h.html#a20e60b82c7c705bcedab5417013540f6">help_1_8_2_9</a></div><div class="ttdeci">void help_1_8_2_9()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.9.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:322</div></div>
+<div class="ttc" id="ahelp_8h_html_a2362cf1dac4be7fdd3cd2527b8c3bf48"><div class="ttname"><a href="help_8h.html#a2362cf1dac4be7fdd3cd2527b8c3bf48">help_1_6_1_9</a></div><div class="ttdeci">void help_1_6_1_9()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.9.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:162</div></div>
+<div class="ttc" id="ahelp_8h_html_a26094af1ee8519d301123f0d1544bdd2"><div class="ttname"><a href="help_8h.html#a26094af1ee8519d301123f0d1544bdd2">help_1_5_7</a></div><div class="ttdeci">void help_1_5_7()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.7.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:108</div></div>
+<div class="ttc" id="ahelp_8h_html_a2638f93ec250c2f23a49a296c4388382"><div class="ttname"><a href="help_8h.html#a2638f93ec250c2f23a49a296c4388382">help_1_2_2</a></div><div class="ttdeci">void help_1_2_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:34</div></div>
+<div class="ttc" id="ahelp_8h_html_a276630f0657807707065ba786380309f"><div class="ttname"><a href="help_8h.html#a276630f0657807707065ba786380309f">help_1_6_2_11</a></div><div class="ttdeci">void help_1_6_2_11()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.11.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:217</div></div>
+<div class="ttc" id="ahelp_8h_html_a28a96c7b0176adb20194b7daf60620ba"><div class="ttname"><a href="help_8h.html#a28a96c7b0176adb20194b7daf60620ba">help_1_6_2_3</a></div><div class="ttdeci">void help_1_6_2_3()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.3.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:187</div></div>
+<div class="ttc" id="ahelp_8h_html_a301b8619e5a8cd29d407108f4432f530"><div class="ttname"><a href="help_8h.html#a301b8619e5a8cd29d407108f4432f530">help_1_2_4</a></div><div class="ttdeci">void help_1_2_4()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.4.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:40</div></div>
+<div class="ttc" id="ahelp_8h_html_a30420952197b5978fb306bb65b6c8c1f"><div class="ttname"><a href="help_8h.html#a30420952197b5978fb306bb65b6c8c1f">help_1_6_1_2</a></div><div class="ttdeci">void help_1_6_1_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:134</div></div>
+<div class="ttc" id="ahelp_8h_html_a30550098a3528b1c57aade201b877044"><div class="ttname"><a href="help_8h.html#a30550098a3528b1c57aade201b877044">help_1_8_2_11</a></div><div class="ttdeci">void help_1_8_2_11()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.11.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:330</div></div>
+<div class="ttc" id="ahelp_8h_html_a31a50a9092fa600eb48f5255b236d817"><div class="ttname"><a href="help_8h.html#a31a50a9092fa600eb48f5255b236d817">help_1_7_2</a></div><div class="ttdeci">void help_1_7_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.7.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:231</div></div>
+<div class="ttc" id="ahelp_8h_html_a394f1bfedcbb23ccc72bdb65aadb6d1d"><div class="ttname"><a href="help_8h.html#a394f1bfedcbb23ccc72bdb65aadb6d1d">help_1_8_1_8</a></div><div class="ttdeci">void help_1_8_1_8()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.8.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:267</div></div>
+<div class="ttc" id="ahelp_8h_html_a43c2d1796f23436388e8162c73426a4a"><div class="ttname"><a href="help_8h.html#a43c2d1796f23436388e8162c73426a4a">help_1_5_3</a></div><div class="ttdeci">void help_1_5_3()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.3.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:96</div></div>
+<div class="ttc" id="ahelp_8h_html_a4fb04ca78346c29dc98b873590c385d1"><div class="ttname"><a href="help_8h.html#a4fb04ca78346c29dc98b873590c385d1">help_1_6_1_6</a></div><div class="ttdeci">void help_1_6_1_6()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.6.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:150</div></div>
+<div class="ttc" id="ahelp_8h_html_a516d53f8ef0af949dfbc13e935d6c712"><div class="ttname"><a href="help_8h.html#a516d53f8ef0af949dfbc13e935d6c712">help_1_8_1_12</a></div><div class="ttdeci">void help_1_8_1_12()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.12.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:283</div></div>
+<div class="ttc" id="ahelp_8h_html_a558c548c278b8fd9997e9b19580860b2"><div class="ttname"><a href="help_8h.html#a558c548c278b8fd9997e9b19580860b2">help_1_1_1</a></div><div class="ttdeci">void help_1_1_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.1.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:23</div></div>
+<div class="ttc" id="ahelp_8h_html_a58387fc67b863b228216620818ddf5c2"><div class="ttname"><a href="help_8h.html#a58387fc67b863b228216620818ddf5c2">help_1_5_11</a></div><div class="ttdeci">void help_1_5_11()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.11.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:120</div></div>
+<div class="ttc" id="ahelp_8h_html_a595e12dc0cb9eaf2d6c3e9d8e076f653"><div class="ttname"><a href="help_8h.html#a595e12dc0cb9eaf2d6c3e9d8e076f653">help_1_5_8</a></div><div class="ttdeci">void help_1_5_8()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.8.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:111</div></div>
+<div class="ttc" id="ahelp_8h_html_a5aba7c0bd6e3bd86aa9c9f6b3dd7e111"><div class="ttname"><a href="help_8h.html#a5aba7c0bd6e3bd86aa9c9f6b3dd7e111">help_1_8_1_2</a></div><div class="ttdeci">void help_1_8_1_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:243</div></div>
+<div class="ttc" id="ahelp_8h_html_a5b05e5dd5dc2387d35f139301a9f84a2"><div class="ttname"><a href="help_8h.html#a5b05e5dd5dc2387d35f139301a9f84a2">help_1_5_12</a></div><div class="ttdeci">void help_1_5_12()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.12.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:123</div></div>
+<div class="ttc" id="ahelp_8h_html_a5b280e0a4805fd4b4fb8051ccb92686b"><div class="ttname"><a href="help_8h.html#a5b280e0a4805fd4b4fb8051ccb92686b">helpWithCipherNumbers</a></div><div class="ttdeci">void helpWithCipherNumbers()</div><div class="ttdoc">Функция, выводящая все возможные номера шифров</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:13</div></div>
+<div class="ttc" id="ahelp_8h_html_a5d56939634b87a78a1f3b2e1fab5a45d"><div class="ttname"><a href="help_8h.html#a5d56939634b87a78a1f3b2e1fab5a45d">help_1_8_1_9</a></div><div class="ttdeci">void help_1_8_1_9()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.9.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:271</div></div>
+<div class="ttc" id="ahelp_8h_html_a5f7f41dcda152b86ebba9c09e70ffd97"><div class="ttname"><a href="help_8h.html#a5f7f41dcda152b86ebba9c09e70ffd97">help_1_2_7</a></div><div class="ttdeci">void help_1_2_7()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.7.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:49</div></div>
+<div class="ttc" id="ahelp_8h_html_a624bf96323818c01ebc7bcd3d3d85d8c"><div class="ttname"><a href="help_8h.html#a624bf96323818c01ebc7bcd3d3d85d8c">help_1_8_1_5</a></div><div class="ttdeci">void help_1_8_1_5()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.5.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:255</div></div>
+<div class="ttc" id="ahelp_8h_html_a6428d36bdf3e6b002ba388edc58629d3"><div class="ttname"><a href="help_8h.html#a6428d36bdf3e6b002ba388edc58629d3">help_1_6_2_10</a></div><div class="ttdeci">void help_1_6_2_10()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.10.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:214</div></div>
+<div class="ttc" id="ahelp_8h_html_a66d038279242b6cd9465ac7b025a838b"><div class="ttname"><a href="help_8h.html#a66d038279242b6cd9465ac7b025a838b">help_1_6_1_8</a></div><div class="ttdeci">void help_1_6_1_8()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.8.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:158</div></div>
+<div class="ttc" id="ahelp_8h_html_a66d5df0862035ad6235126bbe56b9c3a"><div class="ttname"><a href="help_8h.html#a66d5df0862035ad6235126bbe56b9c3a">help_1_6_1_5</a></div><div class="ttdeci">void help_1_6_1_5()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.5.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:146</div></div>
+<div class="ttc" id="ahelp_8h_html_a6b4d20e7aa648cd479baa46732c49473"><div class="ttname"><a href="help_8h.html#a6b4d20e7aa648cd479baa46732c49473">help_1_6_2_2</a></div><div class="ttdeci">void help_1_6_2_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:183</div></div>
+<div class="ttc" id="ahelp_8h_html_a6be81cdde155121d588b0500455d0921"><div class="ttname"><a href="help_8h.html#a6be81cdde155121d588b0500455d0921">help_1_2_8</a></div><div class="ttdeci">void help_1_2_8()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.8.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:52</div></div>
+<div class="ttc" id="ahelp_8h_html_a6ef24120670c65a47f5ff646d5461e9b"><div class="ttname"><a href="help_8h.html#a6ef24120670c65a47f5ff646d5461e9b">help_1_2_5</a></div><div class="ttdeci">void help_1_2_5()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.5.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:43</div></div>
+<div class="ttc" id="ahelp_8h_html_a70a120c74a1c214f6584f0f3c959fbaf"><div class="ttname"><a href="help_8h.html#a70a120c74a1c214f6584f0f3c959fbaf">help_1_6_2_8</a></div><div class="ttdeci">void help_1_6_2_8()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.8.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:207</div></div>
+<div class="ttc" id="ahelp_8h_html_a78bca5ef57a56bdd026d639807014b6c"><div class="ttname"><a href="help_8h.html#a78bca5ef57a56bdd026d639807014b6c">help_1_5_5</a></div><div class="ttdeci">void help_1_5_5()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.5.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:102</div></div>
+<div class="ttc" id="ahelp_8h_html_a7e60239f52b5580f1b2f6c316d9d708b"><div class="ttname"><a href="help_8h.html#a7e60239f52b5580f1b2f6c316d9d708b">help_1_8_1_4</a></div><div class="ttdeci">void help_1_8_1_4()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.4.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:251</div></div>
+<div class="ttc" id="ahelp_8h_html_a7e7e10dd68d2da6c07193d0bb3e11b1c"><div class="ttname"><a href="help_8h.html#a7e7e10dd68d2da6c07193d0bb3e11b1c">help_1_6_1_11</a></div><div class="ttdeci">void help_1_6_1_11()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.11.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:169</div></div>
+<div class="ttc" id="ahelp_8h_html_a8265887cd054ffb3598a9b5503328da1"><div class="ttname"><a href="help_8h.html#a8265887cd054ffb3598a9b5503328da1">help_1_5_6</a></div><div class="ttdeci">void help_1_5_6()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.6.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:105</div></div>
+<div class="ttc" id="ahelp_8h_html_a853216ac51aa181669ff4d3de74058a7"><div class="ttname"><a href="help_8h.html#a853216ac51aa181669ff4d3de74058a7">print_help</a></div><div class="ttdeci">void print_help()</div><div class="ttdoc">Функция выводящая подсказку при неправильном запуске программы</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:8</div></div>
+<div class="ttc" id="ahelp_8h_html_a85d53863818a322b9c0522b70ae4149a"><div class="ttname"><a href="help_8h.html#a85d53863818a322b9c0522b70ae4149a">help_1_8_2_8</a></div><div class="ttdeci">void help_1_8_2_8()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.8.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:318</div></div>
+<div class="ttc" id="ahelp_8h_html_a86cb4cbc949a8db2076c8bb12560975c"><div class="ttname"><a href="help_8h.html#a86cb4cbc949a8db2076c8bb12560975c">help_1_6_2_1</a></div><div class="ttdeci">void help_1_6_2_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:179</div></div>
+<div class="ttc" id="ahelp_8h_html_a87792ee359d90b6dede5d991a767a85a"><div class="ttname"><a href="help_8h.html#a87792ee359d90b6dede5d991a767a85a">help_1_5_10</a></div><div class="ttdeci">void help_1_5_10()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.10.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:117</div></div>
+<div class="ttc" id="ahelp_8h_html_a8a524ee283381e19775824dfa739f9d0"><div class="ttname"><a href="help_8h.html#a8a524ee283381e19775824dfa739f9d0">help_1_6_2_5</a></div><div class="ttdeci">void help_1_6_2_5()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.5.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:195</div></div>
+<div class="ttc" id="ahelp_8h_html_a8b7e03e7a7444cfdcf74823bcadc524b"><div class="ttname"><a href="help_8h.html#a8b7e03e7a7444cfdcf74823bcadc524b">help_1_6_2_7</a></div><div class="ttdeci">void help_1_6_2_7()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.7.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:203</div></div>
+<div class="ttc" id="ahelp_8h_html_aa25c356aab26df5bc34d00e6ce6252a3"><div class="ttname"><a href="help_8h.html#aa25c356aab26df5bc34d00e6ce6252a3">help_1_8_1_6</a></div><div class="ttdeci">void help_1_8_1_6()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.6.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:259</div></div>
+<div class="ttc" id="ahelp_8h_html_aa9a1931119d33a1f8ba6e3950e01c9f0"><div class="ttname"><a href="help_8h.html#aa9a1931119d33a1f8ba6e3950e01c9f0">help_1_8_2_4</a></div><div class="ttdeci">void help_1_8_2_4()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.4.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:302</div></div>
+<div class="ttc" id="ahelp_8h_html_aa9ec4f0aaa753d02af83cd289d2d48df"><div class="ttname"><a href="help_8h.html#aa9ec4f0aaa753d02af83cd289d2d48df">help_1_3_1</a></div><div class="ttdeci">void help_1_3_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.3.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:70</div></div>
+<div class="ttc" id="ahelp_8h_html_aaad7b610ca2b93cf6ab2b3074ab68155"><div class="ttname"><a href="help_8h.html#aaad7b610ca2b93cf6ab2b3074ab68155">help_1_5_1</a></div><div class="ttdeci">void help_1_5_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:90</div></div>
+<div class="ttc" id="ahelp_8h_html_aaf0c194b55f0aa3d07d3f35e6c41c265"><div class="ttname"><a href="help_8h.html#aaf0c194b55f0aa3d07d3f35e6c41c265">help_1_6_2_12</a></div><div class="ttdeci">void help_1_6_2_12()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.12.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:221</div></div>
+<div class="ttc" id="ahelp_8h_html_ab2efc7c892ecfcb4cb498ea1f1a9e87a"><div class="ttname"><a href="help_8h.html#ab2efc7c892ecfcb4cb498ea1f1a9e87a">help_1_2_12</a></div><div class="ttdeci">void help_1_2_12()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.12.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:64</div></div>
+<div class="ttc" id="ahelp_8h_html_ab2fb6fabf07fec38b40cad652c825491"><div class="ttname"><a href="help_8h.html#ab2fb6fabf07fec38b40cad652c825491">help_1_2_6</a></div><div class="ttdeci">void help_1_2_6()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.6.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:46</div></div>
+<div class="ttc" id="ahelp_8h_html_ab3af6e0f746e43b46ccbbef9f86f89a9"><div class="ttname"><a href="help_8h.html#ab3af6e0f746e43b46ccbbef9f86f89a9">help_1_6_1_7</a></div><div class="ttdeci">void help_1_6_1_7()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.7.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:154</div></div>
+<div class="ttc" id="ahelp_8h_html_ab3dfee2d946a5afbbb8201ba5253b6cb"><div class="ttname"><a href="help_8h.html#ab3dfee2d946a5afbbb8201ba5253b6cb">help_1_6_1_4</a></div><div class="ttdeci">void help_1_6_1_4()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.4.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:142</div></div>
+<div class="ttc" id="ahelp_8h_html_ab41a9c32919a1981b18542a84b291acc"><div class="ttname"><a href="help_8h.html#ab41a9c32919a1981b18542a84b291acc">help_1_8_2_5</a></div><div class="ttdeci">void help_1_8_2_5()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.5.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:306</div></div>
+<div class="ttc" id="ahelp_8h_html_ab72d99122455962d6b934eee1c2ff276"><div class="ttname"><a href="help_8h.html#ab72d99122455962d6b934eee1c2ff276">help_1_6_1_1</a></div><div class="ttdeci">void help_1_6_1_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:130</div></div>
+<div class="ttc" id="ahelp_8h_html_ab82e8988597ad6b7d5b4039c449426e7"><div class="ttname"><a href="help_8h.html#ab82e8988597ad6b7d5b4039c449426e7">help_1_2_11</a></div><div class="ttdeci">void help_1_2_11()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.11.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:61</div></div>
+<div class="ttc" id="ahelp_8h_html_ab90e2ca988a1664b5c3db97beff2901d"><div class="ttname"><a href="help_8h.html#ab90e2ca988a1664b5c3db97beff2901d">help_1_5_2</a></div><div class="ttdeci">void help_1_5_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:93</div></div>
+<div class="ttc" id="ahelp_8h_html_abb2656f5bf3f3c04ddc25212b0f6d4de"><div class="ttname"><a href="help_8h.html#abb2656f5bf3f3c04ddc25212b0f6d4de">help_1_6_1_10</a></div><div class="ttdeci">void help_1_6_1_10()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.10.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:166</div></div>
+<div class="ttc" id="ahelp_8h_html_ac515c90b4e11fc497d938f73d842c064"><div class="ttname"><a href="help_8h.html#ac515c90b4e11fc497d938f73d842c064">help_1_4_1</a></div><div class="ttdeci">void help_1_4_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.4.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:79</div></div>
+<div class="ttc" id="ahelp_8h_html_ac52c32ad52ed5d8b24a11df6ff1a1c23"><div class="ttname"><a href="help_8h.html#ac52c32ad52ed5d8b24a11df6ff1a1c23">help_1_6_1_12</a></div><div class="ttdeci">void help_1_6_1_12()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.12.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:173</div></div>
+<div class="ttc" id="ahelp_8h_html_ac6556d69d2afaa49a7d686142b38599f"><div class="ttname"><a href="help_8h.html#ac6556d69d2afaa49a7d686142b38599f">help_1_6_2_9</a></div><div class="ttdeci">void help_1_6_2_9()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.2.9.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:210</div></div>
+<div class="ttc" id="ahelp_8h_html_aca9da2e018068a51116d62d74337c6b7"><div class="ttname"><a href="help_8h.html#aca9da2e018068a51116d62d74337c6b7">help_1_2_10</a></div><div class="ttdeci">void help_1_2_10()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.10.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:58</div></div>
+<div class="ttc" id="ahelp_8h_html_acb86d7240e01614f06b1f2b78f29d78a"><div class="ttname"><a href="help_8h.html#acb86d7240e01614f06b1f2b78f29d78a">help_1_8_1_7</a></div><div class="ttdeci">void help_1_8_1_7()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.7.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:263</div></div>
+<div class="ttc" id="ahelp_8h_html_acbf73d9bf31240d035942f16e58f1a8d"><div class="ttname"><a href="help_8h.html#acbf73d9bf31240d035942f16e58f1a8d">help_1_2_1</a></div><div class="ttdeci">void help_1_2_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:31</div></div>
+<div class="ttc" id="ahelp_8h_html_accdf9ffa4a0c09f78864c5e4fe616717"><div class="ttname"><a href="help_8h.html#accdf9ffa4a0c09f78864c5e4fe616717">help_1_2_3</a></div><div class="ttdeci">void help_1_2_3()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.3.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:37</div></div>
+<div class="ttc" id="ahelp_8h_html_ad05ae21012de0bfbf6cb6953b66ed001"><div class="ttname"><a href="help_8h.html#ad05ae21012de0bfbf6cb6953b66ed001">help_1_7_1</a></div><div class="ttdeci">void help_1_7_1()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.7.1.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:227</div></div>
+<div class="ttc" id="ahelp_8h_html_adb1234d0cc23ffc3e34f10bcb40d5fdf"><div class="ttname"><a href="help_8h.html#adb1234d0cc23ffc3e34f10bcb40d5fdf">help_1_8_2_10</a></div><div class="ttdeci">void help_1_8_2_10()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.10.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:326</div></div>
+<div class="ttc" id="ahelp_8h_html_add04d69bb19f126209cf03fd35c622a4"><div class="ttname"><a href="help_8h.html#add04d69bb19f126209cf03fd35c622a4">help_1_8_1_10</a></div><div class="ttdeci">void help_1_8_1_10()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.10.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:275</div></div>
+<div class="ttc" id="ahelp_8h_html_addd0ce16e3109625c3f664830f60b55e"><div class="ttname"><a href="help_8h.html#addd0ce16e3109625c3f664830f60b55e">help_1_8_2_3</a></div><div class="ttdeci">void help_1_8_2_3()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.3.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:298</div></div>
+<div class="ttc" id="ahelp_8h_html_adde3f1ba652d3b3a5d2ae9f093cd943a"><div class="ttname"><a href="help_8h.html#adde3f1ba652d3b3a5d2ae9f093cd943a">help_1_1_2</a></div><div class="ttdeci">void help_1_1_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.1.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:26</div></div>
+<div class="ttc" id="ahelp_8h_html_ae0e8620740bbebd905f73667e9aec420"><div class="ttname"><a href="help_8h.html#ae0e8620740bbebd905f73667e9aec420">help_1_5_9</a></div><div class="ttdeci">void help_1_5_9()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.5.9.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:114</div></div>
+<div class="ttc" id="ahelp_8h_html_ae202c7b8608b5ed2a54f890bff304d58"><div class="ttname"><a href="help_8h.html#ae202c7b8608b5ed2a54f890bff304d58">help_1_8_2_7</a></div><div class="ttdeci">void help_1_8_2_7()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.7.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:314</div></div>
+<div class="ttc" id="ahelp_8h_html_ae56e9052eff9c7990cbb5ae5b23a6b80"><div class="ttname"><a href="help_8h.html#ae56e9052eff9c7990cbb5ae5b23a6b80">help_1_6_1_3</a></div><div class="ttdeci">void help_1_6_1_3()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.6.1.3.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:138</div></div>
+<div class="ttc" id="ahelp_8h_html_ae856792f7513b16c86825d334a319202"><div class="ttname"><a href="help_8h.html#ae856792f7513b16c86825d334a319202">help_1_8_2_12</a></div><div class="ttdeci">void help_1_8_2_12()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.12.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:334</div></div>
+<div class="ttc" id="ahelp_8h_html_ae89175e6ace89d06418864e103312928"><div class="ttname"><a href="help_8h.html#ae89175e6ace89d06418864e103312928">help_1_8_2_6</a></div><div class="ttdeci">void help_1_8_2_6()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.2.6.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:310</div></div>
+<div class="ttc" id="ahelp_8h_html_af4666912e4403e1dc3cb606a18727aa1"><div class="ttname"><a href="help_8h.html#af4666912e4403e1dc3cb606a18727aa1">help_1_3_2</a></div><div class="ttdeci">void help_1_3_2()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.3.2.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:73</div></div>
+<div class="ttc" id="ahelp_8h_html_af9546222f657546aca2efe64e4ea081a"><div class="ttname"><a href="help_8h.html#af9546222f657546aca2efe64e4ea081a">help_1_8_1_3</a></div><div class="ttdeci">void help_1_8_1_3()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.8.1.3.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:247</div></div>
+<div class="ttc" id="ahelp_8h_html_afc90ef91dcddb0a6d70966e271981566"><div class="ttname"><a href="help_8h.html#afc90ef91dcddb0a6d70966e271981566">help_1_2_9</a></div><div class="ttdeci">void help_1_2_9()</div><div class="ttdoc">Функция, выводящая подробное описание работы шифра под номером 1.2.9.</div><div class="ttdef"><b>Definition</b> help_Linux.cpp:55</div></div>
+<div class="ttc" id="ahelp___windows_8cpp_html"><div class="ttname"><a href="help___windows_8cpp.html">help_Windows.cpp</a></div><div class="ttdoc">Файл содержащий функции помощи для пользователя в ОС Winsows.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

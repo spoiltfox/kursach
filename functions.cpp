@@ -291,8 +291,3 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
     input_file->seekg(0, ios_base::beg);
     return 0;
 }
-
-
-void print_help(){          //вывод помощи
-    cout << "Usage:\n\t kursach.exe [input_file] [output_file] [cipher_number]\n";
-}

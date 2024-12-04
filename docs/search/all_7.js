@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_0',['num',['../structoffsets.html#a40b5e6be65bc10bef4fa816bbc711357',1,'offsets']]]
+  ['lat_0',['lat',['../structoffsets.html#a9de0771372d6e4da933a53ffabc64fb1',1,'offsets']]]
 ];

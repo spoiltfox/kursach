@@ -564,6 +564,156 @@ int main(int argc, char* argv[])
             case decor_choice::Option::Option1_5_12:
                 help_1_5_12();
                 break;
+            case decor_choice::Option::Option1_6_1_1:
+                help_1_6_1_1();
+                break;
+            case decor_choice::Option::Option1_6_1_2:
+                help_1_6_1_2();
+                break;
+            case decor_choice::Option::Option1_6_1_3:
+                help_1_6_1_3();
+                break;
+            case decor_choice::Option::Option1_6_1_4:
+                help_1_6_1_4();
+                break;
+            case decor_choice::Option::Option1_6_1_5:
+                help_1_6_1_5();
+                break;
+            case decor_choice::Option::Option1_6_1_6:
+                help_1_6_1_6();
+                break;
+            case decor_choice::Option::Option1_6_1_7:
+                help_1_6_1_7();
+                break;
+            case decor_choice::Option::Option1_6_1_8:
+                help_1_6_1_8();
+                break;
+            case decor_choice::Option::Option1_6_1_9:
+                help_1_6_1_9();
+                break;
+            case decor_choice::Option::Option1_6_1_10:
+                help_1_6_1_10();
+                break;
+            case decor_choice::Option::Option1_6_1_11:
+                help_1_6_1_11();
+                break;
+            case decor_choice::Option::Option1_6_1_12:
+                help_1_6_1_12();
+                break;
+            case decor_choice::Option::Option1_6_2_1:
+                help_1_6_2_1();
+                break;
+            case decor_choice::Option::Option1_6_2_2:
+                help_1_6_2_2();
+                break;
+            case decor_choice::Option::Option1_6_2_3:
+                help_1_6_2_3();
+                break;
+            case decor_choice::Option::Option1_6_2_4:
+                help_1_6_2_4();
+                break;
+            case decor_choice::Option::Option1_6_2_5:
+                help_1_6_2_5();
+                break;
+            case decor_choice::Option::Option1_6_2_6:
+                help_1_6_2_6();
+                break;
+            case decor_choice::Option::Option1_6_2_7:
+                help_1_6_2_7();
+                break;
+            case decor_choice::Option::Option1_6_2_8:
+                help_1_6_2_8();
+                break;
+            case decor_choice::Option::Option1_6_2_9:
+                help_1_6_2_9();
+                break;
+            case decor_choice::Option::Option1_6_2_10:
+                help_1_6_2_10();
+                break;
+            case decor_choice::Option::Option1_6_2_11:
+                help_1_6_2_11();
+                break;
+            case decor_choice::Option::Option1_6_2_12:
+                help_1_6_2_12();
+                break;
+            case decor_choice::Option::Option1_7_1:
+                help_1_7_1();
+                break;
+            case decor_choice::Option::Option1_7_2:
+                help_1_7_2();
+                break;
+            case decor_choice::Option::Option1_8_1_1:
+                help_1_8_1_1();
+                break;
+            case decor_choice::Option::Option1_8_1_2:
+                help_1_8_1_2();
+                break;
+            case decor_choice::Option::Option1_8_1_3:
+                help_1_8_1_3();
+                break;
+            case decor_choice::Option::Option1_8_1_4:
+                help_1_8_1_4();
+                break;
+            case decor_choice::Option::Option1_8_1_5:
+                help_1_8_1_5();
+                break;
+            case decor_choice::Option::Option1_8_1_6:
+                help_1_8_1_6();
+                break;
+            case decor_choice::Option::Option1_8_1_7:
+                help_1_8_1_7();
+                break;
+            case decor_choice::Option::Option1_8_1_8:
+                help_1_8_1_8();
+                break;
+            case decor_choice::Option::Option1_8_1_9:
+                help_1_8_1_9();
+                break;
+            case decor_choice::Option::Option1_8_1_10:
+                help_1_8_1_10();
+                break;
+            case decor_choice::Option::Option1_8_1_11:
+                help_1_8_1_11();
+                break;
+            case decor_choice::Option::Option1_8_1_12:
+                help_1_8_1_12();
+                break;
+            case decor_choice::Option::Option1_8_2_1:
+                help_1_8_2_1();
+                break;
+            case decor_choice::Option::Option1_8_2_2:
+                help_1_8_2_2();
+                break;
+            case decor_choice::Option::Option1_8_2_3:
+                help_1_8_2_3();
+                break;
+            case decor_choice::Option::Option1_8_2_4:
+                help_1_8_2_4();
+                break;
+            case decor_choice::Option::Option1_8_2_5:
+                help_1_8_2_5();
+                break;
+            case decor_choice::Option::Option1_8_2_6:
+                help_1_8_2_6();
+                break;
+            case decor_choice::Option::Option1_8_2_7:
+                help_1_8_2_7();
+                break;
+            case decor_choice::Option::Option1_8_2_8:
+                help_1_8_2_8();
+                break;
+            case decor_choice::Option::Option1_8_2_9:
+                help_1_8_2_9();
+                break;
+            case decor_choice::Option::Option1_8_2_10:
+                help_1_8_2_10();
+                break;
+            case decor_choice::Option::Option1_8_2_11:
+                help_1_8_2_11();
+                break;
+            case decor_choice::Option::Option1_8_2_12:
+                help_1_8_2_12();
+                break;
             default:
                 cout << "Help is not available for the specified cipher option." << endl;
                 break;

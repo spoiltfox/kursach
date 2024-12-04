@@ -24,7 +24,6 @@
 */
 var menudata={children:[
 {text:"Титульная страница",url:"index.html"},
-{text:"Описания",url:"pages.html"},
 {text:"Пространства имен",url:"namespaces.html",children:[
 {text:"Пространства имен",url:"namespaces.html"},
 {text:"Члены пространств имен",url:"namespacemembers.html",children:[
@@ -44,19 +43,23 @@ var menudata={children:[
 {text:"Список членов всех файлов",url:"globals.html",children:[
 {text:"Указатель",url:"globals.html",children:[
 {text:"c",url:"globals.html#index_c"},
-{text:"g",url:"globals.html#index_g"},
-{text:"m",url:"globals.html#index_m"},
-{text:"p",url:"globals.html#index_p"},
-{text:"r",url:"globals.html#index_r"},
-{text:"s",url:"globals.html#index_s"},
-{text:"t",url:"globals.html#index_t"},
-{text:"v",url:"globals.html#index_v"}]},
+{text:"g",url:"globals_g.html#index_g"},
+{text:"h",url:"globals_h.html#index_h"},
+{text:"i",url:"globals_i.html#index_i"},
+{text:"m",url:"globals_m.html#index_m"},
+{text:"p",url:"globals_p.html#index_p"},
+{text:"r",url:"globals_r.html#index_r"},
+{text:"s",url:"globals_s.html#index_s"},
+{text:"t",url:"globals_t.html#index_t"},
+{text:"v",url:"globals_v.html#index_v"}]},
 {text:"Функции",url:"globals_func.html",children:[
 {text:"c",url:"globals_func.html#index_c"},
-{text:"g",url:"globals_func.html#index_g"},
-{text:"m",url:"globals_func.html#index_m"},
-{text:"p",url:"globals_func.html#index_p"},
-{text:"r",url:"globals_func.html#index_r"},
-{text:"s",url:"globals_func.html#index_s"},
-{text:"t",url:"globals_func.html#index_t"},
-{text:"v",url:"globals_func.html#index_v"}]}]}]}]}
+{text:"g",url:"globals_func_g.html#index_g"},
+{text:"h",url:"globals_func_h.html#index_h"},
+{text:"i",url:"globals_func_i.html#index_i"},
+{text:"m",url:"globals_func_m.html#index_m"},
+{text:"p",url:"globals_func_p.html#index_p"},
+{text:"r",url:"globals_func_r.html#index_r"},
+{text:"s",url:"globals_func_s.html#index_s"},
+{text:"t",url:"globals_func_t.html#index_t"},
+{text:"v",url:"globals_func_v.html#index_v"}]}]}]}]}
