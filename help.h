@@ -9,7 +9,7 @@
 #endif // __WIN32__
 
 #ifdef __linux__
-#include "help_Linnux.cpp"
+#include "help_Linux.cpp"
 #endif // __linux__
 
 /**

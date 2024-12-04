@@ -724,7 +724,7 @@ int main(int argc, char* argv[])
     if (argc != 4) {
         print_help();
         cout << "To get help on existing encoder numbers, enter --help\n";
-        return 1;
+        return 0;
     }
 
     // Release
@@ -732,9 +732,9 @@ int main(int argc, char* argv[])
     output.open(argv[2], ios::binary);
     string decorator_choice = argv[3];
     if(input.is_open()){cout << "input file open ok\n";}
-    else{return 2;}
+    else{cout << "can't open " << argv[2]; return 2;}
     if(output.is_open()){cout << "output file open ok\n";}
-    else{return 2;}
+    else{cout << "can't open " << argv[3]; return 2;}
 
     offsets test;
 

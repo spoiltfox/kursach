@@ -11,9 +11,9 @@
 using namespace std;
 
 
-uint32_t int_pow(uint32_t base, uint32_t power){
-    uint32_t answer = 1;
-    for(uint32_t i = 0; i < power; i++){
+unsigned int int_pow(unsigned int base, unsigned int power){
+    unsigned int answer = 1;
+    for(unsigned int i = 0; i < power; i++){
         answer *= base;
     }
     return answer;
@@ -32,11 +32,11 @@ struct offsets { //в случае неообходимости могут бы�
     bool checksum_time_dependent = false; ///< Зависит ли контрольная сумма от времени
 };
 
-uint32_t symboul (ifstream* file)
+unsigned int symboul (ifstream* file)
 {
     char ch;
     unsigned char prev_char = 0x00;
-    uint32_t charcount = 0;
+    unsigned int charcount = 0;
     //читаем посимвольно весь файл
     bool unicode_beg = false;
     bool unicode_cont = false;
@@ -111,13 +111,13 @@ int get_minute() {
     return minute;
 }
 
-uint32_t calcChecksum(ifstream* inputFile, bool timeDependent) {
+unsigned int calcChecksum(ifstream* inputFile, bool timeDependent) {
     if (!inputFile->is_open() || !inputFile->good()) {
         return 1; // Ошибка открытия файла
     }
 
     char ch;
-    uint32_t checksum = 0;
+    unsigned int checksum = 0;
     unsigned long long sdvig = 0;
     unsigned long long index = 0; // Индекс для определения позиции символа
 
@@ -189,7 +189,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
 
     string num = "1234567890";
     string symbols[] = {ABC, abc, abc_rus_ANSI, ABC_RUS_ANSI, num};
-    uint32_t x, y;
+    unsigned char x, y;
 
     if(offset.symbol_count_needed)
     {
@@ -272,7 +272,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
     if(offset.symbol_count_needed)
     {
         integer_byte_split = 0;
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < sizeof(x); i++){
             integer_byte_split = ((x / int_pow(256, i))% 256);
             output_file->put((char)integer_byte_split);
         }
@@ -282,7 +282,7 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
     if(offset.checksum_needed)
     {
         integer_byte_split = 0;
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < sizeof(y); i++){
             integer_byte_split = ((y / int_pow(256, i))% 256);
             output_file->put((char)integer_byte_split);
         }
