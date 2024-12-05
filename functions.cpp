@@ -30,6 +30,7 @@ struct offsets { //в случае неообходимости могут бы�
     bool symbol_count_needed = false; ///< Необходимость вычисления количества символов
     bool checksum_needed = false; ///< Необходимость вычисления контрольной суммы
     bool checksum_time_dependent = false; ///< Зависит ли контрольная сумма от времени
+    bool console_print_disable = true;///< Отключить вывод шифрованного текста в консоль
 };
 
 unsigned int symboul (ifstream* file)
@@ -227,19 +228,32 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
                 }
             }
             if(symbol_found && crypted_symbol_abc == 0){
-                cout << abc_rus_UTF8[crypted_symbol_pos][0]; output_file->put(abc_rus_UTF8[crypted_symbol_pos][0]);
-                cout << abc_rus_UTF8[crypted_symbol_pos][1]; output_file->put(abc_rus_UTF8[crypted_symbol_pos][1]);
+                if (!offset.console_print_disable){
+                    cout << abc_rus_UTF8[crypted_symbol_pos][0];
+                    cout << abc_rus_UTF8[crypted_symbol_pos][1];}
+                output_file->put(abc_rus_UTF8[crypted_symbol_pos][0]);
+                output_file->put(abc_rus_UTF8[crypted_symbol_pos][1]);
             }
-            else if(symbol_found && crypted_symbol_abc == 1){
-                cout << ABC_RUS_UTF8[crypted_symbol_pos][0]; output_file->put(ABC_RUS_UTF8[crypted_symbol_pos][0]);
-                cout << ABC_RUS_UTF8[crypted_symbol_pos][1]; output_file->put(ABC_RUS_UTF8[crypted_symbol_pos][1]);
+            else if (symbol_found && crypted_symbol_abc == 1){
+                    if (!offset.console_print_disable){
+                        cout << ABC_RUS_UTF8[crypted_symbol_pos][0];
+                        cout << ABC_RUS_UTF8[crypted_symbol_pos][1];
+                    }
+                output_file->put(ABC_RUS_UTF8[crypted_symbol_pos][0]);
+                output_file->put(ABC_RUS_UTF8[crypted_symbol_pos][1]);
             }
             else if(!symbol_found && (unsigned char)current_byte == 0xd0){
-                cout << ABC_RUS_ANSI[(17+ offset.kir + 33*16) % 33]; output_file->put(ABC_RUS_ANSI[(17+ offset.kir + 33*16) % 33]);
+                    if (!offset.console_print_disable){
+                        cout << ABC_RUS_ANSI[(17+ offset.kir + 33*16) % 33];
+                    }
+                output_file->put(ABC_RUS_ANSI[(17+ offset.kir + 33*16) % 33]);
                 current_byte = addicional_byte;
             }
             else if(!symbol_found && (unsigned char)current_byte == 0xd1){
-                cout << ABC_RUS_ANSI[(18+ offset.kir + 33*16) % 33]; output_file->put(ABC_RUS_ANSI[(18+ offset.kir + 33*16) % 33]);
+                if (!offset.console_print_disable){
+                    cout << ABC_RUS_ANSI[(18+ offset.kir + 33*16) % 33];
+                }
+                output_file->put(ABC_RUS_ANSI[(18+ offset.kir + 33*16) % 33]);
                 current_byte = addicional_byte;
             }
         }
@@ -265,8 +279,18 @@ int caesar(ifstream* input_file, ofstream* output_file, offsets offset){
             }
         }
 
-        if(symbol_found){cout << symbols[crypted_symbol_abc][crypted_symbol_pos]; output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);}
-        else {cout << current_byte; output_file[0].put(current_byte);}
+        if(symbol_found){
+            if (!offset.console_print_disable){
+                cout << symbols[crypted_symbol_abc][crypted_symbol_pos];
+            }
+            output_file[0].put(symbols[crypted_symbol_abc][crypted_symbol_pos]);
+        }
+        else {
+            if (!offset.console_print_disable){
+                cout << current_byte;
+            }
+            output_file[0].put(current_byte);
+        }
     }
 
     if(offset.symbol_count_needed)

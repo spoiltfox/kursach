@@ -204,15 +204,17 @@ int main(int argc, char* argv[])
     if (is_debug_run) {
         // Debug
         cin >> variation;
-        input.open("ioFiles/testUTF-8.txt");
+        input.open("ioFiles/testANSI.txt");
         output.open("output.txt", ios::binary);
-        if(input.is_open()){cout << "input file open ok\n";}
+        if(input.is_open()){cout << "";}
         else{return 2;}
-        if(output.is_open()){cout << "output file open ok\n";}
+        if(output.is_open()){cout << "";}
         else{return 2;}
         offsets test;
 
-        output << endl;
+        // !!!!!!!!!!!!!!!!!!!!! ОТКЛЮЧЕНИЕ ВЫВОДА В КОНСОЛЬ !!!!!!!!!!!!!!!!!!!
+        test.console_print_disable = true;
+
         // Выбор декоратора
          // Выбираем нужный декоратор
         switch (variation)
@@ -723,7 +725,7 @@ int main(int argc, char* argv[])
 
     if (argc != 4) {
         print_help();
-        cout << "To get help on existing encoder numbers, enter --help\n";
+        cout << "To get help on existing encoder numbers, enter --help or -h\n";
         return 0;
     }
 
@@ -731,9 +733,9 @@ int main(int argc, char* argv[])
     input.open(argv[1], ios::binary);
     output.open(argv[2], ios::binary);
     string decorator_choice = argv[3];
-    if(input.is_open()){cout << "input file open ok\n";}
+    if(input.is_open()){cout << "";}
     else{cout << "can't open " << argv[2]; return 2;}
-    if(output.is_open()){cout << "output file open ok\n";}
+    if(output.is_open()){cout << "";}
     else{cout << "can't open " << argv[3]; return 2;}
 
     offsets test;

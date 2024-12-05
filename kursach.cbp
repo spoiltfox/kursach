@@ -42,11 +42,15 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="functions.h" />
-		<Unit filename="help.cpp">
+		<Unit filename="help.h" />
+		<Unit filename="help_Linux.cpp">
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
-		<Unit filename="help.h" />
+		<Unit filename="help_Windows.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="unit_tests.cpp">
 			<Option compile="0" />
