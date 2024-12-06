@@ -204,7 +204,7 @@ int main(int argc, char* argv[])
     if (is_debug_run) {
         // Debug
         cin >> variation;
-        input.open("ioFiles/testANSI.txt");
+        input.open("ioFiles/testUTF-8.txt");
         output.open("output.txt", ios::binary);
         if(input.is_open()){cout << "";}
         else{return 2;}

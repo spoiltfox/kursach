@@ -51,8 +51,8 @@ unsigned int symboul (ifstream* file)
             unicode_cont = true;
         }
         else if (unicode_beg && unicode_cont){
-            bool unicode_beg = false;
-            bool unicode_cont = false;
+            unicode_beg = false;
+            unicode_cont = false;
             charcount++;
         }
         else if (static_cast<unsigned char>(ch) >= 0xc0){
@@ -119,23 +119,13 @@ unsigned int calcChecksum(ifstream* inputFile, bool timeDependent) {
 
     char ch;
     unsigned int checksum = 0;
-    unsigned long long sdvig = 0;
     unsigned long long index = 0; // Индекс для определения позиции символа
 
     while (inputFile->get(ch)) {
-        // Определяем сдвиг в зависимости от символа
-        if (isalpha(ch)) { // Латинские буквы
-            sdvig = (ch >= L'a' && ch <= L'z') ? 3 : 3; // Латинские буквы - сдвиг 3
-        } else if ((ch >= 0xC0 && ch <= 0xFF) || (ch >= 0xE0 && ch <= 0xEF)) { // Кириллица в UTF-8
-            sdvig = 5; // Кириллица - сдвиг 5
-        } else if (isdigit(ch)) { // Цифры
-            sdvig = 2; // Цифры - сдвиг 2
-        } else {
-            sdvig = 0; // Прочие символы
-        }
+
 
         // Применяем сдвиг и обновляем контрольную сумму, учитывая индекс символа
-        checksum += (ch + sdvig) * (index + 1); // Увеличиваем значение в зависимости от позиции
+        checksum += static_cast<unsigned char>(ch) * (index + 1); // Увеличиваем значение в зависимости от позиции
         index++; // Увеличиваем индекс
     }
 

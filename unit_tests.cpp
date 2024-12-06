@@ -115,94 +115,115 @@ void test_minute_range()
     }
 }
 
+/**
+    \brief Юнит-тест для функции calcChecksum(), которая вычисляет контрольную сумму текста
+*/
 void test_calcChecksum() {
     ofstream input_test_file("input.txt");
     input_test_file << "Hello123";
     input_test_file.close();
 
     ifstream input("input.txt");
-    char checksum = calcChecksum(&input, false);
+    unsigned int checksum = calcChecksum(&input, false);
     input.close();
 
     // Предполагаемое значение контрольной суммы для "Hello123"
     // Считаем сумму вручную:
-    // H = 72 + 3 = 75
-    // e = 101 + 3 = 104
-    // l = 108 + 3 = 111
-    // l = 108 + 3 = 111
-    // o = 111 + 3 = 114
-    // 1 = 49 + 2 = 51
-    // 2 = 50 + 2 = 52
-    // 3 = 51 + 2 = 53
-    // Итого: 75 + 104 + 111 + 111 + 114 + 51 + 52 + 53 = 671
-    char expected_checksum = 671;
+    // H = 72
+    // e = 101
+    // l = 108
+    // l = 108
+    // o = 111
+    // 1 = 49
+    // 2 = 50
+    // 3 = 51
+    // Итого: 72 + 202 + 324 + 432 + 555 + 294 + 350 + 408 = 2637
+    unsigned int expected_checksum = 2637;
 
     if (checksum == expected_checksum) {
         cout << "test_calcChecksum passed\n";
     } else {
-        cout << "test_calcChecksum failed: expected " << static_cast<int>(expected_checksum) << ", got " << static_cast<int>(checksum) << "\n";
+        cout << "test_calcChecksum failed: expected " << expected_checksum << ", got " << checksum << "\n";
     }
 }
-
+/**
+    \brief Юнит-тест для функции calcChecksum(), которая вычисляет контрольную сумму текста
+*/
 void test_calcChecksum_with_special_characters() {
     ofstream input_test_file("input_special.txt");
     input_test_file << "!@#123";
     input_test_file.close();
 
     ifstream input("input_special.txt");
-    char checksum = calcChecksum(&input, false);
+    unsigned int checksum = calcChecksum(&input, false);
     input.close();
 
     // Предполагаемое значение контрольной суммы для "!@#123"
-    // ! = 33 + 0 = 33
-    // @ = 64 + 0 = 64
-    // # = 35 + 0 = 35
-    // 1 = 49 + 2 = 51
-    // 2 = 50 + 2 = 52
-    // 3 = 51 + 2 = 53
-    // Итого: 33 + 64 + 35 + 51 + 52 + 53 = 288
-    char expected_checksum = 288;
+    // ! = 33
+    // @ = 64
+    // # = 35
+    // 1 = 49
+    // 2 = 50
+    // 3 = 51
+    // Итого: 33 + 128 + 105 + 196 + 250 + 306 = 288
+    unsigned int expected_checksum = 1018;
 
     if (checksum == expected_checksum) {
         cout << "test_calcChecksum_with_special_characters passed\n";
     } else {
-        cout << "test_calcChecksum_with_special_characters failed: expected " << static_cast<int>(expected_checksum) << ", got " << static_cast<int>(checksum) << "\n";
+        cout << "test_calcChecksum_with_special_characters failed: expected " << expected_checksum << ", got " << checksum << "\n";
     }
 }
-
+/**
+    \brief Юнит-тест для функции calcChecksum(), которая вычисляет контрольную сумму текста
+*/
 void test_calcChecksum_with_russian_characters() {
-    ofstream input_test_file("input_russian.txt");
+    ofstream input_test_file("input_russian.txt", ios::binary);
     input_test_file << "Привет123";
     input_test_file.close();
 
     ifstream input("input_russian.txt");
-    char checksum = calcChecksum(&input, false);
+    unsigned int checksum = calcChecksum(&input, false);
     input.close();
 
     // Предполагаемое значение контрольной суммы для "Привет123"
-    // П = 208 + 5 = 213
-    // р = 240 + 5 = 245
-    // и = 232 + 5 = 237
-    // в = 226 + 5 = 231
-    // е = 229 + 5 = 234
-    // т = 242 + 5 = 247
-    // 1 = 49 + 2 = 51
-    // 2 = 50 + 2 = 52
-    // 3 = 51 + 2 = 53
-    // Итого: 213 + 245 + 237 + 231 + 234 + 247 + 51 + 52 + 53 = 1563
-    char expected_checksum = 1563;
+    // П = 208, 159
+    // р = 209, 128
+    // и = 208, 184
+    // в = 208, 178
+    // е = 208, 181
+    // т = 209, 130
+    // 1 = 49
+    // 2 = 50
+    // 3 = 51
+    // Итого: 208 + 318 + 627 + 512 + 1040 + 1104 + 1456 + 1424 + 1872 + 1810 + 2299 + 1560 + 637 + 700 + 765 = 16332
+    unsigned int expected_checksum = 16332;
 
     if (checksum == expected_checksum) {
         cout << "test_calcChecksum_with_russian_characters passed\n";
     } else {
-        cout << "test_calcChecksum_with_russian_characters failed: expected " << static_cast<int>(expected_checksum) << ", got " << static_cast<int>(checksum) << "\n";
+        cout << "test_calcChecksum_with_russian_characters failed: expected " <<expected_checksum << ", got " << checksum << "\n";
     }
 }
+/**
+    \brief Юнит-тест для функции int_pow(), которая вычисляет число a в степени b
+*/
 void int_pow_test(){
-    cout << "2^0 = " << int_pow(2, 0) << endl;
-    cout << "2^1 = " << int_pow(2, 1) << endl;
-    cout << "2^2 = " << int_pow(2, 2) << endl;
-    cout << "2^3 = " << int_pow(2, 3) << endl;
+    bool is_correct = true;
+    if (int_pow(2, 0) != 1){is_correct = false;}
+    if (int_pow(2, 1) != 2){is_correct = false;}
+    if (int_pow(2, 2) != 4){is_correct = false;}
+    if (int_pow(2, 3) != 8){is_correct = false;}
+    if (is_correct){
+        cout << "int_pow_test passed\n";
+    }
+    else {
+        cout <<"int_pow_test failed\n";
+        cout << "2^0 = " << int_pow(2, 0) << endl;
+        cout << "2^1 = " << int_pow(2, 1) << endl;
+        cout << "2^2 = " << int_pow(2, 2) << endl;
+        cout << "2^3 = " << int_pow(2, 3) << endl;
+    }
 }
  /**
     \brief Запуск юнит-тестов
